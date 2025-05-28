@@ -1,0 +1,19 @@
+{
+  "Version": 1,
+  "Hash": "YmdIp8Ea0dgRv895s+g8SlAnP2/q6o7m+z2+454R4pk=",
+  "Source": "ecobony.webapi",
+  "BasePath": "_content/ecobony.webapi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "ecobony.webapi/wwwroot",
+      "Source": "ecobony.webapi",
+      "ContentRoot": "/home/rsc/Documents/ecobony/presentation/ecobony.webapi/wwwroot/",
+      "BasePath": "_content/ecobony.webapi",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": []
+}

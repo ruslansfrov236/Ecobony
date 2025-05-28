@@ -1,0 +1,15 @@
+/home/rsc/Documents/ecobony/core/ecobony.application/bin/Debug/net8.0/ecobony.application.deps.json
+/home/rsc/Documents/ecobony/core/ecobony.application/bin/Debug/net8.0/ecobony.application.dll
+/home/rsc/Documents/ecobony/core/ecobony.application/bin/Debug/net8.0/ecobony.application.pdb
+/home/rsc/Documents/ecobony/core/ecobony.application/bin/Debug/net8.0/ecobony.domain.dll
+/home/rsc/Documents/ecobony/core/ecobony.application/bin/Debug/net8.0/ecobony.domain.pdb
+/home/rsc/Documents/ecobony/core/ecobony.application/obj/Debug/net8.0/ecobony.application.csproj.AssemblyReference.cache
+/home/rsc/Documents/ecobony/core/ecobony.application/obj/Debug/net8.0/ecobony.application.GeneratedMSBuildEditorConfig.editorconfig
+/home/rsc/Documents/ecobony/core/ecobony.application/obj/Debug/net8.0/ecobony.application.AssemblyInfoInputs.cache
+/home/rsc/Documents/ecobony/core/ecobony.application/obj/Debug/net8.0/ecobony.application.AssemblyInfo.cs
+/home/rsc/Documents/ecobony/core/ecobony.application/obj/Debug/net8.0/ecobony.application.csproj.CoreCompileInputs.cache
+/home/rsc/Documents/ecobony/core/ecobony.application/obj/Debug/net8.0/ecobony.application.dll
+/home/rsc/Documents/ecobony/core/ecobony.application/obj/Debug/net8.0/refint/ecobony.application.dll
+/home/rsc/Documents/ecobony/core/ecobony.application/obj/Debug/net8.0/ecobony.application.pdb
+/home/rsc/Documents/ecobony/core/ecobony.application/obj/Debug/net8.0/ref/ecobony.application.dll
+/home/rsc/Documents/ecobony/core/ecobony.application/obj/Debug/net8.0/ecobony.application.csproj.CopyComplete

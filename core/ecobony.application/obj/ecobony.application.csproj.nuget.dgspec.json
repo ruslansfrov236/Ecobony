@@ -1,0 +1,162 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/rsc/Documents/ecobony/core/ecobony.application/ecobony.application.csproj": {}
+  },
+  "projects": {
+    "/home/rsc/Documents/ecobony/core/ecobony.application/ecobony.application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/rsc/Documents/ecobony/core/ecobony.application/ecobony.application.csproj",
+        "projectName": "ecobony.application",
+        "projectPath": "/home/rsc/Documents/ecobony/core/ecobony.application/ecobony.application.csproj",
+        "packagesPath": "/home/rsc/.nuget/packages/",
+        "outputPath": "/home/rsc/Documents/ecobony/core/ecobony.application/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/rsc/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/home/rsc/Documents/ecobony/core/ecobony.domain/ecobony.domain.csproj": {
+                "projectPath": "/home/rsc/Documents/ecobony/core/ecobony.domain/ecobony.domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[12.0.0-preview1, )"
+            },
+            "FluentValidation.AspNetCore": {
+              "target": "Package",
+              "version": "[11.3.0, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[11.1.0, )"
+            },
+            "MediatR.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[11.1.0, )"
+            },
+            "Microsoft.Extensions.Http": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "PDFsharp": {
+              "target": "Package",
+              "version": "[6.2.0-preview-3, )"
+            },
+            "PdfSharp.MigraDoc": {
+              "target": "Package",
+              "version": "[2.0.1, )"
+            },
+            "itext7": {
+              "target": "Package",
+              "version": "[8.0.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.116/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/rsc/Documents/ecobony/core/ecobony.domain/ecobony.domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/rsc/Documents/ecobony/core/ecobony.domain/ecobony.domain.csproj",
+        "projectName": "ecobony.domain",
+        "projectPath": "/home/rsc/Documents/ecobony/core/ecobony.domain/ecobony.domain.csproj",
+        "packagesPath": "/home/rsc/.nuget/packages/",
+        "outputPath": "/home/rsc/Documents/ecobony/core/ecobony.domain/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/rsc/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Http": {
+              "target": "Package",
+              "version": "[2.3.0, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.116/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

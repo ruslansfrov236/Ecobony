@@ -1,0 +1,21 @@
+global using System.ComponentModel.DataAnnotations.Schema;
+global using Microsoft.Extensions.DependencyInjection;
+global using Microsoft.Extensions.Localization;
+global using ecobony.domain.Entities.Comunity;
+global using ecobony.domain.Entities.Identity;
+global using Microsoft.AspNetCore.Mvc.Filters;
+global  using Microsoft.EntityFrameworkCore;
+global using ecobony.domain.Dto_s.Authorize;
+global using ecobony.domain.Entities.Enum;
+global using ecobony.application.Services;
+global using FluentValidation.Resources;
+global using ecobony.domain.Dto_s.Token;
+global using Microsoft.AspNetCore.Http;
+global using Microsoft.AspNetCore.Mvc;
+global  using ecobony.domain.Entities;
+global using System.Linq.Expressions;
+global using System.Globalization;
+global using ecobony.domain.Dto_s;
+global using FluentValidation;
+global using MediatR;
+

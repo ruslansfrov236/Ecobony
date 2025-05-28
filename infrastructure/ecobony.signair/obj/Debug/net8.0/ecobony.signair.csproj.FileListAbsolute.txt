@@ -1,0 +1,17 @@
+/home/rsc/Documents/ecobony/infrastructure/ecobony.signair/bin/Debug/net8.0/ecobony.signair.deps.json
+/home/rsc/Documents/ecobony/infrastructure/ecobony.signair/bin/Debug/net8.0/ecobony.signair.dll
+/home/rsc/Documents/ecobony/infrastructure/ecobony.signair/bin/Debug/net8.0/ecobony.signair.pdb
+/home/rsc/Documents/ecobony/infrastructure/ecobony.signair/bin/Debug/net8.0/ecobony.application.dll
+/home/rsc/Documents/ecobony/infrastructure/ecobony.signair/bin/Debug/net8.0/ecobony.domain.dll
+/home/rsc/Documents/ecobony/infrastructure/ecobony.signair/bin/Debug/net8.0/ecobony.application.pdb
+/home/rsc/Documents/ecobony/infrastructure/ecobony.signair/bin/Debug/net8.0/ecobony.domain.pdb
+/home/rsc/Documents/ecobony/infrastructure/ecobony.signair/obj/Debug/net8.0/ecobony.signair.csproj.AssemblyReference.cache
+/home/rsc/Documents/ecobony/infrastructure/ecobony.signair/obj/Debug/net8.0/ecobony.signair.GeneratedMSBuildEditorConfig.editorconfig
+/home/rsc/Documents/ecobony/infrastructure/ecobony.signair/obj/Debug/net8.0/ecobony.signair.AssemblyInfoInputs.cache
+/home/rsc/Documents/ecobony/infrastructure/ecobony.signair/obj/Debug/net8.0/ecobony.signair.AssemblyInfo.cs
+/home/rsc/Documents/ecobony/infrastructure/ecobony.signair/obj/Debug/net8.0/ecobony.signair.csproj.CoreCompileInputs.cache
+/home/rsc/Documents/ecobony/infrastructure/ecobony.signair/obj/Debug/net8.0/ecobony.signair.dll
+/home/rsc/Documents/ecobony/infrastructure/ecobony.signair/obj/Debug/net8.0/refint/ecobony.signair.dll
+/home/rsc/Documents/ecobony/infrastructure/ecobony.signair/obj/Debug/net8.0/ecobony.signair.pdb
+/home/rsc/Documents/ecobony/infrastructure/ecobony.signair/obj/Debug/net8.0/ref/ecobony.signair.dll
+/home/rsc/Documents/ecobony/infrastructure/ecobony.signair/obj/Debug/net8.0/ecobony.signair.csproj.CopyComplete

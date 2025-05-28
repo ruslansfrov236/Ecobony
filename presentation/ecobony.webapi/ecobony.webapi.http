@@ -1,0 +1,6 @@
+@ecobony.webapi_HostAddress = http://localhost:5083
+
+GET {{ecobony.webapi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
