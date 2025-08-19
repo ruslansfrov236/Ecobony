@@ -1,33 +1,39 @@
 {
   "format": 1,
   "restore": {
-    "/home/rsc/Documents/ecobony/infrastructure/ecobony.persistence/ecobony.persistence.csproj": {}
+    "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\infrastructure\\ecobony.persistence\\ecobony.persistence.csproj": {}
   },
   "projects": {
-    "/home/rsc/Documents/ecobony/core/ecobony.application/ecobony.application.csproj": {
+    "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\core\\ecobony.application\\ecobony.application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/rsc/Documents/ecobony/core/ecobony.application/ecobony.application.csproj",
+        "projectUniqueName": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\core\\ecobony.application\\ecobony.application.csproj",
         "projectName": "ecobony.application",
-        "projectPath": "/home/rsc/Documents/ecobony/core/ecobony.application/ecobony.application.csproj",
-        "packagesPath": "/home/rsc/.nuget/packages/",
-        "outputPath": "/home/rsc/Documents/ecobony/core/ecobony.application/obj/",
+        "projectPath": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\core\\ecobony.application\\ecobony.application.csproj",
+        "packagesPath": "C:\\Users\\rusla\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\core\\ecobony.application\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/home/rsc/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\rusla\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net8.0"
+          "net9.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
+          "net9.0": {
+            "targetAlias": "net9.0",
             "projectReferences": {
-              "/home/rsc/Documents/ecobony/core/ecobony.domain/ecobony.domain.csproj": {
-                "projectPath": "/home/rsc/Documents/ecobony/core/ecobony.domain/ecobony.domain.csproj"
+              "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\core\\ecobony.domain\\ecobony.domain.csproj": {
+                "projectPath": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\core\\ecobony.domain\\ecobony.domain.csproj"
               }
             }
           }
@@ -36,11 +42,17 @@
           "warnAsError": [
             "NU1605"
           ]
-        }
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
+        "net9.0": {
+          "targetAlias": "net9.0",
           "dependencies": {
             "FluentValidation": {
               "target": "Package",
@@ -60,7 +72,7 @@
             },
             "Microsoft.Extensions.Http": {
               "target": "Package",
-              "version": "[8.0.0, )"
+              "version": "[9.0.8, )"
             },
             "PDFsharp": {
               "target": "Package",
@@ -91,31 +103,37 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.116/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.303/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "/home/rsc/Documents/ecobony/core/ecobony.domain/ecobony.domain.csproj": {
+    "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\core\\ecobony.domain\\ecobony.domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/rsc/Documents/ecobony/core/ecobony.domain/ecobony.domain.csproj",
+        "projectUniqueName": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\core\\ecobony.domain\\ecobony.domain.csproj",
         "projectName": "ecobony.domain",
-        "projectPath": "/home/rsc/Documents/ecobony/core/ecobony.domain/ecobony.domain.csproj",
-        "packagesPath": "/home/rsc/.nuget/packages/",
-        "outputPath": "/home/rsc/Documents/ecobony/core/ecobony.domain/obj/",
+        "projectPath": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\core\\ecobony.domain\\ecobony.domain.csproj",
+        "packagesPath": "C:\\Users\\rusla\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\core\\ecobony.domain\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/home/rsc/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\rusla\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net8.0"
+          "net9.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
+          "net9.0": {
+            "targetAlias": "net9.0",
             "projectReferences": {}
           }
         },
@@ -123,11 +141,17 @@
           "warnAsError": [
             "NU1605"
           ]
-        }
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
+        "net9.0": {
+          "targetAlias": "net9.0",
           "dependencies": {
             "Microsoft.AspNetCore.Http": {
               "target": "Package",
@@ -135,7 +159,7 @@
             },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[8.0.4, )"
+              "version": "[9.0.8, )"
             }
           },
           "imports": [
@@ -154,37 +178,43 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.116/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.303/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "/home/rsc/Documents/ecobony/infrastructure/ecobony.persistence/ecobony.persistence.csproj": {
+    "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\infrastructure\\ecobony.persistence\\ecobony.persistence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/rsc/Documents/ecobony/infrastructure/ecobony.persistence/ecobony.persistence.csproj",
+        "projectUniqueName": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\infrastructure\\ecobony.persistence\\ecobony.persistence.csproj",
         "projectName": "ecobony.persistence",
-        "projectPath": "/home/rsc/Documents/ecobony/infrastructure/ecobony.persistence/ecobony.persistence.csproj",
-        "packagesPath": "/home/rsc/.nuget/packages/",
-        "outputPath": "/home/rsc/Documents/ecobony/infrastructure/ecobony.persistence/obj/",
+        "projectPath": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\infrastructure\\ecobony.persistence\\ecobony.persistence.csproj",
+        "packagesPath": "C:\\Users\\rusla\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\infrastructure\\ecobony.persistence\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/home/rsc/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\rusla\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net8.0"
+          "net9.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
+          "net9.0": {
+            "targetAlias": "net9.0",
             "projectReferences": {
-              "/home/rsc/Documents/ecobony/core/ecobony.application/ecobony.application.csproj": {
-                "projectPath": "/home/rsc/Documents/ecobony/core/ecobony.application/ecobony.application.csproj"
+              "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\core\\ecobony.application\\ecobony.application.csproj": {
+                "projectPath": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\core\\ecobony.application\\ecobony.application.csproj"
               },
-              "/home/rsc/Documents/ecobony/infrastructure/ecobony.signair/ecobony.signair.csproj": {
-                "projectPath": "/home/rsc/Documents/ecobony/infrastructure/ecobony.signair/ecobony.signair.csproj"
+              "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\infrastructure\\ecobony.signair\\ecobony.signair.csproj": {
+                "projectPath": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\infrastructure\\ecobony.signair\\ecobony.signair.csproj"
               }
             }
           }
@@ -193,11 +223,17 @@
           "warnAsError": [
             "NU1605"
           ]
-        }
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
+        "net9.0": {
+          "targetAlias": "net9.0",
           "dependencies": {
             "ClosedXML": {
               "target": "Package",
@@ -209,11 +245,11 @@
             },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[8.0.4, )"
+              "version": "[9.0.8, )"
             },
             "Microsoft.AspNetCore.Identity.UI": {
               "target": "Package",
-              "version": "[8.0.4, )"
+              "version": "[9.0.8, )"
             },
             "Microsoft.AspNetCore.Session": {
               "target": "Package",
@@ -221,39 +257,39 @@
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[8.0.4, )"
+              "version": "[9.0.8, )"
             },
             "Microsoft.EntityFrameworkCore.Abstractions": {
               "target": "Package",
-              "version": "[8.0.4, )"
+              "version": "[9.0.8, )"
             },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[8.0.4, )"
+              "version": "[9.0.8, )"
             },
             "Microsoft.EntityFrameworkCore.Proxies": {
               "target": "Package",
-              "version": "[8.0.4, )"
+              "version": "[9.0.8, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[8.0.4, )"
+              "version": "[9.0.8, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[8.0.4, )"
+              "version": "[9.0.8, )"
             },
             "Microsoft.Extensions.Configuration": {
               "target": "Package",
-              "version": "[8.0.0, )"
+              "version": "[9.0.8, )"
             },
             "Microsoft.Extensions.Configuration.Json": {
               "target": "Package",
-              "version": "[8.0.0, )"
+              "version": "[9.0.8, )"
             },
             "PDFsharp": {
               "target": "Package",
@@ -292,37 +328,43 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.116/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.303/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "/home/rsc/Documents/ecobony/infrastructure/ecobony.signair/ecobony.signair.csproj": {
+    "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\infrastructure\\ecobony.signair\\ecobony.signair.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/rsc/Documents/ecobony/infrastructure/ecobony.signair/ecobony.signair.csproj",
+        "projectUniqueName": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\infrastructure\\ecobony.signair\\ecobony.signair.csproj",
         "projectName": "ecobony.signair",
-        "projectPath": "/home/rsc/Documents/ecobony/infrastructure/ecobony.signair/ecobony.signair.csproj",
-        "packagesPath": "/home/rsc/.nuget/packages/",
-        "outputPath": "/home/rsc/Documents/ecobony/infrastructure/ecobony.signair/obj/",
+        "projectPath": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\infrastructure\\ecobony.signair\\ecobony.signair.csproj",
+        "packagesPath": "C:\\Users\\rusla\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\infrastructure\\ecobony.signair\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/home/rsc/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\rusla\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net8.0"
+          "net9.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
+          "net9.0": {
+            "targetAlias": "net9.0",
             "projectReferences": {
-              "/home/rsc/Documents/ecobony/core/ecobony.application/ecobony.application.csproj": {
-                "projectPath": "/home/rsc/Documents/ecobony/core/ecobony.application/ecobony.application.csproj"
+              "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\core\\ecobony.application\\ecobony.application.csproj": {
+                "projectPath": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\core\\ecobony.application\\ecobony.application.csproj"
               },
-              "/home/rsc/Documents/ecobony/core/ecobony.domain/ecobony.domain.csproj": {
-                "projectPath": "/home/rsc/Documents/ecobony/core/ecobony.domain/ecobony.domain.csproj"
+              "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\core\\ecobony.domain\\ecobony.domain.csproj": {
+                "projectPath": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\core\\ecobony.domain\\ecobony.domain.csproj"
               }
             }
           }
@@ -331,11 +373,17 @@
           "warnAsError": [
             "NU1605"
           ]
-        }
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
+        "net9.0": {
+          "targetAlias": "net9.0",
           "dependencies": {
             "Microsoft.AspNetCore.SignalR": {
               "target": "Package",
@@ -362,7 +410,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.116/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.303/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

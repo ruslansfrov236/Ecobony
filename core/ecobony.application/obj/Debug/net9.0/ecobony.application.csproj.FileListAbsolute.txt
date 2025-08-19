@@ -1,0 +1,16 @@
+C:\Users\rusla\Documents\Web\ecobony\ecobony\core\ecobony.application\bin\Debug\net9.0\ecobony.application.deps.json
+C:\Users\rusla\Documents\Web\ecobony\ecobony\core\ecobony.application\bin\Debug\net9.0\ecobony.application.dll
+C:\Users\rusla\Documents\Web\ecobony\ecobony\core\ecobony.application\bin\Debug\net9.0\ecobony.application.pdb
+C:\Users\rusla\Documents\Web\ecobony\ecobony\core\ecobony.application\bin\Debug\net9.0\ecobony.domain.dll
+C:\Users\rusla\Documents\Web\ecobony\ecobony\core\ecobony.application\bin\Debug\net9.0\ecobony.domain.pdb
+C:\Users\rusla\Documents\Web\ecobony\ecobony\core\ecobony.application\obj\Debug\net9.0\ecobony.application.csproj.AssemblyReference.cache
+C:\Users\rusla\Documents\Web\ecobony\ecobony\core\ecobony.application\obj\Debug\net9.0\ecobony.application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\rusla\Documents\Web\ecobony\ecobony\core\ecobony.application\obj\Debug\net9.0\ecobony.application.AssemblyInfoInputs.cache
+C:\Users\rusla\Documents\Web\ecobony\ecobony\core\ecobony.application\obj\Debug\net9.0\ecobony.application.AssemblyInfo.cs
+C:\Users\rusla\Documents\Web\ecobony\ecobony\core\ecobony.application\obj\Debug\net9.0\ecobony.application.csproj.CoreCompileInputs.cache
+C:\Users\rusla\Documents\Web\ecobony\ecobony\core\ecobony.application\obj\Debug\net9.0\ecobony.application.sourcelink.json
+C:\Users\rusla\Documents\Web\ecobony\ecobony\core\ecobony.application\obj\Debug\net9.0\ecobony..3A5F90FD.Up2Date
+C:\Users\rusla\Documents\Web\ecobony\ecobony\core\ecobony.application\obj\Debug\net9.0\ecobony.application.dll
+C:\Users\rusla\Documents\Web\ecobony\ecobony\core\ecobony.application\obj\Debug\net9.0\refint\ecobony.application.dll
+C:\Users\rusla\Documents\Web\ecobony\ecobony\core\ecobony.application\obj\Debug\net9.0\ecobony.application.pdb
+C:\Users\rusla\Documents\Web\ecobony\ecobony\core\ecobony.application\obj\Debug\net9.0\ref\ecobony.application.dll

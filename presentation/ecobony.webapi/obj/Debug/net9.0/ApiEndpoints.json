@@ -1,0 +1,1193 @@
+[
+  {
+    "ContainingType": "ecobony.webapi.Areas.Controllers.BalanceController",
+    "Method": "Index",
+    "RelativePath": "api/Admin/Balance",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "ecobony.application.Feauters.Query.GetAdminBalanceAllQueryRequest",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ecobony.webapi.Areas.Controllers.BalanceController",
+    "Method": "Index",
+    "RelativePath": "api/Admin/Balance/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ecobony.webapi.Areas.Controllers.BalanceController",
+    "Method": "Delete",
+    "RelativePath": "api/Admin/Balance/delete/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ecobony.webapi.Areas.Controllers.BalanceController",
+    "Method": "RestoreDelete",
+    "RelativePath": "api/Admin/Balance/restore-delete/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ecobony.webapi.Areas.Controllers.BalanceController",
+    "Method": "SoftDelete",
+    "RelativePath": "api/Admin/Balance/soft-delete/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ecobony.webapi.Areas.Controllers.BonusController",
+    "Method": "Index",
+    "RelativePath": "api/Admin/Bonus",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "ecobony.application.Feauters.Query.GetAdminBonusAllCommandRequest",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ecobony.webapi.Areas.Controllers.BonusController",
+    "Method": "Create",
+    "RelativePath": "api/Admin/Bonus/{wasteId}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "wasteId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ecobony.webapi.Areas.Controllers.BonusController",
+    "Method": "Delete",
+    "RelativePath": "api/Admin/Bonus/delete/{Id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ecobony.webapi.Areas.Controllers.BonusController",
+    "Method": "RestoreDelete",
+    "RelativePath": "api/Admin/Bonus/restore-delete/{Id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ecobony.webapi.Areas.Controllers.BonusController",
+    "Method": "SoftDelete",
+    "RelativePath": "api/Admin/Bonus/soft-delete/{Id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ecobony.webapi.Areas.Controllers.CategoryController",
+    "Method": "Index",
+    "RelativePath": "api/Admin/Category",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "ecobony.application.Feauters.Query.GetAdminCategoryAllCommandRequest",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ecobony.webapi.Areas.Controllers.CategoryController",
+    "Method": "Create",
+    "RelativePath": "api/Admin/Category",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Image",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Pointy",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "FormFile",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "CategoryId",
+        "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
+        "Name": "Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "LanguageId",
+        "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
+        "Name": "Description",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ecobony.webapi.Areas.Controllers.CategoryController",
+    "Method": "Update",
+    "RelativePath": "api/Admin/Category",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Image",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Pointy",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "FormFile",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "CategoryId",
+        "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
+        "Name": "Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "LanguageId",
+        "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
+        "Name": "Description",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ecobony.webapi.Areas.Controllers.CategoryController",
+    "Method": "Index",
+    "RelativePath": "api/Admin/Category/{Id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ecobony.webapi.Areas.Controllers.CategoryController",
+    "Method": "Delete",
+    "RelativePath": "api/Admin/Category/delete/{Id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ecobony.webapi.Areas.Controllers.CategoryController",
+    "Method": "SoftDelete",
+    "RelativePath": "api/Admin/Category/restore/{Id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ecobony.webapi.Areas.Controllers.CategoryController",
+    "Method": "SoftDelete",
+    "RelativePath": "api/Admin/Category/soft-delete/{Id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ecobony.webapi.Areas.Controllers.HeaderController",
+    "Method": "Index",
+    "RelativePath": "api/Admin/Header",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "ecobony.application.Feauters.Query.Header.GetAdminAllCommandHandlerRequest",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ecobony.webapi.Areas.Controllers.HeaderController",
+    "Method": "Create",
+    "RelativePath": "api/Admin/Header",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Role",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Image",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FomFile",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "Title",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Description",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "LanguageId",
+        "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
+        "Name": "HeaderId",
+        "Type": "System.Guid",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ecobony.webapi.Areas.Controllers.HeaderController",
+    "Method": "Update",
+    "RelativePath": "api/Admin/Header",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Role",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Image",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FomFile",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "Title",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Description",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "LanguageId",
+        "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
+        "Name": "HeaderId",
+        "Type": "System.Guid",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ecobony.webapi.Areas.Controllers.HeaderController",
+    "Method": "Index",
+    "RelativePath": "api/Admin/Header/{Id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ecobony.webapi.Areas.Controllers.HeaderController",
+    "Method": "Delete",
+    "RelativePath": "api/Admin/Header/delete/{Id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ecobony.webapi.Areas.Controllers.HeaderController",
+    "Method": "Restore",
+    "RelativePath": "api/Admin/Header/restore/{Id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ecobony.webapi.Areas.Controllers.HeaderController",
+    "Method": "SoftDelete",
+    "RelativePath": "api/Admin/Header/soft-delete/{Id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ecobony.webapi.Areas.Controllers.LanguageController",
+    "Method": "Index",
+    "RelativePath": "api/Admin/Language",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "ecobony.application.Feauters.Query.Language.GetAdminAllCommandRequest",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ecobony.webapi.Areas.Controllers.LanguageController",
+    "Method": "Create",
+    "RelativePath": "api/Admin/Language",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "IsoCode",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Key",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Image",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FormFile",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ecobony.webapi.Areas.Controllers.LanguageController",
+    "Method": "Update",
+    "RelativePath": "api/Admin/Language",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "IsoCode",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Key",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Image",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FormFile",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ecobony.webapi.Areas.Controllers.LanguageController",
+    "Method": "Index",
+    "RelativePath": "api/Admin/Language/{Id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ecobony.webapi.Areas.Controllers.LanguageController",
+    "Method": "Delete",
+    "RelativePath": "api/Admin/Language/delete/{Id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "ecobony.application.Feauters.Command.Language.DeleteCommandRequest",
+        "IsRequired": true
+      },
+      {
+        "Name": "Id",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ecobony.webapi.Areas.Controllers.LanguageController",
+    "Method": "Restore",
+    "RelativePath": "api/Admin/Language/restore/{Id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ecobony.webapi.Areas.Controllers.LanguageController",
+    "Method": "SoftDelete",
+    "RelativePath": "api/Admin/Language/soft-delete/{Id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ecobony.webapi.Areas.Controllers.RoleController",
+    "Method": "Index",
+    "RelativePath": "api/Admin/Role",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "ecobony.application.Feauters.Query.GetRoleAllCommandRequest",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ecobony.webapi.Areas.Controllers.RoleController",
+    "Method": "Create",
+    "RelativePath": "api/Admin/Role",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "ecobony.application.Feauters.Command.CreateRoleCommandRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ecobony.webapi.Areas.Controllers.RoleController",
+    "Method": "Create",
+    "RelativePath": "api/Admin/Role",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "ecobony.application.Feauters.Command.UpdateRoleCommandRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ecobony.webapi.Areas.Controllers.RoleController",
+    "Method": "Index",
+    "RelativePath": "api/Admin/Role/{Id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ecobony.webapi.Areas.Controllers.RoleController",
+    "Method": "Delete",
+    "RelativePath": "api/Admin/Role/delete/{Id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ecobony.webapi.Areas.Controllers.UserController",
+    "Method": "Index",
+    "RelativePath": "api/Admin/User",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "page",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "size",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ecobony.webapi.Areas.Controllers.UserController",
+    "Method": "AssignRoleToUser",
+    "RelativePath": "api/Admin/User",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "ecobony.application.Feauters.Command.AssignRoleToUserAsyncCommandRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ecobony.webapi.Areas.Controllers.UserController",
+    "Method": "AssignRoleDeleteUser",
+    "RelativePath": "api/Admin/User/{userId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ecobony.webapi.Areas.Controllers.WasteController",
+    "Method": "Index",
+    "RelativePath": "api/Admin/Waste",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "ecobony.application.Feauters.Query.GetAdminWasteAllCommandRequest",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ecobony.webapi.Controllers.BalanceController",
+    "Method": "Index",
+    "RelativePath": "api/Balance",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "ecobony.application.Feauters.Query.GetClientBalanceAllCommandRequest",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ecobony.webapi.Controllers.BalanceController",
+    "Method": "Create",
+    "RelativePath": "api/Balance",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "ecobony.application.Feauters.Command.CreateBalanceCommandRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ecobony.webapi.Controllers.BonusController",
+    "Method": "Index",
+    "RelativePath": "api/Bonus",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "ecobony.application.Feauters.Query.GetClientBonusAllCommandRequest",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ecobony.webapi.Controllers.BonusController",
+    "Method": "Create",
+    "RelativePath": "api/Bonus/{wasteId}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "ecobony.application.Feauters.Command.CreateBonusCommandRequest",
+        "IsRequired": true
+      },
+      {
+        "Name": "wasteId",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ecobony.webapi.Controllers.BonusController",
+    "Method": "GetBonusPdfView",
+    "RelativePath": "api/Bonus/get-bonus-excel-view",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "StartDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "EndDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ecobony.webapi.Controllers.BonusController",
+    "Method": "GetBonusPdfView",
+    "RelativePath": "api/Bonus/get-bonus-pdf-view",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "StartDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "EndDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ecobony.webapi.Controllers.HeaderController",
+    "Method": "Index",
+    "RelativePath": "api/Header",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "ecobony.application.Feauters.Query.Language.GetClientAllCommandRequest",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ecobony.webapi.Controllers.LanguageController",
+    "Method": "Index",
+    "RelativePath": "api/Language",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "ecobony.application.Feauters.Query.Language.GetClientAllCommandRequest",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ecobony.webapi.Controllers.LanguageController",
+    "Method": "Index",
+    "RelativePath": "api/Language/filter",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "isoCode",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ecobony.webapi.Controllers.OTPController",
+    "Method": "Create",
+    "RelativePath": "api/OTP",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "ecobony.application.Feauters.Command.VerificationCodeAsyncCommandRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ecobony.webapi.Controllers.OTPController",
+    "Method": "EmailConfirmed",
+    "RelativePath": "api/OTP/{email}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "email",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ecobony.webapi.Controllers.UserController",
+    "Method": "Index",
+    "RelativePath": "api/User",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "ecobony.application.Feauters.Query.UserDashboardCommandRequest",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ecobony.webapi.Controllers.UserController",
+    "Method": "UpdatePassword",
+    "RelativePath": "api/User",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "ecobony.application.Feauters.Command.UpdatePasswordCommandRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ecobony.webapi.Controllers.WasteController",
+    "Method": "Index",
+    "RelativePath": "api/Waste",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "ecobony.application.Feauters.Query.GetClientWasteAllCommandRequest",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ecobony.webapi.Controllers.WasteController",
+    "Method": "Create",
+    "RelativePath": "api/Waste",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "ecobony.application.Feauters.Command.CreateWasteCommandRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ecobony.webapi.Controllers.WasteController",
+    "Method": "Update",
+    "RelativePath": "api/Waste",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "ecobony.application.Feauters.Command.UpdateWasteCommandRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ecobony.webapi.Controllers.WasteController",
+    "Method": "Index",
+    "RelativePath": "api/Waste/{categoryId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "categoryId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ecobony.webapi.Controllers.WasteController",
+    "Method": "Delete",
+    "RelativePath": "api/Waste/{Id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ecobony.webapi.Controllers.WasteController",
+    "Method": "Restore",
+    "RelativePath": "api/Waste/restore/{Id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "ecobony.application.Feauters.Command.RestoreWasteCommandRequest",
+        "IsRequired": true
+      },
+      {
+        "Name": "Id",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ecobony.webapi.Controllers.WasteController",
+    "Method": "SoftDelete",
+    "RelativePath": "api/Waste/soft-delete/{Id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "ecobony.application.Feauters.Command.SoftWasteCommandRequest",
+        "IsRequired": true
+      },
+      {
+        "Name": "Id",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ecobony.webapi.Controllers.WasteController",
+    "Method": "Index",
+    "RelativePath": "api/Waste/trash",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "ecobony.application.Feauters.Query.GetWasteTrashCommandRequest",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
