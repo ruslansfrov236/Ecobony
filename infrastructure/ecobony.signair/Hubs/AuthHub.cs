@@ -1,8 +1,6 @@
+namespace ecobony.signair.Hubs;
 
-
-namespace ecobony.signair.Services;
-
-public class AuthHubService(UserManager<AppUser> _userManager , IHttpContextAccessor  _contextAccessor):Hub
+public class AuthHub(UserManager<AppUser> _userManager , IHttpContextAccessor  _contextAccessor):Hub
 {
     public static Dictionary<string, string> Users = new();
     public async Task Connect()

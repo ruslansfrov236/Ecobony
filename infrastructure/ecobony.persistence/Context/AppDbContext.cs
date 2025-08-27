@@ -7,7 +7,8 @@ public class AppDbContext(DbContextOptions<AppDbContext> options):IdentityDbCont
     public DbSet<SortingActionTranslation> SortingActionsTranslations { get; set; }
     public DbSet<CategoryTranslation> CategoryTranslations { get; set; }
     public DbSet<WasteSortingMistake> WasteSortingMistakes { get; set; }
-   
+   public DbSet<UserHistory> UserHistories { get; set; }
+    public DbSet<UserTracking> UserTrackings { get; set; }
     public DbSet<SortingAction> SortingActions { get; set; } 
     public DbSet<BonusComunity> BonusComunities { get; set; }
     public DbSet<WasteProcess> WasteProcesses { get; set; }

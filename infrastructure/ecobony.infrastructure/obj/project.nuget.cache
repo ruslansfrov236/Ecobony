@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "eFivn1VLvBU=",
+  "dgSpecHash": "IRp4eQoueU0=",
   "success": true,
   "projectFilePath": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\infrastructure\\ecobony.infrastructure\\ecobony.infrastructure.csproj",
   "expectedPackageFiles": [
@@ -155,6 +155,7 @@
     "C:\\Users\\rusla\\.nuget\\packages\\system.io.packaging\\8.0.1\\system.io.packaging.8.0.1.nupkg.sha512",
     "C:\\Users\\rusla\\.nuget\\packages\\system.io.pipelines\\8.0.0\\system.io.pipelines.8.0.0.nupkg.sha512",
     "C:\\Users\\rusla\\.nuget\\packages\\system.linq\\4.3.0\\system.linq.4.3.0.nupkg.sha512",
+    "C:\\Users\\rusla\\.nuget\\packages\\system.linq.dynamic.core\\1.6.7\\system.linq.dynamic.core.1.6.7.nupkg.sha512",
     "C:\\Users\\rusla\\.nuget\\packages\\system.linq.expressions\\4.1.0\\system.linq.expressions.4.1.0.nupkg.sha512",
     "C:\\Users\\rusla\\.nuget\\packages\\system.management\\7.0.2\\system.management.7.0.2.nupkg.sha512",
     "C:\\Users\\rusla\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",

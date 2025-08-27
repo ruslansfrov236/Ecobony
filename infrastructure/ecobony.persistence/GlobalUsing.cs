@@ -19,6 +19,8 @@ global using ecobony.domain.Dto_s.Token;
 global using Microsoft.AspNetCore.Http;
 global using ecobony.domain.Entities;
 global using Microsoft.AspNetCore.Mvc;
+global using ecobony.domain.Entities.Enum;
+global using System.Linq.Dynamic.Core;
 global using System.Globalization;
 
 global using ecobony.domain.Dto_s;

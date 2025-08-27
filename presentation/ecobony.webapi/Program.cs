@@ -21,10 +21,16 @@ var localizationOptions = new RequestLocalizationOptions
     SupportedUICultures = supportedCultures.Select(x => new CultureInfo(x)).ToList()
 };
 
-builder.Services.AddControllers(options => { options.Filters.Add<ValidationFilter>(); })
+builder.Services.AddControllers(options => { 
+    options.Filters.Add<ValidationFilter>();
+
+})
     .ConfigureApiBehaviorOptions(options => { options.SuppressModelStateInvalidFilter = true; })
     .AddJsonOptions(options =>
     {
+
+        options.JsonSerializerOptions.Converters.Add(new CultureDateTimeConverter());
+        options.JsonSerializerOptions.Converters.Add(new CultureNullableDateTimeConverter());
         options.JsonSerializerOptions.DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull;
         options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
     }).AddViewLocalization();
@@ -60,6 +66,9 @@ app.UseLanguageValidator(app.Services.GetRequiredService<IMemoryCache>(), app.Se
 // Middleware setup
 app.UseMiddleware<LocalizationMiddleware>();
 app.UseMiddleware<GlobalExceptionMiddleware>();
+app.UseMiddleware<RateLimitingMiddleware>();
+app.UseMiddleware<UserTrackingMiddleware>();
+app.UseMiddleware<UserHistoryMiddleware>();
 
 app.UseRouting();
 app.UseAuthentication();

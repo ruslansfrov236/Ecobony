@@ -38,7 +38,6 @@ public static class ServiceRegistration
         service
             .AddScoped<IWasteSortingMistakeTranslationWriteRepository, WasteSortingMistakeTranslationWriteRepository>();
 
-
         service.AddScoped<ISortingActionTranslationReadRepository, SortingActionTranslationReadRepository>();
         service.AddScoped<ISortingActionTranslationWriteRepository, SortingActionTranslationWriteRepository>();
 
@@ -55,6 +54,8 @@ public static class ServiceRegistration
         service.AddScoped<ISortingActionWriteRepository, SortingActionWriteRepository>();
 
         service.AddScoped<IBonusComunityReadRepository, BonusComunityReadRepository>();
+        service.AddScoped<IUserTrackingReadRepository, UserTrackingReadRepository>();
+        service.AddScoped<IUserTrackingWriteRepository, UserTrackingWriteRepository>();
         service.AddScoped<IBonusComunityWriteRepository, BonusComunityWriteRepository>();
 
         service.AddScoped<IWasteProcessReadRepository, WasteProcessReadRepository>();
@@ -62,6 +63,8 @@ public static class ServiceRegistration
 
         service.AddScoped<IBalanceTransferReadRepository, BalanceTransferReadRepository>();
         service.AddScoped<IBalanceTransferWriteRepository, BalanceTransferWriteRepository>();
+        service.AddScoped<IUserHistoryReadRepository, UserHistoryReadRepository>();
+        service.AddScoped<IUserHistoryWriteRepository, UserHistoryWriteRepository>();
         service.AddScoped<IBalanceReadRepository, BalanceReadRepository>();
         service.AddScoped<IBalanceWriteRepository, BalanceWriteRepository>();
 
@@ -79,7 +82,6 @@ public static class ServiceRegistration
 
         service.AddScoped<IBonusReadRepository, BonusReadRepository>();
         service.AddScoped<IBonusWriteRepository, BonusWriteRepository>();
-
         service.AddScoped<IWasteReadRepository, WasteReadRepository>();
         service.AddScoped<IWasteWriteRepository, WasteWriteRepository>();
 
@@ -89,6 +91,7 @@ public static class ServiceRegistration
         #region Service
 
 
+        service.AddTransient<IUserHistoryService, UserHistoryService>();
         service.AddScoped<ICategoryService, CategoryService>();
         service.AddScoped<IHeaderService, HeaderService>();
         service.AddScoped<IWasteService, WasteService>();

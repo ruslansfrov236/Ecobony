@@ -1,10 +1,10 @@
-using ecobony.signair.Services;
+using ecobony.signair.Hubs;
 
 namespace ecobony.persistence.Service;
 
 public class AuthService( 
  UserManager<AppUser>  _userManager,
- AuthHubService _authHub,
+ AuthHub _authHub,
  ITokenService _tokenHandler,
  IConfiguration _configuration,
 HttpClient _httpClient,
