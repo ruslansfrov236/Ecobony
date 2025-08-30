@@ -1,15 +1,18 @@
 using ecobony.application.Services;
 using ecobony.domain.Entities;
 using ecobony.signair.Hubs;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+
 
 namespace ecobony.signair;
 
 public static class ServiceRegistration
 {
-    public static void AddSignairRegistration(this IServiceCollection collection)
+    public static void AddSignairRegistration(this IServiceCollection collection , IConfiguration configuration)
     {
-        collection.AddSignalR();
+        collection.AddSignalR().AddStackExchangeRedis(configuration.GetConnectionString("Reddis")); ;
+
         collection.AddScoped<AuthHub>();
         collection.AddTransient<IUserTrackingService , UserTrackingService>();  
         collection.AddTransient<UserTrackingHub>();

@@ -219,6 +219,9 @@
               },
               "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\core\\ecobony.domain\\ecobony.domain.csproj": {
                 "projectPath": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\core\\ecobony.domain\\ecobony.domain.csproj"
+              },
+              "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\infrastructure\\eco": {
+                "projectPath": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\infrastructure\\eco"
               }
             }
           }
@@ -246,6 +249,10 @@
             "Microsoft.AspNetCore.SignalR.Core": {
               "target": "Package",
               "version": "[1.2.0, )"
+            },
+            "Microsoft.AspNetCore.SignalR.StackExchangeRedis": {
+              "target": "Package",
+              "version": "[9.0.8, )"
             }
           },
           "imports": [

@@ -22,25 +22,31 @@ namespace ecobony.signair.Services
 
 
             var user = await _userManager.FindByNameAsync(username);
-
             var ip = GetClientIp(context);
             if (ip == "::1" || ip == "127.0.0.1")
             {
                 ip = await _httpClient.GetStringAsync("https://api.ipify.org");
 
             }
-                var userAgent = context.Request.Headers["User-Agent"].ToString();
+
+            var userAgent = context.Request.Headers["User-Agent"].ToString();
             var query = context.Request.QueryString.ToString();
             var referer = context.Request.Headers["Referer"].ToString();
             var response = await _httpClient.GetStringAsync($"https://ipinfo.io/{ip}/json");
             var result = JsonSerializer.Deserialize<UserTracking>(response);
+
+            if (user is not null)
+            {
+
+            }
+          
 
                 var userTracking = new UserTracking
                 {
                     Ip = ip,
                     Path = path,
                     UserAgent = userAgent,
-                    UserId = user.Id,
+                    UserId = user?.Id,
                     UserName = username,
                     Query = query,
                     Referer = referer,
