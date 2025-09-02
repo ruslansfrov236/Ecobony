@@ -22,7 +22,7 @@ namespace ecobony.webapi.Filter
         {
             var ip = GetClientIp(context);
 
-            // Əgər localhost-dursa - xarici IP-ni bir dəfə götür və cache-də saxla
+          
             if (ip == "::1" || ip == "127.0.0.1")
             {
                 if (!_cache.TryGetValue("ServerPublicIP", out string publicIp))
@@ -44,14 +44,14 @@ namespace ecobony.webapi.Filter
                     return;
                 }
                 info.Count++;
-                _cache.Set(key, info, info.ExpireAt - DateTime.UtcNow); // expiry dəyişmir
+                _cache.Set(key, info, info.ExpireAt - DateTime.UtcNow.ToLocalTime()); 
             }
             else
             {
                 _cache.Set(key, new RateLimitInfo
                 {
                     Count = 1,
-                    ExpireAt = DateTime.UtcNow.Add(LimitWindow)
+                    ExpireAt = DateTime.UtcNow.ToLocalTime().Add(LimitWindow)
                 }, LimitWindow);
             }
 
