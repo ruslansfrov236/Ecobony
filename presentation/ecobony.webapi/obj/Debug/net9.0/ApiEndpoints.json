@@ -515,7 +515,7 @@
   },
   {
     "ContainingType": "ecobony.webapi.Areas.Controllers.LanguageController",
-    "Method": "Index",
+    "Method": "GetAll",
     "RelativePath": "api/Admin/Language",
     "HttpMethod": "GET",
     "IsController": true,
@@ -608,7 +608,7 @@
   },
   {
     "ContainingType": "ecobony.webapi.Areas.Controllers.LanguageController",
-    "Method": "Index",
+    "Method": "GetById",
     "RelativePath": "api/Admin/Language/{Id}",
     "HttpMethod": "GET",
     "IsController": true,
@@ -809,6 +809,122 @@
         "Name": "userId",
         "Type": "System.String",
         "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ecobony.webapi.Areas.Controllers.UserHistoryController",
+    "Method": "Index",
+    "RelativePath": "api/Admin/UserHistory",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "ecobony.application.Feauters.Query.UserHistory.GetUserHistoryAdminQueryRequest",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ecobony.webapi.Areas.Controllers.UserHistoryController",
+    "Method": "GetActionStatisticsAsync",
+    "RelativePath": "api/Admin/UserHistory/get-action-statistics",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "StartDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "EndDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ecobony.webapi.Areas.Controllers.UserHistoryController",
+    "Method": "GetActionTypeAsync",
+    "RelativePath": "api/Admin/UserHistory/get-action-type",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ActionType",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ecobony.webapi.Areas.Controllers.UserHistoryController",
+    "Method": "Index",
+    "RelativePath": "api/Admin/UserHistory/get-by-user/{userId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ecobony.webapi.Areas.Controllers.UserHistoryController",
+    "Method": "GetPagedResult",
+    "RelativePath": "api/Admin/UserHistory/get-page-result",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "sortBy",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "isDescending",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ecobony.webapi.Areas.Controllers.UserHistoryController",
+    "Method": "Search",
+    "RelativePath": "api/Admin/UserHistory/search",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "keyword",
+        "Type": "System.String",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []

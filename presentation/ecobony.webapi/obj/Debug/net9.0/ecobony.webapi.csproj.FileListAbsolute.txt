@@ -38,6 +38,8 @@ C:\Users\rusla\Documents\Web\ecobony\ecobony\presentation\ecobony.webapi\bin\Deb
 C:\Users\rusla\Documents\Web\ecobony\ecobony\presentation\ecobony.webapi\bin\Debug\net9.0\MediatR.dll
 C:\Users\rusla\Documents\Web\ecobony\ecobony\presentation\ecobony.webapi\bin\Debug\net9.0\MediatR.Contracts.dll
 C:\Users\rusla\Documents\Web\ecobony\ecobony\presentation\ecobony.webapi\bin\Debug\net9.0\MediatR.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\rusla\Documents\Web\ecobony\ecobony\presentation\ecobony.webapi\bin\Debug\net9.0\MessagePack.dll
+C:\Users\rusla\Documents\Web\ecobony\ecobony\presentation\ecobony.webapi\bin\Debug\net9.0\MessagePack.Annotations.dll
 C:\Users\rusla\Documents\Web\ecobony\ecobony\presentation\ecobony.webapi\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\rusla\Documents\Web\ecobony\ecobony\presentation\ecobony.webapi\bin\Debug\net9.0\Microsoft.AspNetCore.Cryptography.Internal.dll
 C:\Users\rusla\Documents\Web\ecobony\ecobony\presentation\ecobony.webapi\bin\Debug\net9.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
@@ -45,6 +47,7 @@ C:\Users\rusla\Documents\Web\ecobony\ecobony\presentation\ecobony.webapi\bin\Deb
 C:\Users\rusla\Documents\Web\ecobony\ecobony\presentation\ecobony.webapi\bin\Debug\net9.0\Microsoft.AspNetCore.Identity.UI.dll
 C:\Users\rusla\Documents\Web\ecobony\ecobony\presentation\ecobony.webapi\bin\Debug\net9.0\Microsoft.AspNetCore.OpenApi.dll
 C:\Users\rusla\Documents\Web\ecobony\ecobony\presentation\ecobony.webapi\bin\Debug\net9.0\Microsoft.AspNetCore.Razor.Language.dll
+C:\Users\rusla\Documents\Web\ecobony\ecobony\presentation\ecobony.webapi\bin\Debug\net9.0\Microsoft.AspNetCore.SignalR.StackExchangeRedis.dll
 C:\Users\rusla\Documents\Web\ecobony\ecobony\presentation\ecobony.webapi\bin\Debug\net9.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\rusla\Documents\Web\ecobony\ecobony\presentation\ecobony.webapi\bin\Debug\net9.0\Microsoft.Build.dll
 C:\Users\rusla\Documents\Web\ecobony\ecobony\presentation\ecobony.webapi\bin\Debug\net9.0\Microsoft.Build.Framework.dll

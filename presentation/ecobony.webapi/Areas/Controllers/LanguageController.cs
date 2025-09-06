@@ -6,16 +6,16 @@ namespace ecobony.webapi.Areas.Controllers;
 public class LanguageController(IMediator _mediator):ControllerBase
 {
     [HttpGet]
-    public async Task<IActionResult> Index([FromQuery]GetAdminAllCommandRequest request)
+    public async Task<IActionResult> GetAll([FromQuery] GetAdminAllCommandRequest request)
     {
-        GetAdminAllCommandResponse response = await _mediator.Send(request);
+        var response = await _mediator.Send(request);
         return Ok(response);
     }
 
     [HttpGet("{Id}")]
-    public async Task<IActionResult> Index([FromRoute]GetByIdCommandRequest request )
+    public async Task<IActionResult> GetById([FromRoute] GetByIdCommandRequest request)
     {
-        GetByIdCommandResponse response = await _mediator.Send(request);
+        var response = await _mediator.Send(request);
         return Ok(response);
     }
 

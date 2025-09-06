@@ -1,0 +1,2 @@
+wwwroot\assets\img\image-1.png
+wwwroot\assets\img\image-2.png

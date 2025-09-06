@@ -2,14 +2,9 @@
 
 namespace ecobony.webapi.Filter
 {
-    public class CompressResponseMiddleware
+    public class CompressResponseMiddleware(RequestDelegate _next)
     {
-        private readonly RequestDelegate _next;
-
-        public CompressResponseMiddleware(RequestDelegate next)
-        {
-            _next = next;
-        }
+       
 
         public async Task InvokeAsync(HttpContext context)
         {

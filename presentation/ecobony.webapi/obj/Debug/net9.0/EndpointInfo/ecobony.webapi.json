@@ -1518,6 +1518,165 @@
         }
       }
     },
+    "/api/Admin/UserHistory": {
+      "get": {
+        "tags": [
+          "UserHistory"
+        ],
+        "parameters": [
+          {
+            "name": "request",
+            "in": "query",
+            "schema": {
+              "$ref": "#/components/schemas/GetUserHistoryAdminQueryRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Admin/UserHistory/get-by-user/{userId}": {
+      "get": {
+        "tags": [
+          "UserHistory"
+        ],
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Admin/UserHistory/search": {
+      "get": {
+        "tags": [
+          "UserHistory"
+        ],
+        "parameters": [
+          {
+            "name": "keyword",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Admin/UserHistory/get-page-result": {
+      "get": {
+        "tags": [
+          "UserHistory"
+        ],
+        "parameters": [
+          {
+            "name": "pageNumber",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "sortBy",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "isDescending",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Admin/UserHistory/get-action-statistics": {
+      "get": {
+        "tags": [
+          "UserHistory"
+        ],
+        "parameters": [
+          {
+            "name": "StartDate",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "EndDate",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Admin/UserHistory/get-action-type": {
+      "get": {
+        "tags": [
+          "UserHistory"
+        ],
+        "parameters": [
+          {
+            "name": "ActionType",
+            "in": "query",
+            "schema": {
+              "$ref": "#/components/schemas/ActionType"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Waste": {
       "get": {
         "tags": [
@@ -1768,6 +1927,15 @@
   },
   "components": {
     "schemas": {
+      "ActionType": {
+        "enum": [
+          "All",
+          "Create",
+          "Update",
+          "Delete"
+        ],
+        "type": "string"
+      },
       "AssignRoleToUserAsyncCommandRequest": {
         "type": "object",
         "properties": {
@@ -1895,6 +2063,10 @@
         "additionalProperties": false
       },
       "GetRoleAllCommandRequest": {
+        "type": "object",
+        "additionalProperties": false
+      },
+      "GetUserHistoryAdminQueryRequest": {
         "type": "object",
         "additionalProperties": false
       },
