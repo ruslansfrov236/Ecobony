@@ -6,6 +6,7 @@ namespace ecobony.webapi.Areas.Controllers;
 public class LanguageController(IMediator _mediator):ControllerBase
 {
     [HttpGet]
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Admin,Manager")]
     public async Task<IActionResult> GetAll([FromQuery] GetAdminAllCommandRequest request)
     {
         var response = await _mediator.Send(request);
@@ -13,6 +14,7 @@ public class LanguageController(IMediator _mediator):ControllerBase
     }
 
     [HttpGet("{Id}")]
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Admin,Manager")]
     public async Task<IActionResult> GetById([FromRoute] GetByIdCommandRequest request)
     {
         var response = await _mediator.Send(request);
@@ -20,6 +22,7 @@ public class LanguageController(IMediator _mediator):ControllerBase
     }
 
     [HttpPost]
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Admin")]
     public async Task<IActionResult> Create([FromForm] CreateLanguageCommandRequest request)
     { 
         CreateLanguageCommandResponse response = await _mediator.Send(request);
@@ -27,6 +30,7 @@ public class LanguageController(IMediator _mediator):ControllerBase
     }
 
     [HttpPut]
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Admin")]
     public async Task<IActionResult> Update([FromForm] UpdateLanguageCommandRequest request)
     {
         UpdateLanguageCommandResponse response = await _mediator.Send(request);
@@ -34,6 +38,7 @@ public class LanguageController(IMediator _mediator):ControllerBase
     }
 
     [HttpPut("soft-delete/{Id}")]
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Admin")]
     public async Task<IActionResult> SoftDelete([FromRoute] SoftDeleteCommandRequest request)
     {
         SoftDeleteCommandResponse response = await _mediator.Send(request);
@@ -41,6 +46,7 @@ public class LanguageController(IMediator _mediator):ControllerBase
     }
 
     [HttpPut("restore/{Id}")]
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Admin")]
     public async Task<IActionResult> Restore([FromRoute]RestoreCommandRequest request)
     {
         RestoreCommandResponse response = await _mediator.Send(request);
@@ -48,6 +54,7 @@ public class LanguageController(IMediator _mediator):ControllerBase
     }
 
     [HttpDelete("delete/{Id}")]
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Admin")]
     public async Task<IActionResult> Delete(DeleteCommandRequest request)
     {
         DeleteCommandResponse response = await _mediator.Send(request);

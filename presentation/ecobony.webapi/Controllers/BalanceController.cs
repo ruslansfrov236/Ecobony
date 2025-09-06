@@ -8,6 +8,7 @@ namespace ecobony.webapi.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Admin,Manager, User")]
     public class BalanceController(IMediator mediator) : ControllerBase
     {
 

@@ -7,6 +7,7 @@ namespace ecobony.webapi.Areas.Controllers;
 [Area("Admin")]
 [Route("api/[area]/[controller]")]
 [ApiController]
+[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Admin,Manager")]
 public class WasteController(IMediator mediator):ControllerBase
 {
     [HttpGet]

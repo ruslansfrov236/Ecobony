@@ -5,9 +5,9 @@ namespace ecobony.webapi.Controllers;
 public class HeaderController(IMediator mediator):ControllerBase
 {
     [HttpGet]
-    public async Task<IActionResult> Index([FromQuery] GetClientAllCommandRequest request)
+    public async Task<IActionResult> Index([FromQuery] GetHeaderClientAllCommandRequest request)
     {
-        GetClientAllCommandResponse response = await mediator.Send(request);
+        GetHeaderClientAllCommandResponse response = await mediator.Send(request);
 
         return Ok(response);
     }

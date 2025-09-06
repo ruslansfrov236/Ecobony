@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace ecobony.webapi.Controllers;
 [Route("api/[controller]")]
 [ApiController]
+[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Admin,Manager")]
 public class UserController(IMediator mediator):ControllerBase
 {
    [HttpGet]

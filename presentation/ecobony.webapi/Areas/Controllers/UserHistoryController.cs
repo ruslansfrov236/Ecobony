@@ -9,6 +9,7 @@ namespace ecobony.webapi.Areas.Controllers
     [Area("Admin")]
     [Route("api/[area]/[controller]")]
     [ApiController]
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Admin,Manager")]
     public class UserHistoryController(IMediator mediator) : ControllerBase
     {
         [HttpGet]
@@ -46,6 +47,7 @@ namespace ecobony.webapi.Areas.Controllers
             return Ok(response);
         }
         [HttpGet("get-action-type")]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Admin,Manager")]
         public async Task<IActionResult> GetActionTypeAsync([FromQuery]GetByActionTypeQueryRequest request)
         {
             GetByActionTypeQueryResponse response = await mediator.Send(request);

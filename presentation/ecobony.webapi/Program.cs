@@ -13,6 +13,7 @@ builder.Services.AddPersistenceRegistration();
 builder.Services.AddApplicationRegistration();
 builder.Services.AddInfrastructureRegistration();
 builder.Services.AddSignairRegistration(builder.Configuration);
+builder.Services.AddJwtAuthorizeRegistration(builder.Configuration);
 builder.Services.AddMemoryCache();
 
 var supportedCultures = new[] { "az-AZ", "en-US", "ru-RU" };

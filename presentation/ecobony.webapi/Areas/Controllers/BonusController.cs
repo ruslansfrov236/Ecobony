@@ -1,6 +1,3 @@
-using ecobony.application.Feauters.Command;
-using ecobony.application.Feauters.Query;
-using Microsoft.AspNetCore.Mvc;
 
 namespace ecobony.webapi.Areas.Controllers;
 [Area("Admin")]
@@ -9,6 +6,8 @@ namespace ecobony.webapi.Areas.Controllers;
 public class BonusController(IMediator mediator):ControllerBase
 {
    [HttpGet]
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Admin,Manager")]
+
     public async Task<IActionResult> Index([FromQuery]GetAdminBonusAllCommandRequest request)
     {
         GetAdminBonusAllCommandResponse response = await mediator.Send(request);
@@ -16,6 +15,7 @@ public class BonusController(IMediator mediator):ControllerBase
     }
 
     [HttpPost("{wasteId}")]
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Admin")]
     public async Task<IActionResult> Create([FromRoute]CreateBonusCommandRequest request)
     {
         CreateBonusCommandResponse response = await mediator.Send(request);
@@ -23,18 +23,21 @@ public class BonusController(IMediator mediator):ControllerBase
     }
 
     [HttpPut("soft-delete/{Id}")]
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Admin")]
     public async Task<IActionResult> SoftDelete([FromRoute] SoftBonusCommandRequest request)
     {
       SoftBonusCommandResponse  response = await mediator.Send(request);
         return Ok(response);
     }
     [HttpPut("restore-delete/{Id}")]
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Admin")]
     public async Task<IActionResult> RestoreDelete([FromRoute] RestoreBonusCommandRequest request)
     {
         RestoreBonusCommandResponse  response = await mediator.Send(request);
         return Ok(response);
     }
     [HttpDelete("delete/{Id}")]
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Admin")]
     public async Task<IActionResult> Delete([FromRoute] DeleteBonusCommandRequest request)
     {
         DeleteBonusCommandResponse  response = await mediator.Send(request);

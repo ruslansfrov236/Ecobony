@@ -9,31 +9,36 @@ namespace ecobony.webapi.Areas.Controllers;
 public class RoleController(IMediator mediator):ControllerBase
 {
    [HttpGet]
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Admin,Manager")]
     public async Task<IActionResult> Index([FromQuery]GetRoleAllCommandRequest request)
     {
         GetRoleAllCommandResponse response = await mediator.Send(request);
         return Ok(response);
     }
-    [HttpGet("{Id}")]
+    [HttpGet("(get-by-id)/{Id}")]
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Admin,Manager")]
     public async Task<IActionResult> Index([FromQuery]GetRoleByIdCommandRequest request)
     {
         GetRoleByIdCommandResponse response = await mediator.Send(request);
         return Ok(response);
     }
-    [HttpPost]
+    [HttpPost("create")]
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Admin")]
     public async Task<IActionResult> Create([FromBody]CreateRoleCommandRequest request)
     {
         CreateRoleCommandResponse response = await mediator.Send(request);
         return Ok(response);
     }
-    [HttpPut]
-    public async Task<IActionResult> Create([FromBody]UpdateRoleCommandRequest request)
+    [HttpPut("update")]
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Admin")]
+    public async Task<IActionResult> Update([FromBody]UpdateRoleCommandRequest request)
     {
         UpdateRoleCommandResponse response = await mediator.Send(request);
         
         return Ok(response);
     }
     [HttpDelete("delete/{Id}")]
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Admin")]
     public async Task<IActionResult> Delete([FromRoute]DeleteRoleCommandRequest request)
     {
         DeleteRoleCommandResponse response = await mediator.Send(request);
