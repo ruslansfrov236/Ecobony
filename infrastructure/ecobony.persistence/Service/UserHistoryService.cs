@@ -4,6 +4,8 @@
 
 
 
+using System.Linq.Expressions;
+
 namespace ecobony.persistence.Service
 {
     public class UserHistoryService(IUserHistoryReadRepository _read, IUserHistoryWriteRepository _write, UserManager<AppUser> _manager, IHttpContextAccessor _contextAccessor,
@@ -66,7 +68,7 @@ namespace ecobony.persistence.Service
                     }
                     catch
                     {
-                        result = new UserHistory(); // boş obyekt saxlanacaq
+                        result = new UserHistory(); 
                     }
                 }
                 var history = new UserHistory()
@@ -194,29 +196,79 @@ namespace ecobony.persistence.Service
         public async Task<int> GetOnlineUserCountAsync()
         => await  _manager.Users.Where(a => a.IsOnline == true).CountAsync();
 
-        public Task<PagedResult<UserHistory>> GetPagedAsync(int pageNumber, int pageSize, string sortBy, bool isDescending)
+      
+public async Task<domain.Dto_s.PagedResult<UserHistory>> GetPagedAsync(int pageNumber, int pageSize, string sortBy, bool isDescending)
+    {
+        if (pageNumber < 1) pageNumber = 1;
+
+            var query = _read.GetAll();
+
+        
+        var parameter = Expression.Parameter(typeof(UserHistory), "x");
+        var property = Expression.Property(parameter, sortBy);
+        var lambda = Expression.Lambda(property, parameter);
+
+        var orderByMethod = isDescending ? "OrderByDescending" : "OrderBy";
+        var orderByExpression = Expression.Call(
+            typeof(Queryable),
+            orderByMethod,
+            new Type[] { typeof(UserHistory), property.Type },
+            query.Expression,
+            Expression.Quote(lambda)
+        );
+
+        query = query.Provider.CreateQuery<UserHistory>(orderByExpression);
+
+        var totalCount = await query.CountAsync();
+
+        var items = await query
+            .Skip((pageNumber - 1) * pageSize)
+            .Take(pageSize)
+            .ToListAsync();
+
+            return new domain.Dto_s.PagedResult<UserHistory>
         {
-            throw new NotImplementedException();
+           
+
+            TotalCount = totalCount,
+            PageSize = pageSize,
+            PageNumber = pageNumber,
+            Items = items
+        };
+    }
+
+        public async Task<List<UserHistory>> GetSuspiciousActivitiesAsync(DateTime startDate, DateTime endDate)
+        {
+            var activities = await _read.GetFilter(x => x.CreateAt >= startDate && x.CreateAt <= endDate)
+      .ToListAsync();
+
+          
+            var suspiciousUsers = activities
+                .GroupBy(x => x.UserId)
+                .Where(g => g.Count() >= 10) 
+                .SelectMany(g => g) 
+                .ToList();
+
+            return suspiciousUsers;
         }
 
-        public Task<List<UserHistory>> GetSuspiciousActivitiesAsync(DateTime startDate, DateTime endDate)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<int> GetTotalActionCountAsync()
-        {
-            throw new NotImplementedException();
-        }
+        public async Task<int> GetTotalActionCountAsync()
+        => await _manager.Users.CountAsync();
 
         public Task<bool> LogUserActionAsync(LogUserActionDto_s model)
         {
             throw new NotImplementedException();
         }
 
-        public Task<bool> RestoreDelete(string id)
+        public async Task<bool> RestoreDelete(string id)
         {
-            throw new NotImplementedException();
+
+            var history = await _read.GetSingleAsync(a => a.isDeleted == true && a.Id == Guid.Parse(id)) ?? throw new NotFoundException("User histoy is not found");
+
+            history.isDeleted = false;
+            _write.Update(history);
+            await _write.SaveChangegesAsync();
+            return true;
         }
 
         public async Task<List<UserHistory>> SearchAsync(string keyword)
@@ -227,9 +279,15 @@ namespace ecobony.persistence.Service
     
         
 
-        public Task<bool> SoftDelete(string id)
+        public async Task<bool> SoftDelete(string id)
         {
-            throw new NotImplementedException();
+            var history = await _read.GetSingleAsync(a => a.isDeleted == false && a.Id == Guid.Parse(id)) ?? throw new NotFoundException("User histoy is not found");
+
+            history.isDeleted = true;
+            _write.Update(history);
+         await   _write.SaveChangegesAsync();
+            return true;
+          
         }
     }
 }

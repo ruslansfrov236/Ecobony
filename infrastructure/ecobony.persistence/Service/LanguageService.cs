@@ -1,4 +1,4 @@
-namespace ecobony.persistence.Service;
+﻿namespace ecobony.persistence.Service;
 
 public class LanguageService(
     ILanguageReadRepository _languageRead,
@@ -10,29 +10,36 @@ public class LanguageService(
 {
     public async Task<List<Language>> GetCLientAll()
     {
-        var latestUpdateAt = await _languageRead.GetFilter
-                (x => !x.isDeleted)
-            .MaxAsync(x =>
-                (DateTime?)(
-                    (x.UpdateAt > x.CreateAt ? x.UpdateAt : x.CreateAt))
-            );
 
-        string cacheKey = $"languages_{latestUpdateAt}";
-        if (_memoryCache.TryGetValue(cacheKey, out (DateTime lastUpdate, List<Language> data) cachedData))
+        var latestUpdateAt = await _languageRead.GetFilter(x => !x.isDeleted)
+         .MaxAsync(x => (DateTime?)(
+             x.UpdateAt > x.CreateAt ? x.UpdateAt : x.CreateAt
+         ));
+
+
+
+        string cacheKey = "languages_cache";
+
+        // Cache-də varsa və hələ expired deyil → qaytar
+        if (_memoryCache.TryGetValue(cacheKey, out List<Language>? cachedLanguages))
         {
-            if (cachedData.lastUpdate>=latestUpdateAt)
+            // Əgər cacheExpiry artıq keçibsə → DB-dən yenilə
+            if (latestUpdateAt <= DateTime.UtcNow.ToLocalTime())
             {
-                return cachedData.data; 
-            }
-        }
-        var language = await _languageRead.GetFilter(a => a.isDeleted == false).ToListAsync();
-        
-        _memoryCache.Set(cacheKey, (latestUpdateAt, language), new MemoryCacheEntryOptions
-        {
-            AbsoluteExpirationRelativeToNow = TimeSpan.FromMinutes(10)
-        });
+                cachedLanguages = await _languageRead.GetAll().ToListAsync();
 
-        return language;
+                // Yeni məlumatı cache-ə əlavə et, expiration 1 dəqiqə kimi qoya bilərsən
+                _memoryCache.Set(cacheKey, cachedLanguages, TimeSpan.FromMinutes(10));
+            }
+
+            return cachedLanguages;
+        }
+
+        // Cache-də yoxdursa → DB-dən götür və cache-ə əlavə et
+        var languages =  await _languageRead.GetAll().ToListAsync(); ;
+        _memoryCache.Set(cacheKey, languages, TimeSpan.FromMinutes(10));
+        return languages;
+
     }
 
 
@@ -47,13 +54,7 @@ public class LanguageService(
             );
 
         string cacheKey = $"languages_{latestUpdateAt}";
-        if (_memoryCache.TryGetValue(cacheKey, out (DateTime lastUpdate, List<Language> data) cachedData))
-        {
-            if (cachedData.lastUpdate>=latestUpdateAt)
-            {
-                return cachedData.data; 
-            }
-        }
+       
         var languages =await _languageRead.GetAll().ToListAsync();
         _memoryCache.Set(cacheKey, (latestUpdateAt, languages), new MemoryCacheEntryOptions
         {

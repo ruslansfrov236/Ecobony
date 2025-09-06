@@ -7260,7 +7260,6 @@
   },
   "projectFileDependencyGroups": {
     "net9.0": [
-      "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\infrastructure\\eco",
       "Microsoft.AspNetCore.SignalR >= 1.2.0",
       "Microsoft.AspNetCore.SignalR.Core >= 1.2.0",
       "Microsoft.AspNetCore.SignalR.StackExchangeRedis >= 9.0.8",
@@ -7305,9 +7304,6 @@
             },
             "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\core\\ecobony.domain\\ecobony.domain.csproj": {
               "projectPath": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\core\\ecobony.domain\\ecobony.domain.csproj"
-            },
-            "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\infrastructure\\eco": {
-              "projectPath": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\infrastructure\\eco"
             }
           }
         }
@@ -7360,16 +7356,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1104",
-      "level": "Error",
-      "message": "Unable to find project 'C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\infrastructure\\eco'. Check that the project reference is valid and that the project file exists.",
-      "libraryId": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\infrastructure\\eco",
-      "targetGraphs": [
-        "net9.0"
-      ]
-    }
-  ]
+  }
 }

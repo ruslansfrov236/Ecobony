@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "dgSpecHash": "DFQLKlO9oJ0=",
-  "success": false,
+  "dgSpecHash": "vCFiTzbzIOg=",
+  "success": true,
   "projectFilePath": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\infrastructure\\ecobony.signair\\ecobony.signair.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\rusla\\.nuget\\packages\\fluentvalidation\\12.0.0-preview1\\fluentvalidation.12.0.0-preview1.nupkg.sha512",
@@ -146,17 +146,5 @@
     "C:\\Users\\rusla\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\rusla\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1104",
-      "level": "Error",
-      "message": "Unable to find project 'C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\infrastructure\\eco'. Check that the project reference is valid and that the project file exists.",
-      "projectPath": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\infrastructure\\ecobony.signair\\ecobony.signair.csproj",
-      "filePath": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\infrastructure\\ecobony.signair\\ecobony.signair.csproj",
-      "libraryId": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\infrastructure\\eco",
-      "targetGraphs": [
-        "net9.0"
-      ]
-    }
-  ]
+  "logs": []
 }

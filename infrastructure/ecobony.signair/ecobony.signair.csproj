@@ -21,7 +21,7 @@
     <ItemGroup>
       <ProjectReference Include="..\..\core\ecobony.application\ecobony.application.csproj" />
 		<ProjectReference Include="..\..\core\ecobony.domain\ecobony.domain.csproj" />
-		<ProjectReference Include="..\eco" />
+		
     </ItemGroup>
 
 </Project>
