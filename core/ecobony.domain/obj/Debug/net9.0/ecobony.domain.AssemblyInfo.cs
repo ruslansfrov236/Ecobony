@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ecobony.domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fac4d1321ae44417b08d67e444bb6e0d574ddc01")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e1c4be1909527c4cc46635461ae3f15bd2ac2fee")]
 [assembly: System.Reflection.AssemblyProductAttribute("ecobony.domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ecobony.domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

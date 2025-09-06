@@ -1,11 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Linq.Dynamic.Core;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ecobony.application.Services
+﻿
+namespace ecobony.application
 {
     public interface IUserHistoryService
     {
@@ -28,7 +22,7 @@ namespace ecobony.application.Services
 
         // Statistik hesabatlar
         Task<int> GetTotalActionCountAsync();
-        Task<int> GetLoginCountAsync(DateTime startDate, DateTime endDate);
+        
         Task<Dictionary<ActionType, int>> GetActionStatisticsAsync(DateTime startDate, DateTime endDate);
         Task<Dictionary<DateTime, int>> GetDailyActivityAsync(DateTime startDate, DateTime endDate);
 
@@ -37,10 +31,7 @@ namespace ecobony.application.Services
         Task<List<UserHistory>> GetSuspiciousActivitiesAsync(DateTime startDate, DateTime endDate);
         Task<bool> LogUserActionAsync(LogUserActionDto_s model);
 
-        // Real-time online istifadəçilər
        
-       
-        Task<int> GetOnlineUserCountAsync();
     }
 
 }

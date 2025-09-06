@@ -12,9 +12,9 @@ namespace ecobony.domain.Entities
         public string? Ip { get; set; }
 
         public string? UserName { get; set; }
-        public AppUser User { get; set; }
+        public AppUser? User { get; set; }
 
-        public string UserId { get; set; }
+        public string? UserId { get; set; }
 
         [JsonPropertyName("city")]
         public string? City { get; set; }

@@ -23,6 +23,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <Folder Include="Feauters\Command\UserHistory\DeleteUserHistory\" />
       <Folder Include="Feauters\Query\OTP\" />
     </ItemGroup>
 
