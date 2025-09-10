@@ -1,5 +1,8 @@
 
 
+using DocumentFormat.OpenXml.InkML;
+using Microsoft.AspNetCore.Http;
+
 namespace ecobony.persistence.Service; 
 public class BonusService(
     IBonusComunityReadRepository _bonusComunityRead,
@@ -242,6 +245,7 @@ public class BonusService(
 
     public async Task<bool> Create(string wasteId)
     {
+        var httpContext = _contextAccessor.HttpContext;
         if (!Guid.TryParse(wasteId, out _))
             throw new BadRequestException($"Invalid GUID format: '{wasteId}'");
 
@@ -256,7 +260,13 @@ public class BonusService(
                     ?? throw new NotFoundException("Waste not found");
 
         var bonus = await _bonusRead.GetSingleAsync(a => a.UserId == user.Id && a.isDeleted==false);
+        var idempotencyKey = httpContext.Request.Headers["Idempotency-Key"].FirstOrDefault();
 
+        if (string.IsNullOrEmpty(idempotencyKey))
+        {
+            throw new BadRequestException("Idempotency-Key header is required.");
+         
+        }
         if (bonus is null)
         {
             bonus = new Bonus
@@ -279,6 +289,7 @@ public class BonusService(
                 BonusId = bonus.Id,
                 Score = waste.Score,
                 PricePoint= waste.PricePoint,
+                IdempotencyKey= idempotencyKey,
             };
             await _bonusComunityWrite.AddAsync(bonusCommunity);
         }
@@ -286,6 +297,7 @@ public class BonusService(
         {
             bonusCommunity.Score += waste.Score;
             bonusCommunity.PricePoint += waste.PricePoint;
+            bonusCommunity.IdempotencyKey = idempotencyKey;
             _bonusComunityWrite.Update(bonusCommunity); 
         }
 

@@ -1,9 +1,4 @@
 ﻿
-using ecobony.webapi.Localization;
-using Microsoft.AspNetCore.ResponseCompression;
-using Microsoft.Extensions.Caching.Memory;
-using Microsoft.Extensions.Localization;
-using System.IO.Compression;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -27,6 +22,7 @@ var localizationOptions = new RequestLocalizationOptions
 builder.Services.AddControllers(options => { 
     options.Filters.Add<ValidationFilter>();
     options.Filters.Add<UserTrackingActionFilter>();
+    options.Filters.Add<IdempotencyActionFilter>();
 
 })
     .ConfigureApiBehaviorOptions(options => { options.SuppressModelStateInvalidFilter = true; })

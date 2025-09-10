@@ -1,5 +1,6 @@
 
 using ecobony.domain.Entities.Enum;
+using Microsoft.AspNetCore.Http;
 
 namespace ecobony.persistence.Service
 {
@@ -17,12 +18,20 @@ namespace ecobony.persistence.Service
     {
         public async Task<bool> Create(string bonusId, decimal bonus)
         {
+
             var username = _contextAccessor?.HttpContext?.User?.Identity?.Name;
             if (string.IsNullOrEmpty(username))
                 throw new UnauthorizedAccessException("User not authenticated");
 
             var user = await userManager.FindByNameAsync(username) ?? throw new NotFoundException("User not found");
 
+            var idempotencyKey = _contextAccessor?.HttpContext?.Request.Headers["Idempotency-Key"].FirstOrDefault();
+
+            if (string.IsNullOrEmpty(idempotencyKey))
+            {
+                throw new BadRequestException("Idempotency-Key header is required.");
+
+            }
             if (!Guid.TryParse(bonusId, out _))
                 throw new BadRequestException($"Invalid GUID format: '{bonusId}'");
 
@@ -60,6 +69,7 @@ namespace ecobony.persistence.Service
 
                 if (balanceTransferCheck is not null)
                 {
+                    balanceTransferCheck.IdempotencyKey = idempotencyKey;
                     balanceTransferCheck.Amount += bonus;
                     balanceTransferWrite.Update(balanceTransferCheck);
                     await balanceTransferWrite.SaveChangegesAsync();
@@ -71,7 +81,8 @@ namespace ecobony.persistence.Service
                     {
                         BalanceId = balance.Id,
                         Valyuta = Valyuta.AZN,
-                        LastUpdated = DateTime.UtcNow,
+                        LastUpdated = DateTime.UtcNow.ToLocalTime(),
+                        IdempotencyKey= idempotencyKey, 
                         Amount = bonus
                     };
 
