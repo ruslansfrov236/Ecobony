@@ -10,6 +10,7 @@ public class BonusService(
     IBonusReadRepository _bonusRead,
     IBonusWriteRepository _bonusWrite,
     ICategoryReadRepository _categoryRead,
+    ILanguageJsonService languageJsonService,
     IWasteReadRepository _wasteRead,
     UserManager<AppUser> _userManager,
     IHttpContextAccessor _contextAccessor,
@@ -47,9 +48,9 @@ public class BonusService(
 
     public async Task<List<BonusComunity>> GetClientAll()
     {
-        var languageCode = _contextAccessor?.HttpContext?.Session?.GetString("Language");
+        var languageCode = CultureInfo.CurrentCulture.TwoLetterISOLanguageName;
 
-        var language = await _languageRead.GetSingleAsync(a => a.IsoCode == languageCode);
+        var language = await _languageRead.GetSingleAsync(a => a.IsoCode == languageCode && a.isDeleted==false);
 
         var latestUpdateAt = await _bonusComunityRead.GetFilter
                 (x => !x.isDeleted)
@@ -69,12 +70,12 @@ public class BonusService(
 
         var username =  _contextAccessor?.HttpContext?.User?.Identity?.Name;
         if (string.IsNullOrEmpty(username))
-            throw new UnauthorizedAccessException("User not authenticated");
+            throw new UnauthorizedAccessException(languageJsonService.LanguageStrongJson("Unauthorized"));
 
         AppUser user = await _userManager.FindByNameAsync(username) ?? throw new NotFoundException();
 
-        var bs = await _bonusRead.GetSingleAsync(a => a.UserId == user.Id) ?? throw new NotFoundException();
-        var bonus = await _bonusComunityRead.GetAll().Include(a => a.Bonus).Where(a=>a.BonusId==bs.Id && a.isDeleted==true).ToListAsync();
+        var bs = await _bonusRead.GetSingleAsync(a => a.UserId == user.Id && a.isDeleted==false) ?? throw new NotFoundException(languageJsonService.LanguageStrongJson("NotFound"));
+        var bonus = await _bonusComunityRead.GetAll().Include(a => a.Bonus).Where(a=>a.BonusId==bs.Id && a.isDeleted==false).ToListAsync();
         
         _memoryCache.Set(cacheKey, (latestUpdateAt , bonus), new MemoryCacheEntryOptions
         {
@@ -91,10 +92,10 @@ public class BonusService(
 
     var username = _contextAccessor?.HttpContext?.User?.Identity?.Name;
     if (string.IsNullOrEmpty(username))
-        throw new UnauthorizedAccessException("User not authenticated");
+        throw new UnauthorizedAccessException(languageJsonService.LanguageStrongJson("Unauthorized"));
 
     var user = await _userManager.FindByNameAsync(username)
-               ?? throw new NotFoundException("User not found");
+               ?? throw new NotFoundException(languageJsonService.LanguageStrongJson("UserNotFound"));
 
     var bonus = await _bonusRead.GetSingleAsync(a => a.isDeleted == false
                                                      && a.UserId == user.Id
@@ -113,10 +114,10 @@ public class BonusService(
         .ToListAsync();
 
     if (wasteList == null || !wasteList.Any())
-        throw new NotFoundException("No waste found");
+        throw new NotFoundException(languageJsonService.LanguageStrongJson("NoWasteFound"));
 
     using var workbook = new XLWorkbook();
-    var worksheet = workbook.Worksheets.Add("Waste Report");
+    var worksheet = workbook.Worksheets.Add(languageJsonService.LanguageStrongJson("WasteReport"));
 
     // Header
     worksheet.Cell(1, 1).Value = "ID";
@@ -247,24 +248,24 @@ public class BonusService(
     {
         var httpContext = _contextAccessor.HttpContext;
         if (!Guid.TryParse(wasteId, out _))
-            throw new BadRequestException($"Invalid GUID format: '{wasteId}'");
+            throw new BadRequestException(languageJsonService.LanguageStrongJson("InvalidGuid"));
 
         var username = _contextAccessor?.HttpContext?.User?.Identity?.Name;
         if (string.IsNullOrEmpty(username))
-            throw new UnauthorizedAccessException("User not authenticated");
+            throw new CustomUnauthorizedException(languageJsonService.LanguageStrongJson("Unauthorized"));
 
         var user = await _userManager.FindByNameAsync(username)
-                   ?? throw new NotFoundException("User not found");
+                   ?? throw new NotFoundException(languageJsonService.LanguageStrongJson("UserNotFound"));
 
         var waste = await _wasteRead.GetByIdAsync(wasteId)
-                    ?? throw new NotFoundException("Waste not found");
+                    ?? throw new NotFoundException(languageJsonService.LanguageStrongJson("WasteNotFound"));
 
         var bonus = await _bonusRead.GetSingleAsync(a => a.UserId == user.Id && a.isDeleted==false);
         var idempotencyKey = httpContext.Request.Headers["Idempotency-Key"].FirstOrDefault();
 
         if (string.IsNullOrEmpty(idempotencyKey))
         {
-            throw new BadRequestException("Idempotency-Key header is required.");
+            throw new BadRequestException(languageJsonService.LanguageStrongJson("IdempotencyKeyRequired"));
          
         }
         if (bonus is null)
@@ -311,7 +312,7 @@ public class BonusService(
     public async Task<bool> SoftDelete(string id)
     {
         if (!Guid.TryParse(id, out _))
-            throw new BadRequestException($"Invalid GUID format: '{id}'");
+            throw new BadRequestException(languageJsonService.LanguageStrongJson("InvalidGuid"));
 
         var bonus = await _bonusRead.GetSingleAsync(a => a.Id == Guid.Parse(id) && a.isDeleted==false) ?? throw new NotFoundException();
 
@@ -330,7 +331,7 @@ public class BonusService(
     public async Task<bool> RestoreDelete(string id)
     {
         if (!Guid.TryParse(id, out _))
-            throw new BadRequestException($"Invalid GUID format: '{id}'");
+            throw new BadRequestException(languageJsonService.LanguageStrongJson("InvalidGuid"));
 
         var bonus = await _bonusRead.GetSingleAsync(a => a.Id == Guid.Parse(id) && a.isDeleted==true) ?? throw new NotFoundException();
 
@@ -338,7 +339,8 @@ public class BonusService(
 
         _bonusWrite.Update(bonus);
       await  _bonusWrite.SaveChangegesAsync();
-        var bonusComunity = await _bonusComunityRead.GetSingleAsync(a => a.BonusId == bonus.Id && a.isDeleted==true) ?? throw new NotFoundException();
+        var bonusComunity = await _bonusComunityRead.GetSingleAsync(a => a.BonusId == bonus.Id && a.isDeleted==true)
+            ?? throw new NotFoundException(languageJsonService.LanguageStrongJson("NotFound"));
         bonusComunity.isDeleted=false;
         _bonusComunityWrite.Update(bonusComunity);
      await   _bonusComunityWrite.SaveChangegesAsync();
@@ -349,9 +351,10 @@ public class BonusService(
     public async Task<bool> Delete(string id)
     {
         if (!Guid.TryParse(id, out _))
-            throw new BadRequestException($"Invalid GUID format: '{id}'");
+            throw new BadRequestException(languageJsonService.LanguageStrongJson("InvalidGuid"));
 
-        var bonus = await _bonusRead.GetSingleAsync(a => a.Id == Guid.Parse(id) && a.isDeleted==true) ?? throw new NotFoundException();
+        var bonus = await _bonusRead.GetSingleAsync(a => a.Id == Guid.Parse(id) && a.isDeleted==true) 
+            ?? throw new NotFoundException(languageJsonService.LanguageStrongJson("NotFound"));
 
     
         _bonusWrite.Delete(bonus);

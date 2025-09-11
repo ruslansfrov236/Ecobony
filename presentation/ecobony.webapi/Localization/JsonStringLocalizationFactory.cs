@@ -1,17 +1,17 @@
-using Microsoft.Extensions.Caching.Distributed;
-using Microsoft.Extensions.Localization;
+﻿using Microsoft.Extensions.Caching.Distributed;
 
-namespace ecobony.webapi.Localization;
-
-public class JsonStringLocalizationFactory(IDistributedCache cache) : IStringLocalizerFactory
+namespace ecobony.webapi.Localization
 {
-    public IStringLocalizer Create(Type resourceSource)
+    public class JsonStringLocalizationFactory(IDistributedCache cache) : IStringLocalizerFactory
     {
-        return new JsonStringLocalization(cache);
-    }
+        public IStringLocalizer Create(Type resourceSource)
+        {
+            return new JsonStringLocalization(cache);
+        }
 
-    public IStringLocalizer Create(string baseName, string location)
-    {
-        return new JsonStringLocalization(cache);
+        public IStringLocalizer Create(string baseName, string location)
+        {
+            return new JsonStringLocalization(cache);
+        }
     }
 }

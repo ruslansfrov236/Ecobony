@@ -1,8 +1,3 @@
-
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
-
 namespace ecobony.webapi.Areas.Controllers
 {
     [Area("Admin")]

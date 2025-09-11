@@ -20,10 +20,7 @@ global using Microsoft.AspNetCore.Mvc.Filters;
 global using ecobony.application.Repository;
 global using ecobony.application.Feauters.Query.Header;
 global using ecobony.application.Feauters.Command.Header;
-global using ecobony.application.Feauters.Command.Language;
 global using ecobony.application.Feauters.Query.Language;
-
-global using ecobony.webapi.Localization;
 global using Microsoft.AspNetCore.ResponseCompression;
 global using Microsoft.Extensions.Caching.Memory;
 global using Microsoft.Extensions.Localization;
@@ -38,7 +35,6 @@ global  using ecobony.infrastructur;
 global using ecobony.webapi.Filter;
 global using System.Globalization;
 global using System.Text.Json;
-global using System.Text.Json.Serialization;
 global using ecobony.application;
 global using ecobony.persistence;
 global using System.Reflection;

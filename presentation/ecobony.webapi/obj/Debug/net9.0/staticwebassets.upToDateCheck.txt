@@ -1,2 +1,4 @@
 wwwroot\assets\img\image-1.png
 wwwroot\assets\img\image-2.png
+wwwroot\assets\img\image-3.png
+wwwroot\assets\img\image-4.png

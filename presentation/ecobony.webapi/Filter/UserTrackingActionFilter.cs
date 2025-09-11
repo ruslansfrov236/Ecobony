@@ -1,5 +1,4 @@
-﻿using ecobony.application.Services;
-using Microsoft.AspNetCore.Mvc.Filters;
+﻿
 
 public class UserTrackingActionFilter( IUserTrackingService _trackingService,
  IUserHistoryService _historyService) : IAsyncActionFilter

@@ -14,6 +14,7 @@ public static class ServiceRegistration
         collection.AddSignalR().AddStackExchangeRedis(configuration.GetConnectionString("Reddis")); ;
 
         collection.AddScoped<AuthHub>();
+        collection.AddScoped<UserHistoryHub>();
         collection.AddTransient<IUserTrackingService , UserTrackingService>();  
         collection.AddTransient<UserTrackingHub>();
     }

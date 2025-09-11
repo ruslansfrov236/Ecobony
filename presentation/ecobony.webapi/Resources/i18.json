@@ -1,65 +1,300 @@
-{
-  "az-AZ": {
-    "RequiredValidator": "'{PropertyName}' sahəsi boş ola bilməz, bu sahə mütləq doldurulmalıdır.",
-    "NotEmptyValidator": "'{PropertyName}' sahəsi boş olmamalıdır.",
-    "MaximumLengthValidator": "'{PropertyName}' sahəsi {MaxLength} simvoldan çox olmamalıdır.",
-    "GreaterThanValidator": "'{PropertyName}' 0-dan böyük olmalıdır.",
-    "ISOCodeCannotBeNull": "ISO kodu boş ola bilməz.",
-    "ISOCodeCannotBeEmpty": "ISO kodu boş ola bilməz.",
-    "ISOCodeLength": "ISO kodu 5 ilə 7 simvol arasında olmalıdır. Məsələn: 'az-AZ', 'en-US', 'ru-RU'.",
-    "InvalidISOCode": "Yanlış ISO kodu. Doğru kodlar: 'az-AZ', 'en-US', 'ru-RU'.",
-    "CultureIsRequired": "Mədəniyyət tələb olunur.",
-    "CultureCannotBeEmpty": "Mədəniyyət boş ola bilməz.",
-    "CultureLength": "Mədəniyyət 5 ilə 20 simvol arasında olmalıdır.",
-    "KeyCannotBeNull": "Açar boş ola bilməz.",
-    "KeyMaxLength": "Açar maksimum 3 simvoldan ibarət olmalıdır.",
-    "FileIsRequired": "Fayl tələb olunur.",
-    "FileCannotBeEmpty": "Fayl boş ola bilməz.",
-    "FileFormatNotAllowed": "Yalnız .jpg, .jpeg, .png, .gif formatları icazəlidir.",
-    "FileSizeExceeded": "Fayl ölçüsü 5MB-dan az olmalıdır.",
-    "NotNullValidator": "'{PropertyName}' tələb olunur.",
-    "LengthValidator": "'{PropertyName}' {MinLength} və {MaxLength} simvollar arasında olmalıdır."
+[
+  {
+    "Key": "RequiredValidator",
+    "LocalizedValue": {
+      "az-AZ": "'{PropertyName}' sahəsi boş ola bilməz, bu sahə mütləq doldurulmalıdır.",
+      "en-EN": "'{PropertyName}' field is required and cannot be empty.",
+      "ru-RU": "Поле '{PropertyName}' обязательно для заполнения."
+    }
   },
-  "ru-RU": {
-    "RequiredValidator": "Поле '{PropertyName}' не может быть пустым, это обязательное поле.",
-    "NotEmptyValidator": "Поле '{PropertyName}' не должно быть пустым.",
-    "MaximumLengthValidator": "Длина поля '{PropertyName}' не должна превышать {MaxLength} символов.",
-    "GreaterThanValidator": "'{PropertyName}' должно быть больше 0.",
-    "ISOCodeCannotBeNull": "ISO код не может быть пустым.",
-    "ISOCodeCannotBeEmpty": "ISO код не может быть пустым.",
-    "ISOCodeLength": "ISO код должен содержать от 5 до 7 символов. Пример: 'az-AZ', 'en-US', 'ru-RU'.",
-    "InvalidISOCode": "Неверный ISO код. Примеры правильных кодов: 'az-AZ', 'en-US', 'ru-RU'.",
-    "CultureIsRequired": "Культура обязательна.",
-    "CultureCannotBeEmpty": "Культура не может быть пустой.",
-    "CultureLength": "Культура должна содержать от 5 до 20 символов.",
-    "KeyCannotBeNull": "Ключ не может быть пустым.",
-    "KeyMaxLength": "Ключ должен содержать не более 3 символов.",
-    "FileIsRequired": "Файл требуется.",
-    "FileCannotBeEmpty": "Файл не может быть пустым.",
-    "FileFormatNotAllowed": "Разрешены только форматы .jpg, .jpeg, .png, .gif.",
-    "FileSizeExceeded": "Размер файла должен быть меньше 5 МБ.",
-    "NotNullValidator": "Поле '{PropertyName}' обязательно.",
-    "LengthValidator": "Поле '{PropertyName}' должно содержать от {MinLength} до {MaxLength} символов."
+  {
+    "Key": "NotEmptyValidator",
+    "LocalizedValue": {
+      "az-AZ": "'{PropertyName}' sahəsi boş olmamalıdır.",
+      "en-EN": "'{PropertyName}' field should not be empty.",
+      "ru-RU": "Поле '{PropertyName}' не должно быть пустым."
+    }
   },
-  "en-US": {
-    "RequiredValidator": "'{PropertyName}' cannot be empty; it is a required field.",
-    "NotEmptyValidator": "'{PropertyName}' is required.",
-    "MaximumLengthValidator": "'{PropertyName}' must not exceed {MaxLength} characters.",
-    "GreaterThanValidator": "'{PropertyName}' must be greater than 0.",
-    "ISOCodeCannotBeNull": "ISO code cannot be null.",
-    "ISOCodeCannotBeEmpty": "ISO code cannot be empty.",
-    "ISOCodeLength": "ISO code must be between 5 and 7 characters. Example: 'az-AZ', 'en-US', 'ru-RU'.",
-    "InvalidISOCode": "Invalid ISO code. Example of valid codes: 'az-AZ', 'en-US', 'ru-RU'.",
-    "CultureIsRequired": "Culture is required.",
-    "CultureCannotBeEmpty": "Culture cannot be empty.",
-    "CultureLength": "Culture must be between 5 and 20 characters.",
-    "KeyCannotBeNull": "Key cannot be null.",
-    "KeyMaxLength": "Key must be a maximum of 3 characters.",
-    "FileIsRequired": "File is required.",
-    "FileCannotBeEmpty": "File cannot be empty.",
-    "FileFormatNotAllowed": "Only .jpg, .jpeg, .png, .gif formats are allowed.",
-    "FileSizeExceeded": "File size must be less than 5MB.",
-    "NotNullValidator": "'{PropertyName}' is required.",
-    "LengthValidator": "'{PropertyName}' must be between {MinLength} and {MaxLength} characters."
+  {
+    "Key": "MaximumLengthValidator",
+    "LocalizedValue": {
+      "az-AZ": "'{PropertyName}' sahəsi {MaxLength} simvoldan çox olmamalıdır.",
+      "en-EN": "'{PropertyName}' field must not exceed {MaxLength} characters.",
+      "ru-RU": "Длина поля '{PropertyName}' не должна превышать {MaxLength} символов."
+    }
+  },
+  {
+    "Key": "GreaterThanValidator",
+    "LocalizedValue": {
+      "az-AZ": "'{PropertyName}' 0-dan böyük olmalıdır.",
+      "en-EN": "'{PropertyName}' must be greater than 0.",
+      "ru-RU": "'{PropertyName}' должно быть больше 0."
+    }
+  },
+  {
+    "Key": "ISOCodeCannotBeNull",
+    "LocalizedValue": {
+      "az-AZ": "ISO kodu boş ola bilməz.",
+      "en-EN": "ISO code cannot be null.",
+      "ru-RU": "ISO код не может быть пустым."
+    }
+  },
+  {
+    "Key": "ISOCodeCannotBeEmpty",
+    "LocalizedValue": {
+      "az-AZ": "ISO kodu boş ola bilməz.",
+      "en-EN": "ISO code cannot be empty.",
+      "ru-RU": "ISO код не может быть пустым."
+    }
+  },
+  {
+    "Key": "ISOCodeLength",
+    "LocalizedValue": {
+      "az-AZ": "ISO kodu 5 ilə 7 simvol arasında olmalıdır. Məsələn: 'az-AZ', 'en-EN', 'ru-RU'.",
+      "en-EN": "ISO code must be between 5 and 7 characters. Example: 'az-AZ', 'en-EN', 'ru-RU'.",
+      "ru-RU": "ISO код должен содержать от 5 до 7 символов. Пример: 'az-AZ', 'en-EN', 'ru-RU'."
+    }
+  },
+  {
+    "Key": "InvalidISOCode",
+    "LocalizedValue": {
+      "az-AZ": "Yanlış ISO kodu. Doğru kodlar: 'az-AZ', 'en-EN', 'ru-RU'.",
+      "en-EN": "Invalid ISO code. Valid codes: 'az-AZ', 'en-EN', 'ru-RU'.",
+      "ru-RU": "Недопустимый ISO код. Допустимые коды: 'az-AZ', 'en-EN', 'ru-RU'."
+    }
+  },
+  {
+    "Key": "CultureIsRequired",
+    "LocalizedValue": {
+      "az-AZ": "Mədəniyyət tələb olunur.",
+      "en-EN": "Culture is required.",
+      "ru-RU": "Культура обязательна."
+    }
+  },
+  {
+    "Key": "CultureCannotBeEmpty",
+    "LocalizedValue": {
+      "az-AZ": "Mədəniyyət boş ola bilməz.",
+      "en-EN": "Culture cannot be empty.",
+      "ru-RU": "Культура не может быть пустой."
+    }
+  },
+  {
+    "Key": "CultureLength",
+    "LocalizedValue": {
+      "az-AZ": "Mədəniyyət 5 ilə 20 simvol arasında olmalıdır.",
+      "en-EN": "Culture must be between 5 and 20 characters.",
+      "ru-RU": "Культура должна содержать от 5 до 20 символов."
+    }
+  },
+  {
+    "Key": "KeyCannotBeNull",
+    "LocalizedValue": {
+      "az-AZ": "Açar boş ola bilməz.",
+      "en-EN": "Key cannot be null.",
+      "ru-RU": "Ключ не может быть пустым."
+    }
+  },
+  {
+    "Key": "KeyMaxLength",
+    "LocalizedValue": {
+      "az-AZ": "Açar maksimum 3 simvoldan ibarət olmalıdır.",
+      "en-EN": "Key must be a maximum of 3 characters.",
+      "ru-RU": "Ключ должен содержать не более 3 символов."
+    }
+  },
+  {
+    "Key": "Message200",
+    "LocalizedValue": {
+      "az-AZ": "Uğurlu əməliyyat",
+      "en-EN": "Successful operation",
+      "ru-RU": "Успешная операция"
+    }
+  },
+  {
+    "Key": "NotFound",
+    "LocalizedValue": {
+      "az-AZ": "Məlumat tapılmadı",
+      "en-EN": "Data not found",
+      "ru-RU": "Данные не найдены"
+    }
+  },
+  {
+    "Key": "UserNotFound",
+    "LocalizedValue": {
+      "az-AZ": "İstifadəçi tapılmadı",
+      "en-EN": "User not found",
+      "ru-RU": "Пользователь не найден"
+    }
+  },
+  {
+    "Key": "PageNotFound",
+    "LocalizedValue": {
+      "az-AZ": "Səhifə tapılmadı",
+      "en-EN": "Page not found",
+      "ru-RU": "Страница не найдена"
+    }
+  },
+  {
+    "Key": "Unauthorized",
+    "LocalizedValue": {
+      "az-AZ": "Səlahiyyətiniz çatmır",
+      "en-EN": "Unauthorized access",
+      "ru-RU": "Нет доступа"
+    }
+  },
+  {
+    "Key": "IdempotencyKeyRequired",
+    "LocalizedValue": {
+      "az-AZ": "Idempotency-Key header tələb olunur",
+      "en-EN": "Idempotency-Key header is required",
+      "ru-RU": "Требуется заголовок Idempotency-Key"
+    }
+  },
+  {
+    "Key": "InsufficientBonusPoints",
+    "LocalizedValue": {
+      "az-AZ": "Kifayət qədər bonus xalları yoxdur",
+      "en-EN": "Insufficient bonus points",
+      "ru-RU": "Недостаточно бонусных баллов"
+    }
+  },
+  {
+    "Key": "InvalidGuid",
+    "LocalizedValue": {
+      "az-AZ": "Yanlış GUID formatı: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX",
+      "en-EN": "Invalid GUID format: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX",
+      "ru-RU": "Неверный формат GUID: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX"
+    }
+  },
+  {
+    "Key": "EmailAlreadyExists",
+    "LocalizedValue": {
+      "az-AZ": "Bu email artıq mövcuddur",
+      "en-EN": "This email already exists",
+      "ru-RU": "Этот email уже существует"
+    }
+  },
+  {
+    "Key": "InsufficientBalance",
+    "LocalizedValue": {
+      "az-AZ": "Balans kifayət qədər deyil",
+      "en-EN": "Insufficient balance",
+      "ru-RU": "Баланс недостаточен"
+    }
+  },
+  {
+    "Key": "InvalidExternalAuthentication",
+    "LocalizedValue": {
+      "az-AZ": "Xarici autentifikasiya etibarsızdır.",
+      "en-EN": "Invalid external authentication.",
+      "ru-RU": "Недопустимая внешняя аутентификация."
+    }
+  },
+  {
+    "Key": "UserDidNotVerifyAccount",
+    "LocalizedValue": {
+      "az-AZ": "İstifadəçi hesabı təsdiqləməyib.",
+      "en-EN": "The user did not verify the account.",
+      "ru-RU": "Пользователь не подтвердил учетную запись."
+    }
+  },
+  {
+    "Key": "InvalidOrExpiredRefreshToken",
+    "LocalizedValue": {
+      "az-AZ": "Yeniləmə tokeni etibarsızdır və ya müddəti bitmişdir.",
+      "en-EN": "The refresh token is invalid or has expired.",
+      "ru-RU": "Токен обновления недействителен или срок его действия истек."
+    }
+  },
+  {
+    "Key": "NoWasteFound",
+    "LocalizedValue": {
+      "az-AZ": "Tullantı tapılmadı.",
+      "en-EN": "No waste found.",
+      "ru-RU": "Отходы не найдены."
+    }
+  },
+  {
+    "Key": "WasteReport",
+    "LocalizedValue": {
+      "az-AZ": "Tullantı hesabatı",
+      "en-EN": "Waste Report",
+      "ru-RU": "Отчет об отходах"
+    }
+  },
+  {
+    "Key": "ReplatValuesPoint",
+    "LocalizedValue": {
+      "az-AZ": "Bal dəyərlərini yenilə",
+      "en-EN": "Replace values point",
+      "ru-RU": "Заменить значения баллов"
+    }
+  },
+  {
+    "Key": "ReplatValuesName",
+    "LocalizedValue": {
+      "az-AZ": "Ad dəyərlərini yenilə",
+      "en-EN": "Replace values name",
+      "ru-RU": "Заменить значения имени"
+    }
+  },
+  {
+    "Key": "ReplatValuesRoleModelDuplicate",
+    "LocalizedValue": {
+      "az-AZ": "Daxil edilmiş rol modeli artıq mövcuddur. Zəhmət olmasa fərqli bir rol modeli daxil edin.",
+      "en-EN": "The entered role model already exists. Please provide a different role model.",
+      "ru-RU": "Введённый ролевой пример уже существует. Пожалуйста, укажите другой ролевой пример."
+    }
+  },
+
+  {
+    "Key" : "ReplatValuesIsoCode",
+      "LocalizedValue": {
+      "az-AZ": "ISO kodu dəyərlərini yenilə",
+      "en-EN": "Replace values ISO code",
+      "ru-RU": "Заменить значения ISO кода"
+    }
   }
-}
+  {
+    "Key": "ImageNotFound",
+    "LocalizedValue": {
+      "az-AZ": "Şəkil tapılmadı.",
+      "en-EN": "Image not found.",
+      "ru-RU": "Изображение не найдено."
+    }
+  },
+  {
+    
+    "Key": "LocationNotFound",
+    "LocalizedValue": {
+      "az-AZ": "Məkan tapılmadı.",
+      "en-EN": "Location not found.",
+      "ru-RU": "Местоположение не найдено."
+    }
+    
+  },
+  {
+    "Key": "RoleNotFound",
+    "LocalizedValue": {
+      "az-AZ": "Röl tapılmadı.",
+      "en-EN": "Role not found.",
+      "ru-RU": "Роль не найдена."
+    }
+  },
+  {
+    {
+      "Key": "UserLoginNotFound",
+      "LocalizedValue": {
+
+        "az-AZ": "İstifadəçi  provayderi ilə tapılmadı.",
+        "en-EN": "User with provider '{0}' and key was not found.",
+        "ru-RU": "Пользователь с провайдером  не найден."
+      }
+      
+    }
+  }
+
+  
+
+]

@@ -5,9 +5,11 @@ namespace ecobony.persistence.Service;
 public class HeaderService(
     IHeaderReadRepository _headerRead,
     IHeaderWriteRepository _headerWrite,
+    UserManager<AppUser> _userManager,
     IHeaderTranslationReadRepository _headerTranslationRead,
     IHeaderTranslationWriteRepository _headerTranslationWrite,
     ILanguageReadRepository _languageRead,
+    ILanguageJsonService _languageJsonService,
     IHttpContextAccessor _contextAccessor,
     IMemoryCache _memoryCache,
     IFileService _fileService
@@ -16,9 +18,9 @@ public class HeaderService(
 {
     public async Task<List<GetHeadetDto>> GetClientAll()
     {
-        var languageCode = _contextAccessor.HttpContext.Session.GetString("Language");
+        var languageCode = CultureInfo.CurrentCulture.Name; 
 
-        var language = await _languageRead.GetSingleAsync(a => a.IsoCode == languageCode)
+        var language = await _languageRead.GetSingleAsync(a => a.IsoCode == languageCode && a.isDeleted==false)
                        ?? throw new NotFoundException();
 
         
@@ -121,21 +123,49 @@ public class HeaderService(
     public async Task<GetHeadetDto> GetById(string id)
     {
         if (!Guid.TryParse(id, out _))
-            throw new BadRequestException($"Invalid GUID format: '{id}'");
-        var languageCode = _contextAccessor.HttpContext.Session.GetString("Language");
+            throw new BadRequestException(_languageJsonService.LanguageStrongJson("InvalidGuid"));
+        var languageCode = CultureInfo.CurrentCulture.Name; 
 
-        var language = await _languageRead.GetSingleAsync(a => a.IsoCode == languageCode)
+        var language = await _languageRead.GetSingleAsync(a => a.IsoCode == languageCode && a.isDeleted==false)
                        ?? throw new NotFoundException();
-        var header = await _headerRead.GetByIdAsync(id)  
-                     ?? throw new NotFoundException();
-        
-        var translation = await _headerTranslationRead
-            .GetSingleAsync(a=>a.HeaderId==header.Id && a.LanguageId==language.Id)
-                          ?? throw new NotFoundException();
+
+        var username = _contextAccessor?.HttpContext?.User?.Identity?.Name
+              ?? throw new CustomUnauthorizedException(_languageJsonService.LanguageStrongJson("Unauthorized")); ;
+        AppUser user = await _userManager.FindByNameAsync(username)
+                       ?? throw new CustomUnauthorizedException(_languageJsonService.LanguageStrongJson("UserNotFound"));
+
+        var userRoles = await _userManager.GetRolesAsync(user) 
+            ?? throw new NotFoundException(_languageJsonService.LanguageStrongJson("RoleNotFound"));
+
+        Header header = null;
+        HeaderTranslation translation = null;
+        foreach (var role in userRoles)
+        {
+            if (role == RoleModel.Admin.ToString() || role == RoleModel.Manager.ToString())
+            {
+                header = await _headerRead.GetByIdAsync(id);
+
+
+                translation = await _headerTranslationRead
+                   .GetSingleAsync(a => a.HeaderId == header.Id && a.LanguageId == language.Id);
+                break;
+            }
+            else if (role == RoleModel.User.ToString())
+            {
+                header = await _headerRead.GetSingleAsync(a => a.Id == Guid.Parse(id) && a.isDeleted == false);
+
+
+                translation = await _headerTranslationRead
+                   .GetSingleAsync(a => a.HeaderId == header.Id && a.LanguageId == language.Id && a.isDeleted == false);
+                break;
+            }
+        }
+            if(header is null || translation is null )
+          throw new NotFoundException(_languageJsonService.LanguageStrongJson("NotFound"));
 
 
 
-        return new GetHeadetDto()
+            return new GetHeadetDto()
         {
 
             Id = translation.Id.ToString(),
@@ -185,7 +215,10 @@ public class HeaderService(
 
     public async Task<bool> Update(UpdateHeaderWithTranslationDto_s model)
     {
-        var header = await _headerRead.GetByIdAsync(model.UpdateHeaderDto.Id) ?? throw new NotFoundException();
+        if(Guid.TryParse(model.UpdateHeaderDto.Id.ToString(), out _))
+            throw new BadRequestException(_languageJsonService.LanguageStrongJson("InvalidGuid"));
+        var header = await _headerRead.GetByIdAsync(model.UpdateHeaderDto.Id)
+            ?? throw new NotFoundException(_languageJsonService.LanguageStrongJson("NotFound"));
 
         if (model.UpdateHeaderDto.FomFile != null)
         {
@@ -219,19 +252,19 @@ public class HeaderService(
     public async Task<bool> SoftDelete(string id)
     {
         if (!Guid.TryParse(id, out _))
-            throw new BadRequestException($"Invalid GUID format: '{id}'");
-        var languageCode = _contextAccessor.HttpContext.Session.GetString("Language");
+            throw new BadRequestException(_languageJsonService.LanguageStrongJson("InvalidGuid"));
+        var languageCode = CultureInfo.CurrentCulture.Name;
 
-        var language = await _languageRead.GetSingleAsync(a => a.IsoCode == languageCode)
-                       ?? throw new NotFoundException();
+        var language = await _languageRead.GetSingleAsync(a => a.IsoCode == languageCode && a.isDeleted==false)
+                       ?? throw new NotFoundException(_languageJsonService.LanguageStrongJson("NotFound"));
         var header = await _headerRead.GetSingleAsync(a=>a.Id==Guid.Parse(id) && a.isDeleted==false) 
-                     ?? throw new NotFoundException();
+                     ?? throw new NotFoundException(_languageJsonService.LanguageStrongJson("NotFound"));
         header.isDeleted = true;
         _headerWrite.Update(header);
         await _headerWrite.SaveChangegesAsync();
         var translation = await _headerTranslationRead
                               .GetSingleAsync(a=>a.HeaderId==header.Id && a.isDeleted==false)
-                          ?? throw new NotFoundException();
+                          ?? throw new NotFoundException(_languageJsonService.LanguageStrongJson("NotFound"));
         translation.isDeleted = true;
         _headerTranslationWrite.Update(translation);
         await _headerTranslationWrite.SaveChangegesAsync();
@@ -241,19 +274,19 @@ public class HeaderService(
     public async Task<bool> Restore(string id)
     {
         if (!Guid.TryParse(id, out _))
-            throw new BadRequestException($"Invalid GUID format: '{id}'");
-        var languageCode = _contextAccessor.HttpContext.Session.GetString("Language");
+            throw new BadRequestException(_languageJsonService.LanguageStrongJson("InvalidGuid"));
+        var languageCode =CultureInfo.CurrentCulture.Name;
 
         var language = await _languageRead.GetSingleAsync(a => a.IsoCode == languageCode)
-                       ?? throw new NotFoundException();
+                       ?? throw new NotFoundException(_languageJsonService.LanguageStrongJson("NotFound"));
         var header = await _headerRead.GetSingleAsync(a=>a.Id==Guid.Parse(id) && a.isDeleted==true) 
-                     ?? throw new NotFoundException();
+                     ?? throw new NotFoundException(_languageJsonService.LanguageStrongJson("NotFound"));
         header.isDeleted=false;
         _headerWrite.Update(header);
         await _headerWrite.SaveChangegesAsync();
         var translation = await _headerTranslationRead
                               .GetSingleAsync(a=>a.HeaderId==header.Id && a.isDeleted==true)
-                          ?? throw new NotFoundException();
+                          ?? throw new NotFoundException(_languageJsonService.LanguageStrongJson("NotFound"));
         translation.isDeleted=false;
         _headerTranslationWrite.Update(translation);
         await _headerTranslationWrite.SaveChangegesAsync();
@@ -263,7 +296,7 @@ public class HeaderService(
     public async Task<bool> Delete(string id)
     {
         var header = await _headerRead.GetSingleAsync(a=>a.Id==Guid.Parse(id) && a.isDeleted==true) 
-                     ?? throw new NotFoundException();
+                     ?? throw new NotFoundException(_languageJsonService.LanguageStrongJson("NotFound"));
         _fileService.DeleteFile(header.Image);
         _headerWrite.Delete(header);
         await _headerWrite.SaveChangegesAsync();

@@ -1,5 +1,7 @@
 ﻿
 using ecobony.application;
+using ecobony.domain.Dto_s;
+using FluentValidation.AspNetCore;
 
 namespace ecobony.infrastructur;
 
@@ -52,6 +54,10 @@ public static class ServiceRegistration
             };
         });
 
+        services.AddValidatorsFromAssemblyContaining<CreateLanguageDto_s>();
+
+        services.AddFluentValidationAutoValidation()
+            .AddFluentValidationClientsideAdapters();
         services.AddAuthorization(options =>
         {
             options.DefaultPolicy = new Microsoft.AspNetCore.Authorization.AuthorizationPolicyBuilder(JwtBearerDefaults.AuthenticationScheme)

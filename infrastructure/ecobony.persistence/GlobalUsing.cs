@@ -1,5 +1,6 @@
 
 global using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+global using Microsoft.EntityFrameworkCore.Diagnostics;
 global using Microsoft.Extensions.DependencyInjection;
 global using Microsoft.EntityFrameworkCore.Design;
 global using Microsoft.Extensions.Caching.Memory;

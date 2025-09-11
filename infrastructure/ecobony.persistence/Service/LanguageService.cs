@@ -1,8 +1,12 @@
-﻿namespace ecobony.persistence.Service;
+﻿using Microsoft.Extensions.Caching.Distributed;
+
+namespace ecobony.persistence.Service;
 
 public class LanguageService(
+    IDistributedCache _cache,
     ILanguageReadRepository _languageRead,
     ILanguageWriteRepository _languageWrite,
+    ILanguageJsonService languageJsonService,
     IHttpContextAccessor _contextAccessor,
     IFileService _fileService,
     IMemoryCache _memoryCache
@@ -67,7 +71,7 @@ public class LanguageService(
     public async Task<Language> GetById(string id)
     {
         if (!Guid.TryParse(id, out _))
-            throw new BadRequestException($"Invalid GUID format: '{id}'");
+            throw new BadRequestException(languageJsonService.LanguageStrongJson("InvalidGuid"));
 
         var latestUpdateAt = await _languageRead.GetFilter
                 (x => !x.isDeleted)
@@ -95,14 +99,15 @@ public class LanguageService(
 
     public async Task<bool> Create(CreateLanguageDto_s model)
     {
+      
         if (await _languageRead.AnyAsync(a => a.Key == model.Key &&  a.Name==model.Key && a.IsoCode==model.Key))
             throw new BadRequestException("Replat values Key ");
 
 
         if (await _languageRead.AnyAsync(a => a.Key == model.Name &&  a.Name==model.Key && a.IsoCode==model.Key))
-            throw new BadRequestException("Replat values Name ");
+            throw new BadRequestException(languageJsonService.LanguageStrongJson("ReplatValuesName"));
         if (await _languageRead.AnyAsync(a => a.Key == model.IsoCode  &&  a.Name==model.IsoCode && a.IsoCode==model.IsoCode))
-            throw new BadRequestException("Replat values IsoCode ");
+            throw new BadRequestException(languageJsonService.LanguageStrongJson("ReplatValuesIsoCode"));
 
         var image = await _fileService.UploadFileAsync(model.FormFile);
 
@@ -121,11 +126,12 @@ public class LanguageService(
     public async Task<bool> Update(UpdateLanguageDto_s model)
     {
         if (!Guid.TryParse(model.Id, out _))
-            throw new BadRequestException($"Invalid GUID format: '{model.Id}'");
-        var language = await _languageRead.GetByIdAsync(model.Id) ?? throw new NotFoundException();
+            throw new BadRequestException(languageJsonService.LanguageStrongJson("InvalidGuid"));
+        var language = await _languageRead.GetByIdAsync(model.Id) 
+            ?? throw new NotFoundException(languageJsonService.LanguageStrongJson("NotFound"));
 
         if (model.FormFile is not null)
-        { 
+        { if(!string.IsNullOrEmpty(language.Image)) throw new NotFoundException(languageJsonService.LanguageStrongJson("ImageNotFound"));
             _fileService.DeleteFile(language.Image);
             var image = await _fileService.UploadFileAsync(model.FormFile);
 
@@ -146,7 +152,7 @@ public class LanguageService(
         var language = await _languageRead
             .GetSingleAsync(a => a.IsoCode == isoCode) ?? throw new NotFoundException();
 
-        _contextAccessor.HttpContext.Session.SetString("Language", language.IsoCode);
+        _contextAccessor?.HttpContext?.Response.Cookies.Append("Language", language.IsoCode);
 
        
     }
@@ -154,8 +160,8 @@ public class LanguageService(
     public async Task<bool> SoftDelete(string id)
     {
         if (!Guid.TryParse(id, out _))
-            throw new BadRequestException($"Invalid GUID format: '{id}'");
-        var language = await _languageRead.GetSingleAsync(a=>a.isDeleted==false) ?? throw new NotFoundException();
+            throw new BadRequestException(languageJsonService.LanguageStrongJson("InvalidGuid"));
+        var language = await _languageRead.GetSingleAsync(a=>a.isDeleted==false) ?? throw new NotFoundException(languageJsonService.LanguageStrongJson("NotFound"));
 
         language.isDeleted = true;
         _languageWrite.Update(language);
@@ -166,8 +172,9 @@ public class LanguageService(
     public async Task<bool> Restore(string id)
     {
         if (!Guid.TryParse(id, out _))
-            throw new BadRequestException($"Invalid GUID format: '{id}'");
-        var language = await _languageRead.GetSingleAsync(a=>a.isDeleted==true) ?? throw new NotFoundException();
+            throw new BadRequestException(languageJsonService.LanguageStrongJson("InvalidGuid"));
+        var language = await _languageRead.GetSingleAsync(a=>a.isDeleted==true)
+            ?? throw new NotFoundException(languageJsonService.LanguageStrongJson("NotFound"));
 
         language.isDeleted=false;
         _languageWrite.Update(language);
@@ -178,10 +185,11 @@ public class LanguageService(
     public async Task<bool> Delete(string id)
     {
         if (!Guid.TryParse(id, out _))
-            throw new BadRequestException($"Invalid GUID format: '{id}'");
-        var language = await _languageRead.GetSingleAsync(a=>a.isDeleted==true) ?? throw new NotFoundException();
-
-     
+            throw new BadRequestException(languageJsonService.LanguageStrongJson("InvalidGuid"));
+        var language = await _languageRead.GetSingleAsync(a=>a.isDeleted==true)
+            ?? throw new NotFoundException(languageJsonService.LanguageStrongJson("NotFound"));
+        if(string.IsNullOrEmpty(language.Image)) throw new NotFoundException(languageJsonService.LanguageStrongJson("ImageNotFound"));
+        _fileService.DeleteFile(language.Image);
         _languageWrite.Delete(language);
         await _languageWrite.SaveChangegesAsync();
         return true;

@@ -5,6 +5,7 @@ namespace ecobony.persistence.Service
 {
     public class LocationService(ILocationReadRepository locationRead,
                                   ILocationWriteRepository locationWrite,
+                                  ILanguageJsonService languageJsonService,
                                   IConfiguration configuration) : ILocationService
     {
         public async Task<bool> Create(CreateLocationDto_s model)
@@ -67,7 +68,7 @@ namespace ecobony.persistence.Service
         public async Task<bool> Delete(string id)
         {
             if (!Guid.TryParse(id, out var _))
-                throw new ArgumentException("Invalid ID format", nameof(id));
+                throw new ArgumentException(languageJsonService.LanguageStrongJson("InvalidGuid"));
 
             var location = await locationRead.GetSingleAsync(a => a.Id == Guid.Parse(id) && a.isDeleted == true);
 
@@ -84,9 +85,9 @@ namespace ecobony.persistence.Service
         public async Task<Location> GetById(string id)
         {
             if (!Guid.TryParse(id, out var _))
-                throw new ArgumentException("Invalid ID format", nameof(id));
+                throw new ArgumentException(languageJsonService.LanguageStrongJson("InvalidGuid"));
 
-            var location = await locationRead.GetByIdAsync(id) ?? throw new KeyNotFoundException("Location not found");
+            var location = await locationRead.GetByIdAsync(id) ?? throw new KeyNotFoundException(languageJsonService.LanguageStrongJson("LocationNotFound"));
 
             return location;
         }
@@ -97,20 +98,7 @@ namespace ecobony.persistence.Service
         public async Task<bool> Restore(string id)
         {
             if (!Guid.TryParse(id, out var _))
-                throw new ArgumentException("Invalid ID format", nameof(id));
-
-            var location = await locationRead.GetSingleAsync(a => a.Id == Guid.Parse(id) && a.isDeleted == true);
-
-            location.isDeleted = false;
-            locationWrite.Update(location);
-            await locationWrite.SaveChangegesAsync();
-            return true;
-        }
-
-        public async Task<bool> SoftDelete(string id)
-        {
-            if (!Guid.TryParse(id, out var _))
-                throw new ArgumentException("Invalid ID format", nameof(id));
+                throw new ArgumentException(languageJsonService.LanguageStrongJson("InvalidGuid"));
 
             var location = await locationRead.GetSingleAsync(a => a.Id == Guid.Parse(id) && a.isDeleted == false);
 
@@ -120,10 +108,23 @@ namespace ecobony.persistence.Service
             return true;
         }
 
+        public async Task<bool> SoftDelete(string id)
+        {
+            if (!Guid.TryParse(id, out var _))
+                throw new BadRequestException(languageJsonService.LanguageStrongJson("InvalidGuid"));
+
+            var location = await locationRead.GetSingleAsync(a => a.Id == Guid.Parse(id) && a.isDeleted == true);
+
+            location.isDeleted = false;
+            locationWrite.Update(location);
+            await locationWrite.SaveChangegesAsync();
+            return true;
+        }
+
         public async Task<bool> Update(UpdateLocationDto_s model)
         {
             if (!Guid.TryParse(model.Id, out var _))
-                throw new ArgumentException("Invalid ID format", nameof(model.Id));
+                throw new BadRequestException(languageJsonService.LanguageStrongJson("InvalidGuid"));
 
             var location = await locationRead.GetSingleAsync(a => a.Id == Guid.Parse(model.Id) && a.isDeleted == true);
 

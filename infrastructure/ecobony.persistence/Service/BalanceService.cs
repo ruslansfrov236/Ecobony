@@ -1,13 +1,16 @@
-
+﻿
 using ecobony.domain.Entities.Enum;
 using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Localization;
 
 namespace ecobony.persistence.Service
 {
     public class BalanceService(IBalanceReadRepository balanceRead,
                                 IBalanceWriteRepository balanceWrite,
+                                ILanguageJsonService  languageJsonService,
                                 IBalanceTransferReadRepository balanceTransferRead,
                                 IBalanceTransferWriteRepository balanceTransferWrite,
+                                RoleManager<AppRole> roleManager,
                                 IHttpContextAccessor _contextAccessor,
                                 IBonusReadRepository bonusReadRepository,
                                 IBonusWriteRepository bonusWriteRepository,
@@ -16,24 +19,25 @@ namespace ecobony.persistence.Service
                                 UserManager<AppUser> userManager
                                 ) : IBalanceService
     {
+
         public async Task<bool> Create(string bonusId, decimal bonus)
         {
 
             var username = _contextAccessor?.HttpContext?.User?.Identity?.Name;
             if (string.IsNullOrEmpty(username))
-                throw new UnauthorizedAccessException("User not authenticated");
+                throw new CustomUnauthorizedException(languageJsonService.LanguageStrongJson("Unauthorized"));
 
-            var user = await userManager.FindByNameAsync(username) ?? throw new NotFoundException("User not found");
+            var user = await userManager.FindByNameAsync(username) ?? throw new NotFoundException(languageJsonService.LanguageStrongJson("UserNotFound"));
 
             var idempotencyKey = _contextAccessor?.HttpContext?.Request.Headers["Idempotency-Key"].FirstOrDefault();
 
             if (string.IsNullOrEmpty(idempotencyKey))
             {
-                throw new BadRequestException("Idempotency-Key header is required.");
+                throw new BadRequestException(languageJsonService.LanguageStrongJson("IdempotencyKeyRequired"));
 
             }
             if (!Guid.TryParse(bonusId, out _))
-                throw new BadRequestException($"Invalid GUID format: '{bonusId}'");
+                throw new BadRequestException(languageJsonService.LanguageStrongJson("InvalidGuid"));
 
             var balance = await balanceRead.GetSingleAsync(a => a.UserId == user.Id && a.isDeleted == false);
 
@@ -55,7 +59,7 @@ namespace ecobony.persistence.Service
 
                 var bonusComunity = await bonusComunityReadRepository.GetSingleAsync(a => a.BonusId == bonusValue.Id && a.isDeleted == false) ?? throw new NotFoundException("Bonus not found");
                 if (bonusComunity.Score < bonus && bonusComunity.PricePoint < bonus && bonusComunity.Score < 0)
-                    throw new BadRequestException("Insufficient bonus points");
+                    throw new BadRequestException(languageJsonService.LanguageStrongJson("InsufficientBonusPoints"));
 
 
                 bonusComunity.Score -= bonus;
@@ -99,8 +103,8 @@ namespace ecobony.persistence.Service
         public async Task<bool> Delete(string id)
         {
             if (!Guid.TryParse(id, out _))
-                throw new BadRequestException($"Invalid GUID format: '{id}'");
-            var balance = await balanceRead.GetSingleAsync(a => a.Id == Guid.Parse(id) && a.isDeleted == true) ?? throw new NotFoundException("Balance not found");
+                throw new BadRequestException(languageJsonService.LanguageStrongJson("InvalidGuid"));
+            var balance = await balanceRead.GetSingleAsync(a => a.Id == Guid.Parse(id) && a.isDeleted == false) ?? throw new NotFoundException(languageJsonService.LanguageStrongJson("NotFound"));
 
             balanceWrite.Delete(balance);
             await balanceWrite.SaveChangegesAsync();
@@ -112,16 +116,58 @@ namespace ecobony.persistence.Service
         => await balanceTransferRead.GetAll().ToListAsync();
 
         public async Task<BalanceTransfer> GetById(string id)
-        => await balanceTransferRead.GetSingleAsync(a => a.BalanceId == Guid.Parse(id)) ?? throw new NotFoundException("Balance not found");
+        {
+           
+            var username = _contextAccessor?.HttpContext?.User?.Identity?.Name;
+
+            if (string.IsNullOrEmpty(username))
+                throw new CustomUnauthorizedException(languageJsonService.LanguageStrongJson("Unauthorized"));
+
+            AppUser? user = await userManager.FindByNameAsync(username)
+                ?? throw new NotFoundException(languageJsonService.LanguageStrongJson("UserNotFound"));
+
+            var userRoles = await userManager.GetRolesAsync(user)
+                ?? throw new NotFoundException(languageJsonService.LanguageStrongJson("RoleNotFound"));
+            var bs = await balanceRead.GetSingleAsync(a => a.UserId == user.Id && a.isDeleted==false) ??
+                throw new NotFoundException(languageJsonService.LanguageStrongJson("NotFound"));
+            
+            BalanceTransfer? balance = null;
+
+            foreach (var role in userRoles)
+            {
+                if (role == RoleModel.Admin.ToString() || role ==RoleModel.Manager.ToString())
+                {
+                    // Admin bütün balansları görə bilər
+                    balance = await balanceTransferRead.GetByIdAsync(id);
+                    break;
+                }
+                else if (role == RoleModel.User.ToString())
+                {
+                    // İstifadəçi yalnız öz balansını görə bilər
+                    balance = await balanceTransferRead.GetSingleAsync(a =>
+                        a.Id == Guid.Parse(id) &&
+                        a.BalanceId==bs.Id &&
+                        !a.isDeleted);
+                    break;
+                }
+               
+            }
+
+            if (balance == null)
+                throw new NotFoundException(languageJsonService.LanguageStrongJson("InsufficientBalance"));
+
+            return balance;
+        }
+
 
         public async Task<List<BalanceTransfer>> GetClientAll()
         {
             var username = _contextAccessor?.HttpContext?.User?.Identity?.Name;
             if (string.IsNullOrEmpty(username))
-                throw new UnauthorizedAccessException("User not authenticated");
+                throw new CustomUnauthorizedException(languageJsonService.LanguageStrongJson("Unauthorized"));
 
-            var user = await userManager.FindByNameAsync(username) ?? throw new NotFoundException("User not found");
-            var balance = await balanceRead.GetSingleAsync(a => a.UserId == user.Id && a.isDeleted == false) ?? throw new NotFoundException("Balance not found");
+            var user = await userManager.FindByNameAsync(username) ?? throw new NotFoundException(languageJsonService.LanguageStrongJson("UserNotFound"));
+            var balance = await balanceRead.GetSingleAsync(a => a.UserId == user.Id && a.isDeleted == false) ?? throw new NotFoundException(languageJsonService.LanguageStrongJson("NotFound"));
 
             var balanceTransfer = await balanceTransferRead.GetFilter(a => a.BalanceId == balance.Id && a.isDeleted == false).ToListAsync();
 
@@ -132,8 +178,8 @@ namespace ecobony.persistence.Service
         public async Task<bool> RestoreDelete(string id)
         {
             if (!Guid.TryParse(id, out _))
-                throw new BadRequestException($"Invalid GUID format: '{id}'");
-            var balance = await balanceRead.GetSingleAsync(a => a.Id == Guid.Parse(id) && a.isDeleted == true) ?? throw new NotFoundException("Balance not found");
+                throw new BadRequestException(languageJsonService.LanguageStrongJson("InvalidGuid"));
+            var balance = await balanceRead.GetSingleAsync(a => a.Id == Guid.Parse(id) && a.isDeleted == true) ?? throw new NotFoundException(languageJsonService.LanguageStrongJson("NotFound"));
 
             balance.isDeleted = false;
             balanceWrite.Update(balance);
@@ -144,7 +190,7 @@ namespace ecobony.persistence.Service
         public async Task<bool> SoftDelete(string id)
         {
             if (!Guid.TryParse(id, out _))
-                throw new BadRequestException($"Invalid GUID format: '{id}'");
+                throw new BadRequestException(languageJsonService.LanguageStrongJson("InvalidGuid"));
             var balance = await balanceRead.GetSingleAsync(a => a.Id == Guid.Parse(id) && a.isDeleted == false) ?? throw new NotFoundException("Balance not found");
             balance.isDeleted = true;
             balanceWrite.Update(balance);

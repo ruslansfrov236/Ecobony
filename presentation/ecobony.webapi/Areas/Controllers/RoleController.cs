@@ -23,8 +23,8 @@ public class RoleController(IMediator mediator):ControllerBase
         return Ok(response);
     }
     [HttpPost("create")]
-    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Admin")]
-    public async Task<IActionResult> Create([FromBody]CreateRoleCommandRequest request)
+    //[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Admin")]
+    public async Task<IActionResult> Create([FromForm]CreateRoleCommandRequest request)
     {
         CreateRoleCommandResponse response = await mediator.Send(request);
         return Ok(response);

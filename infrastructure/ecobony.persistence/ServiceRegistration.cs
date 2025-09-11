@@ -1,42 +1,40 @@
+﻿using Microsoft.Extensions.Localization;
+
 namespace ecobony.persistence;
 
 public static class ServiceRegistration
 {
     public static void AddPersistenceRegistration(this IServiceCollection service)
     {
-        service.AddDbContext<AppDbContext>(opt => opt.UseSqlServer(Configuration.ConnectionString));
-
+        service.AddScoped<SoftDeleteInterceptor>();
+        service.AddDbContext<AppDbContext>((sp, opt) =>
+        {
+            var interceptor = sp.GetRequiredService<SoftDeleteInterceptor>();
+            opt.UseSqlServer(Configuration.ConnectionString).AddInterceptors(interceptor);
+        });
 
         service.AddIdentity<AppUser, AppRole>(options =>
-            {
+        {
+            options.Password.RequiredLength = 5;
+            options.Password.RequireUppercase = false;
+            options.Password.RequireLowercase = false;
+            options.Password.RequireNonAlphanumeric = false;
+            options.Password.RequireDigit = false;
 
-                options.Password.RequiredLength = 5;
-                options.Password.RequireUppercase = false;
-                options.Password.RequireLowercase = false;
-                options.Password.RequireNonAlphanumeric = false;
-                options.Password.RequireDigit = false;
+            options.User.RequireUniqueEmail = true;
 
+            options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(10);
+            options.Lockout.MaxFailedAccessAttempts = 5;
+            options.Lockout.AllowedForNewUsers = true;
 
-                options.User.RequireUniqueEmail = true;
-
-
-                options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(10);
-                options.Lockout.MaxFailedAccessAttempts = 5;
-                options.Lockout.AllowedForNewUsers = true;
-
-
-                options.SignIn.RequireConfirmedEmail = true;
-
-            })
+            options.SignIn.RequireConfirmedEmail = true;
+        })
             .AddEntityFrameworkStores<AppDbContext>()
             .AddDefaultTokenProviders();
 
         #region Repository
-
-        service
-            .AddScoped<IWasteSortingMistakeTranslationReadRepository, WasteSortingMistakeTranslationReadRepository>();
-        service
-            .AddScoped<IWasteSortingMistakeTranslationWriteRepository, WasteSortingMistakeTranslationWriteRepository>();
+        service.AddScoped<IWasteSortingMistakeTranslationReadRepository, WasteSortingMistakeTranslationReadRepository>();
+        service.AddScoped<IWasteSortingMistakeTranslationWriteRepository, WasteSortingMistakeTranslationWriteRepository>();
 
         service.AddScoped<ISortingActionTranslationReadRepository, SortingActionTranslationReadRepository>();
         service.AddScoped<ISortingActionTranslationWriteRepository, SortingActionTranslationWriteRepository>();
@@ -70,7 +68,8 @@ public static class ServiceRegistration
 
         service.AddScoped<ILocationReadRepository, LocationReadRepository>();
         service.AddScoped<ILocationWriteRepository, LocationWriteRepository>();
-
+        service.AddScoped<ITrashCanReadRepository, TrashCanReadRepository>();
+        service.AddScoped<ITrashCanWriteRepository, TrashCanWriteRepository>();
         service.AddScoped<ILanguageReadRepository, LanguageReadRepository>();
         service.AddScoped<ILanguageWriteRepository, LanguageWriteRepository>();
 
@@ -84,13 +83,9 @@ public static class ServiceRegistration
         service.AddScoped<IBonusWriteRepository, BonusWriteRepository>();
         service.AddScoped<IWasteReadRepository, WasteReadRepository>();
         service.AddScoped<IWasteWriteRepository, WasteWriteRepository>();
-
         #endregion
 
-
         #region Service
-
-
         service.AddTransient<IUserHistoryService, UserHistoryService>();
         service.AddScoped<ICategoryService, CategoryService>();
         service.AddScoped<IHeaderService, HeaderService>();
@@ -101,7 +96,11 @@ public static class ServiceRegistration
         service.AddScoped<ILanguageService, LanguageService>();
         service.AddScoped<IRoleService, RoleService>();
         service.AddScoped<IBalanceService, BalanceService>();
-        #endregion
+        service.AddTransient<ILanguageJsonService, LanguageJsonService>();
+      
 
+      
+      
+        #endregion
     }
 }

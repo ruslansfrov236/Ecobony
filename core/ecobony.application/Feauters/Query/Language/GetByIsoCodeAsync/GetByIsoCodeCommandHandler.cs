@@ -4,7 +4,9 @@ public class GetByIsoCodeCommandHandler(ILanguageService _languageService):IRequ
 {
     public async Task<GetByIsoCodeCommandResponse> Handle(GetByIsoCodeCommandRequest request, CancellationToken cancellationToken)
     {
-          await _languageService.GetByIsoCodeAsync(request.isoCode);
+           await _languageService.GetByIsoCodeAsync(request.isoCode);
+
+
           return new GetByIsoCodeCommandResponse();
     }
 }

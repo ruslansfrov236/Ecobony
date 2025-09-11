@@ -693,40 +693,8 @@
   },
   {
     "ContainingType": "ecobony.webapi.Areas.Controllers.RoleController",
-    "Method": "Create",
-    "RelativePath": "api/Admin/Role",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "request",
-        "Type": "ecobony.application.Feauters.Command.CreateRoleCommandRequest",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "ecobony.webapi.Areas.Controllers.RoleController",
-    "Method": "Create",
-    "RelativePath": "api/Admin/Role",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "request",
-        "Type": "ecobony.application.Feauters.Command.UpdateRoleCommandRequest",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "ecobony.webapi.Areas.Controllers.RoleController",
     "Method": "Index",
-    "RelativePath": "api/Admin/Role/{Id}",
+    "RelativePath": "api/Admin/Role/(get-by-id)/{Id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -746,6 +714,27 @@
   },
   {
     "ContainingType": "ecobony.webapi.Areas.Controllers.RoleController",
+    "Method": "Create",
+    "RelativePath": "api/Admin/Role/create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "RoleModel",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ecobony.webapi.Areas.Controllers.RoleController",
     "Method": "Delete",
     "RelativePath": "api/Admin/Role/delete/{Id}",
     "HttpMethod": "DELETE",
@@ -755,6 +744,22 @@
       {
         "Name": "Id",
         "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ecobony.webapi.Areas.Controllers.RoleController",
+    "Method": "Update",
+    "RelativePath": "api/Admin/Role/update",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "ecobony.application.Feauters.Command.UpdateRoleCommandRequest",
         "IsRequired": true
       }
     ],
@@ -784,7 +789,7 @@
   {
     "ContainingType": "ecobony.webapi.Areas.Controllers.UserController",
     "Method": "AssignRoleToUser",
-    "RelativePath": "api/Admin/User",
+    "RelativePath": "api/Admin/User/assign-role-to-user",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -800,7 +805,7 @@
   {
     "ContainingType": "ecobony.webapi.Areas.Controllers.UserController",
     "Method": "AssignRoleDeleteUser",
-    "RelativePath": "api/Admin/User/{userId}",
+    "RelativePath": "api/Admin/User/delete/{userId}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -946,38 +951,6 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "ecobony.webapi.Controllers.BalanceController",
-    "Method": "Index",
-    "RelativePath": "api/Balance",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "request",
-        "Type": "ecobony.application.Feauters.Query.GetClientBalanceAllCommandRequest",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "ecobony.webapi.Controllers.BalanceController",
-    "Method": "Create",
-    "RelativePath": "api/Balance",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "request",
-        "Type": "ecobony.application.Feauters.Command.CreateBalanceCommandRequest",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
     "ContainingType": "ecobony.webapi.Controllers.BonusController",
     "Method": "Index",
     "RelativePath": "api/Bonus",
@@ -1066,7 +1039,7 @@
     "Parameters": [
       {
         "Name": "request",
-        "Type": "ecobony.application.Feauters.Query.Language.GetClientAllCommandRequest",
+        "Type": "ecobony.application.Feauters.Query.Header.GetHeaderClientAllCommandRequest",
         "IsRequired": false
       }
     ],
@@ -1302,6 +1275,70 @@
         "Name": "request",
         "Type": "ecobony.application.Feauters.Query.GetWasteTrashCommandRequest",
         "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ecobony.webapi.Controllers.AuthController",
+    "Method": "Facebook",
+    "RelativePath": "facebook-login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "ecobony.application.Feauters.Command.FacebookLoginAsyncCommandRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ecobony.webapi.Controllers.AuthController",
+    "Method": "Google",
+    "RelativePath": "google-login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "ecobony.application.Feauters.Command.GoogleLoginAsyncCommandRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ecobony.webapi.Controllers.AuthController",
+    "Method": "Login",
+    "RelativePath": "login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "ecobony.application.Feauters.Command.LoginAsyncCommandRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ecobony.webapi.Controllers.AuthController",
+    "Method": "Registration",
+    "RelativePath": "registration",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "ecobony.application.Feauters.Command.CreateUserCommandRequest",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []

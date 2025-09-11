@@ -6,23 +6,26 @@ namespace ecobony.persistence.Service;
 public class CategoryService(
     ICategoryTranslationWriteRepository categoryTranslationWrite,
     ICategoryTranslationReadRepository categoryTranslationRead,
+    ILanguageJsonService _languageJsonService,
+    UserManager<AppUser> userManager,
+    RoleManager<AppRole> roleManager,
     ICategoryReadRepository _categoryRead,
     ICategoryWriteRepository _categoryWrite,
     IHttpContextAccessor _contextAccessor,
     ILanguageReadRepository _languageRead,
     IMemoryCache _memoryCache,
     IFileService _fileService
-    
-    ):ICategoryService
+
+    ) : ICategoryService
 {
     public async Task<List<GetCategoryDto_s>> GetClientAll()
     {
-       
-        var languageCode = _contextAccessor?.HttpContext?.Session?.GetString("Language");
+
+        var languageCode = CultureInfo.CurrentCulture.TwoLetterISOLanguageName;
 
         var language = await _languageRead.GetSingleAsync(a => a.IsoCode == languageCode)
-                      
-                       ?? throw new NotFoundException();
+
+                       ?? throw new NotFoundException(_languageJsonService.LanguageStrongJson("NotFound"));
 
         var latestUpdateAt = await _categoryRead.GetFilter
             (x => !x.isDeleted)
@@ -34,13 +37,13 @@ public class CategoryService(
         string cacheKey = $"categories_{language.Id}";
         if (_memoryCache.TryGetValue(cacheKey, out (DateTime lastUpdate, List<GetCategoryDto_s> data) cachedData))
         {
-            if (cachedData.lastUpdate>=latestUpdateAt)
+            if (cachedData.lastUpdate >= latestUpdateAt)
             {
-                return cachedData.data; 
+                return cachedData.data;
             }
         }
         var category = await _categoryRead.GetAll()
-            .Include(a=>a.Wastes)
+            .Include(a => a.Wastes)
             .Select(a => new
             {
                 a.Id,
@@ -51,14 +54,14 @@ public class CategoryService(
                 a.CreateAt,
                 a.Wastes,
                 a.Pointy,
-                Translation = a.CategoryTranslations.FirstOrDefault(t => t.LanguageId == language.Id )
+                Translation = a.CategoryTranslations.FirstOrDefault(t => t.LanguageId == language.Id)
             })
-            
-            .Where(a => a.Translation != null && a.isDeleted==false)
+
+            .Where(a => a.Translation != null && a.isDeleted == false)
             .Select(a => new GetCategoryDto_s
             {
                 CategoryId = a.Id,
-                Count = a.Wastes.Where(w=>w.CategoryId==a.Id).Count(),
+                Count = a.Wastes.Where(w => w.CategoryId == a.Id).Count(),
                 CreateAt = a.CreateAt,
                 UpdateAt = a.UpdateAt,
                 isDeleted = a.isDeleted,
@@ -71,7 +74,7 @@ public class CategoryService(
             })
             .ToListAsync();
 
-        
+
         _memoryCache.Set(cacheKey, (latestUpdateAt, category), new MemoryCacheEntryOptions
         {
             AbsoluteExpirationRelativeToNow = TimeSpan.FromMinutes(10)
@@ -81,7 +84,7 @@ public class CategoryService(
 
 
     public async Task<List<GetCategoryDto_s>> GetAdminAll()
-    
+
     {
         var latestUpdateAt = await _categoryRead.GetFilter
                 (x => !x.isDeleted)
@@ -93,70 +96,104 @@ public class CategoryService(
         string cacheKey = $"categories_{latestUpdateAt}";
         if (_memoryCache.TryGetValue(cacheKey, out (DateTime lastUpdate, List<GetCategoryDto_s> data) cachedData))
         {
-            if (cachedData.lastUpdate>=latestUpdateAt)
+            if (cachedData.lastUpdate >= latestUpdateAt)
             {
-                return cachedData.data; 
-            }
-        }
-        var category = await _categoryRead.GetAll()
-            .Include(a=>a.Wastes)
-            .Select(a => new
-            {
-                a.Id,
-                a.Count,
-                a.CreateAt,
-                a.Image,
-                a.UpdateAt,
-                a.isDeleted,
-                a.Wastes,
-                a.Pointy,
-                Translation = a.CategoryTranslations.FirstOrDefault()
-            })
-            .Where(a => a.Translation != null )
-            .Select(a => new GetCategoryDto_s
-            {
-                CategoryId = a.Id,
-                Pointy = a.Pointy,
-                Count = a.Wastes.Where(w=>w.CategoryId==a.Id).Count(),
-             
-                CreateAt = a.CreateAt,
-                isDeleted = a.isDeleted,
-                UpdateAt = a.UpdateAt,
-                Image = a.Image,
-                CategoryTranslationId = a.Translation.Id,
-                LanguageId = a.Translation.LanguageId,
-                Name = a.Translation.Name,
-                Description = a.Translation.Description
-            })
-            .ToListAsync();
+                return cachedData.data;
 
-        
-    
-        _memoryCache.Set(cacheKey, (latestUpdateAt, category), new MemoryCacheEntryOptions
-        {
-            AbsoluteExpirationRelativeToNow = TimeSpan.FromMinutes(10)
-        });
-        return category;
+
+            }
+            var category = await _categoryRead.GetAll()
+                .Include(a => a.Wastes)
+                .Select(a => new
+                {
+                    a.Id,
+                    a.Count,
+                    a.CreateAt,
+                    a.Image,
+                    a.UpdateAt,
+                    a.isDeleted,
+                    a.Wastes,
+                    a.Pointy,
+                    Translation = a.CategoryTranslations.FirstOrDefault()
+                })
+                .Where(a => a.Translation != null)
+                .Select(a => new GetCategoryDto_s
+                {
+                    CategoryId = a.Id,
+                    Pointy = a.Pointy,
+                    Count = a.Wastes.Where(w => w.CategoryId == a.Id).Count(),
+
+                    CreateAt = a.CreateAt,
+                    isDeleted = a.isDeleted,
+                    UpdateAt = a.UpdateAt,
+                    Image = a.Image,
+                    CategoryTranslationId = a.Translation.Id,
+                    LanguageId = a.Translation.LanguageId,
+                    Name = a.Translation.Name,
+                    Description = a.Translation.Description
+                })
+                .ToListAsync();
+
+
+
+            _memoryCache.Set(cacheKey, (latestUpdateAt, category), new MemoryCacheEntryOptions
+            {
+                AbsoluteExpirationRelativeToNow = TimeSpan.FromMinutes(10)
+            });
+            return category;
+        }
+        throw new NotFoundException(_languageJsonService.LanguageStrongJson("NotFound"));
     }
 
     public async Task<GetCategoryDto_s> GetById(string id)
     {
         if (!Guid.TryParse(id, out _))
-            throw new BadRequestException($"Invalid GUID format: '{id}'");
-        var languageCode = _contextAccessor.HttpContext.Session.GetString("Language");
+            throw new BadRequestException(_languageJsonService.LanguageStrongJson("InvalidGuid"));
+        var languageCode = CultureInfo.CurrentCulture.TwoLetterISOLanguageName;
 
-        var language = await _languageRead.GetSingleAsync(a => a.IsoCode == languageCode)
-                       ?? throw new NotFoundException();
-        var category = await _categoryRead.GetByIdAsync(id) ?? throw new NotFoundException();
+        var language = await _languageRead.GetSingleAsync(a => a.IsoCode == languageCode && a.isDeleted == false)
+                       ?? throw new NotFoundException(_languageJsonService.LanguageStrongJson("NotFound"));
+        var username = _contextAccessor?.HttpContext?.User?.Identity?.Name ??
+            throw new CustomUnauthorizedException(_languageJsonService.LanguageStrongJson("Unauthorized"));
+        AppUser? user = await userManager.FindByNameAsync(username)
+            ?? throw new CustomUnauthorizedException(_languageJsonService.LanguageStrongJson("UserNotFound"));
+        var userRoles = await userManager.GetRolesAsync(user) ?? throw new CustomUnauthorizedException(_languageJsonService.LanguageStrongJson("UserNotFound")); ;
+        Category category = null;
+        CategoryTranslation translation = null;
+        foreach (var role in userRoles)
+        {
 
-        var translation =
-            await categoryTranslationRead.GetSingleAsync(a =>
-                a.CategoryId == category.Id && a.LanguageId == language.Id && a.isDeleted==false);
+
+            if (role == RoleModel.Admin.ToString() || role == RoleModel.Manager.ToString())
+            {
+                category = await _categoryRead.GetByIdAsync(id);
+                translation =
+        await categoryTranslationRead.GetSingleAsync(a =>
+            a.CategoryId == category.Id && a.LanguageId == language.Id);
+
+
+                break;
+            }
+            else if (role == RoleModel.User.ToString())
+            {
+                category = await _categoryRead.GetSingleAsync(a => a.Id == Guid.Parse(id) && a.isDeleted == false);
+                translation =
+      await categoryTranslationRead.GetSingleAsync(a =>
+          a.CategoryId == category.Id && a.LanguageId == language.Id && a.isDeleted == false);
+
+
+                break;
+            }
+            if (category is null || translation is null)
+                throw new CustomUnauthorizedException(_languageJsonService.LanguageStrongJson("NotFound"));
+        }
+
+
 
         return new GetCategoryDto_s
         {
             CategoryId = category.Id,
-            Count = category.Wastes.Where(w=>w.CategoryId==category.Id).Count(),
+            Count = category.Wastes.Where(w => w.CategoryId == category.Id).Count(),
             Pointy = category.Pointy,
             isDeleted = category.isDeleted,
             CreateAt = category.CreateAt,
@@ -175,22 +212,22 @@ public class CategoryService(
         if (image is null) throw new NotFoundException();
 
         if (await _categoryRead.AnyAsync(a => a.Pointy == model.CreateCategoryDto.Pointy))
-            throw new BadRequestException("Replat values point ");
-        
+            throw new BadRequestException(_languageJsonService.LanguageStrongJson("ReplatValuesPoint"));
+
         Category category = new Category()
         {
             Pointy = model.CreateCategoryDto.Pointy,
             PricePoint = model.CreateCategoryDto.PricePoint,
             Image = image
         };
-        
+
         await _categoryWrite.AddAsync(category);
         await _categoryWrite.SaveChangegesAsync();
 
         var languges = await _languageRead.GetByIdAsync(model.CreateCategoryTranslationDto.LanguageId.ToString()) ?? throw new NotFoundException();
         if (await categoryTranslationRead
-                .AnyAsync(a => a.Name == model.CreateCategoryTranslationDto.Name && a.LanguageId==languges.Id))
-            throw new BadRequestException("Replat values name ");
+                .AnyAsync(a => a.Name == model.CreateCategoryTranslationDto.Name && a.LanguageId == languges.Id))
+            throw new BadRequestException(_languageJsonService.LanguageStrongJson("ReplatValuesName"));
         CategoryTranslation categoryTranslation = new CategoryTranslation()
         {
             Name = model.CreateCategoryTranslationDto.Name,
@@ -206,10 +243,11 @@ public class CategoryService(
     public async Task<bool> Update(UpdateCategoryWithTranslationDto model)
     {
         if (!Guid.TryParse(model.UpdateCategoryDto.Id, out _))
-            throw new BadRequestException($"Invalid GUID format: '{model.UpdateCategoryDto.Id}'");
+            throw new BadRequestException(_languageJsonService.LanguageStrongJson("InvalidGuid"));
 
-        
-        var category = await _categoryRead.GetByIdAsync(model.UpdateCategoryDto.Id) ?? throw new NotFoundException();
+
+        var category = await _categoryRead.GetByIdAsync(model.UpdateCategoryDto.Id)
+            ?? throw new NotFoundException(_languageJsonService.LanguageStrongJson("NotFound"));
 
         if (model.UpdateCategoryDto.FormFile is not null)
         {
@@ -217,43 +255,43 @@ public class CategoryService(
             _fileService.DeleteFile(category.Image);
             var image = await _fileService.UploadFileAsync(model.UpdateCategoryDto.FormFile);
 
-            if (image is null) throw new NotFoundException();
+            if (image is null) throw new NotFoundException(_languageJsonService.LanguageStrongJson("ImageNotFound"));
 
             category.Image = image;
-            
+
         }
         category.Pointy = model.UpdateCategoryDto.Pointy;
         category.PricePoint = model.UpdateCategoryDto.PricePoint;
 
-         _categoryWrite.Update(category);
-         await _categoryWrite.SaveChangegesAsync();
+        _categoryWrite.Update(category);
+        await _categoryWrite.SaveChangegesAsync();
 
 
-         var languages = await _languageRead.GetByIdAsync(model.UpdateCategoryTranslationDto.LanguageId.ToString()) ??
-                         throw new NotFoundException();
-         var translation = await categoryTranslationRead.GetSingleAsync(a => a.CategoryId == category.Id) ??
-                           throw new NotFoundException();
-         translation.CategoryId = category.Id;
-         translation.Description = model.UpdateCategoryTranslationDto.Description;
-         translation.Name = model.UpdateCategoryTranslationDto.Name;
-         translation.LanguageId = languages.Id;
+        var languages = await _languageRead.GetByIdAsync(model.UpdateCategoryTranslationDto.LanguageId.ToString()) ??
+                        throw new NotFoundException();
+        var translation = await categoryTranslationRead.GetSingleAsync(a => a.CategoryId == category.Id && a.isDeleted == false) ??
+                          throw new NotFoundException(_languageJsonService.LanguageStrongJson("NotFound"));
+        translation.CategoryId = category.Id;
+        translation.Description = model.UpdateCategoryTranslationDto.Description;
+        translation.Name = model.UpdateCategoryTranslationDto.Name;
+        translation.LanguageId = languages.Id;
 
-         return true;
+        return true;
 
     }
 
     public async Task<bool> SoftDelete(string id)
     {
         if (!Guid.TryParse(id, out _))
-            throw new BadRequestException($"Invalid GUID format: '{id}'");
+            throw new BadRequestException(_languageJsonService.LanguageStrongJson("InvalidGuid"));
 
-        var category = await _categoryRead.GetSingleAsync(a=>a.Id==Guid.Parse(id) && a.isDeleted==false) ?? throw new NotFoundException();
+        var category = await _categoryRead.GetSingleAsync(a => a.Id == Guid.Parse(id) && a.isDeleted == false) ?? throw new NotFoundException();
 
-        category.isDeleted =true;
+        category.isDeleted = true;
         _categoryWrite.Update(category);
         await _categoryWrite.SaveChangegesAsync();
-        var translation = await categoryTranslationRead.GetSingleAsync(a => a.CategoryId == category.Id && a.isDeleted==false) ??
-                          throw new NotFoundException();
+        var translation = await categoryTranslationRead.GetSingleAsync(a => a.CategoryId == category.Id && a.isDeleted == false) ??
+                          throw new NotFoundException(_languageJsonService.LanguageStrongJson("NotFound"));
         translation.isDeleted = true;
         categoryTranslationWrite.Update(translation);
         await categoryTranslationWrite.SaveChangegesAsync();
@@ -263,30 +301,36 @@ public class CategoryService(
     public async Task<bool> Restore(string id)
     {
         if (!Guid.TryParse(id, out _))
-            throw new BadRequestException($"Invalid GUID format: '{id}'");
+            throw new BadRequestException(_languageJsonService.LanguageStrongJson("InvalidGuid"));
 
-        var category = await _categoryRead.GetSingleAsync(a=>a.Id==Guid.Parse(id) && a.isDeleted==true) ?? throw new NotFoundException();
+        var category = await _categoryRead.GetSingleAsync(a => a.Id == Guid.Parse(id) && a.isDeleted == false)
+            ?? throw new NotFoundException(_languageJsonService.LanguageStrongJson("NotFound"));
 
         category.isDeleted = false;
         _categoryWrite.Update(category);
         await _categoryWrite.SaveChangegesAsync();
-        var translation = await categoryTranslationRead.GetSingleAsync(a => a.CategoryId == category.Id && a.isDeleted==true) ??
-                          throw new NotFoundException();
-        translation.isDeleted=false;
+        var translation = await categoryTranslationRead.GetSingleAsync(a => a.CategoryId == category.Id && a.isDeleted == false) ??
+                         throw new NotFoundException(_languageJsonService.LanguageStrongJson("NotFound"));
+        translation.isDeleted = false;
         categoryTranslationWrite.Update(translation);
         await categoryTranslationWrite.SaveChangegesAsync();
         return true;
     }
 
     public async Task<bool> Delete(string id)
-    { 
+    {
         if (!Guid.TryParse(id, out _))
-            throw new BadRequestException($"Invalid GUID format: '{id}'");
+            throw new BadRequestException(_languageJsonService.LanguageStrongJson("InvalidGuid"));
 
-        var category = await _categoryRead.GetSingleAsync(a=>a.Id==Guid.Parse(id) && a.isDeleted==true) ?? throw new NotFoundException();
-        _fileService.DeleteFile(category.Image);
-        _categoryWrite.Update(category);
-        await _categoryWrite.SaveChangegesAsync();
-        return true;
+        var category = await _categoryRead.GetSingleAsync(a => a.Id == Guid.Parse(id) && a.isDeleted == true)
+            ?? throw new NotFoundException(_languageJsonService.LanguageStrongJson("NotFound"));
+        if (!string.IsNullOrEmpty(category.Image))
+        {
+            _fileService.DeleteFile(category.Image);
+            _categoryWrite.Update(category);
+            await _categoryWrite.SaveChangegesAsync();
+            return true;
+        }
+        throw new NotFoundException(_languageJsonService.LanguageStrongJson("ImageNotFound"));
     }
 }

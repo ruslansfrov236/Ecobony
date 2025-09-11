@@ -5,45 +5,119 @@
     "version": "1.0"
   },
   "paths": {
-    "/api/Balance": {
-      "get": {
-        "tags": [
-          "Balance"
-        ],
-        "parameters": [
-          {
-            "name": "request",
-            "in": "query",
-            "schema": {
-              "$ref": "#/components/schemas/GetClientBalanceAllCommandRequest"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      },
+    "/login": {
       "post": {
         "tags": [
-          "Balance"
+          "Auth"
         ],
         "requestBody": {
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/CreateBalanceCommandRequest"
+                "$ref": "#/components/schemas/LoginAsyncCommandRequest"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/CreateBalanceCommandRequest"
+                "$ref": "#/components/schemas/LoginAsyncCommandRequest"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/CreateBalanceCommandRequest"
+                "$ref": "#/components/schemas/LoginAsyncCommandRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/registration": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateUserCommandRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateUserCommandRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateUserCommandRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/google-login": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GoogleLoginAsyncCommandRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GoogleLoginAsyncCommandRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GoogleLoginAsyncCommandRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/facebook-login": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FacebookLoginAsyncCommandRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FacebookLoginAsyncCommandRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/FacebookLoginAsyncCommandRequest"
               }
             }
           }
@@ -658,7 +732,7 @@
             "name": "request",
             "in": "query",
             "schema": {
-              "$ref": "#/components/schemas/GetClientAllCommandRequest"
+              "$ref": "#/components/schemas/GetHeaderClientAllCommandRequest"
             }
           }
         ],
@@ -1276,26 +1350,63 @@
             "description": "OK"
           }
         }
-      },
+      }
+    },
+    "/api/Admin/Role/(get-by-id)/{Id}": {
+      "get": {
+        "tags": [
+          "Role"
+        ],
+        "parameters": [
+          {
+            "name": "Id",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Admin/Role/create": {
       "post": {
         "tags": [
           "Role"
         ],
         "requestBody": {
           "content": {
-            "application/json": {
+            "multipart/form-data": {
               "schema": {
-                "$ref": "#/components/schemas/CreateRoleCommandRequest"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/CreateRoleCommandRequest"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/CreateRoleCommandRequest"
+                "type": "object",
+                "properties": {
+                  "Name": {
+                    "type": "string"
+                  },
+                  "RoleModel": {
+                    "$ref": "#/components/schemas/RoleModel"
+                  }
+                }
+              },
+              "encoding": {
+                "Name": {
+                  "style": "form"
+                },
+                "RoleModel": {
+                  "style": "form"
+                }
               }
             }
           }
@@ -1305,7 +1416,9 @@
             "description": "OK"
           }
         }
-      },
+      }
+    },
+    "/api/Admin/Role/update": {
       "put": {
         "tags": [
           "Role"
@@ -1329,35 +1442,6 @@
             }
           }
         },
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/Admin/Role/{Id}": {
-      "get": {
-        "tags": [
-          "Role"
-        ],
-        "parameters": [
-          {
-            "name": "Id",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "Id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
         "responses": {
           "200": {
             "description": "OK"
@@ -1465,7 +1549,31 @@
             "description": "OK"
           }
         }
-      },
+      }
+    },
+    "/api/Admin/User/delete/{userId}": {
+      "delete": {
+        "tags": [
+          "User"
+        ],
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Admin/User/assign-role-to-user": {
       "post": {
         "tags": [
           "User"
@@ -1489,28 +1597,6 @@
             }
           }
         },
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/Admin/User/{userId}": {
-      "delete": {
-        "tags": [
-          "User"
-        ],
-        "parameters": [
-          {
-            "name": "userId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
         "responses": {
           "200": {
             "description": "OK"
@@ -1953,20 +2039,6 @@
         },
         "additionalProperties": false
       },
-      "CreateBalanceCommandRequest": {
-        "type": "object",
-        "properties": {
-          "bonusId": {
-            "type": "string",
-            "nullable": true
-          },
-          "bonus": {
-            "type": "number",
-            "format": "double"
-          }
-        },
-        "additionalProperties": false
-      },
       "CreateBonusCommandRequest": {
         "type": "object",
         "properties": {
@@ -1977,15 +2049,20 @@
         },
         "additionalProperties": false
       },
-      "CreateRoleCommandRequest": {
+      "CreateUserCommandRequest": {
         "type": "object",
         "properties": {
-          "name": {
+          "userName": {
             "type": "string",
             "nullable": true
           },
-          "roleModel": {
-            "$ref": "#/components/schemas/RoleModel"
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "password": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -2022,6 +2099,20 @@
         },
         "additionalProperties": false
       },
+      "FacebookLoginAsyncCommandRequest": {
+        "type": "object",
+        "properties": {
+          "authToken": {
+            "type": "string",
+            "nullable": true
+          },
+          "accessTokenLifeTime": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
       "GetAdminAllCommandHandlerRequest": {
         "type": "object",
         "additionalProperties": false
@@ -2050,15 +2141,15 @@
         "type": "object",
         "additionalProperties": false
       },
-      "GetClientBalanceAllCommandRequest": {
-        "type": "object",
-        "additionalProperties": false
-      },
       "GetClientBonusAllCommandRequest": {
         "type": "object",
         "additionalProperties": false
       },
       "GetClientWasteAllCommandRequest": {
+        "type": "object",
+        "additionalProperties": false
+      },
+      "GetHeaderClientAllCommandRequest": {
         "type": "object",
         "additionalProperties": false
       },
@@ -2074,6 +2165,20 @@
         "type": "object",
         "additionalProperties": false
       },
+      "GoogleLoginAsyncCommandRequest": {
+        "type": "object",
+        "properties": {
+          "idToken": {
+            "type": "string",
+            "nullable": true
+          },
+          "accessTokenLifeTime": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
       "HeaderRole": {
         "enum": [
           "Header",
@@ -2081,6 +2186,27 @@
           "Admin"
         ],
         "type": "string"
+      },
+      "LoginAsyncCommandRequest": {
+        "type": "object",
+        "properties": {
+          "password": {
+            "type": "string",
+            "nullable": true
+          },
+          "usernameOrEmail": {
+            "type": "string",
+            "nullable": true
+          },
+          "accessTokenLifeTime": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "isSave": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
       },
       "RestoreWasteCommandRequest": {
         "type": "object",
@@ -2095,7 +2221,8 @@
       "RoleModel": {
         "enum": [
           "Admin",
-          "Manager"
+          "Manager",
+          "User"
         ],
         "type": "string"
       },

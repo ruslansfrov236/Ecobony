@@ -1,3 +1,4 @@
+C:\Users\rusla\Documents\Web\ecobony\ecobony\presentation\ecobony.webapi\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\Users\rusla\Documents\Web\ecobony\ecobony\presentation\ecobony.webapi\bin\Debug\net9.0\appsettings.Development.json
 C:\Users\rusla\Documents\Web\ecobony\ecobony\presentation\ecobony.webapi\bin\Debug\net9.0\appsettings.json
 C:\Users\rusla\Documents\Web\ecobony\ecobony\presentation\ecobony.webapi\bin\Debug\net9.0\Resources\i18.json
@@ -150,7 +151,6 @@ C:\Users\rusla\Documents\Web\ecobony\ecobony\presentation\ecobony.webapi\bin\Deb
 C:\Users\rusla\Documents\Web\ecobony\ecobony\presentation\ecobony.webapi\bin\Debug\net9.0\StackExchange.Redis.dll
 C:\Users\rusla\Documents\Web\ecobony\ecobony\presentation\ecobony.webapi\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\rusla\Documents\Web\ecobony\ecobony\presentation\ecobony.webapi\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
-C:\Users\rusla\Documents\Web\ecobony\ecobony\presentation\ecobony.webapi\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\Users\rusla\Documents\Web\ecobony\ecobony\presentation\ecobony.webapi\bin\Debug\net9.0\System.ClientModel.dll
 C:\Users\rusla\Documents\Web\ecobony\ecobony\presentation\ecobony.webapi\bin\Debug\net9.0\System.CodeDom.dll
 C:\Users\rusla\Documents\Web\ecobony\ecobony\presentation\ecobony.webapi\bin\Debug\net9.0\System.Composition.AttributedModel.dll
@@ -345,7 +345,6 @@ C:\Users\rusla\Documents\Web\ecobony\ecobony\presentation\ecobony.webapi\obj\Deb
 C:\Users\rusla\Documents\Web\ecobony\ecobony\presentation\ecobony.webapi\obj\Debug\net9.0\ecobony.webapi.AssemblyInfoInputs.cache
 C:\Users\rusla\Documents\Web\ecobony\ecobony\presentation\ecobony.webapi\obj\Debug\net9.0\ecobony.webapi.AssemblyInfo.cs
 C:\Users\rusla\Documents\Web\ecobony\ecobony\presentation\ecobony.webapi\obj\Debug\net9.0\ecobony.webapi.csproj.CoreCompileInputs.cache
-C:\Users\rusla\Documents\Web\ecobony\ecobony\presentation\ecobony.webapi\obj\Debug\net9.0\ecobony.webapi.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\rusla\Documents\Web\ecobony\ecobony\presentation\ecobony.webapi\obj\Debug\net9.0\ecobony.webapi.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\rusla\Documents\Web\ecobony\ecobony\presentation\ecobony.webapi\obj\Debug\net9.0\ecobony.webapi.sourcelink.json
 C:\Users\rusla\Documents\Web\ecobony\ecobony\presentation\ecobony.webapi\obj\Debug\net9.0\rjimswa.dswa.cache.json
@@ -356,10 +355,12 @@ C:\Users\rusla\Documents\Web\ecobony\ecobony\presentation\ecobony.webapi\obj\Deb
 C:\Users\rusla\Documents\Web\ecobony\ecobony\presentation\ecobony.webapi\obj\Debug\net9.0\staticwebassets.build.json.cache
 C:\Users\rusla\Documents\Web\ecobony\ecobony\presentation\ecobony.webapi\obj\Debug\net9.0\staticwebassets.development.json
 C:\Users\rusla\Documents\Web\ecobony\ecobony\presentation\ecobony.webapi\obj\Debug\net9.0\staticwebassets.build.endpoints.json
-C:\Users\rusla\Documents\Web\ecobony\ecobony\presentation\ecobony.webapi\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
 C:\Users\rusla\Documents\Web\ecobony\ecobony\presentation\ecobony.webapi\obj\Debug\net9.0\ecobony..34A977E0.Up2Date
 C:\Users\rusla\Documents\Web\ecobony\ecobony\presentation\ecobony.webapi\obj\Debug\net9.0\ecobony.webapi.dll
 C:\Users\rusla\Documents\Web\ecobony\ecobony\presentation\ecobony.webapi\obj\Debug\net9.0\refint\ecobony.webapi.dll
 C:\Users\rusla\Documents\Web\ecobony\ecobony\presentation\ecobony.webapi\obj\Debug\net9.0\ecobony.webapi.pdb
 C:\Users\rusla\Documents\Web\ecobony\ecobony\presentation\ecobony.webapi\obj\Debug\net9.0\ecobony.webapi.genruntimeconfig.cache
 C:\Users\rusla\Documents\Web\ecobony\ecobony\presentation\ecobony.webapi\obj\Debug\net9.0\ref\ecobony.webapi.dll
+C:\Users\rusla\Documents\Web\ecobony\ecobony\presentation\ecobony.webapi\bin\Debug\net9.0\AspNetCore.JsonLocalization.dll
+C:\Users\rusla\Documents\Web\ecobony\ecobony\presentation\ecobony.webapi\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
+C:\Users\rusla\Documents\Web\ecobony\ecobony\presentation\ecobony.webapi\obj\Debug\net9.0\ecobony.webapi.MvcApplicationPartsAssemblyInfo.cs

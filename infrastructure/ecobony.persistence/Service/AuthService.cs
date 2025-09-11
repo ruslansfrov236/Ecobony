@@ -5,6 +5,7 @@ namespace ecobony.persistence.Service;
 public class AuthService( 
  UserManager<AppUser>  _userManager,
  AuthHub _authHub,
+ ILanguageJsonService _languageJsonService,
  ITokenService _tokenHandler,
  IConfiguration _configuration,
 HttpClient _httpClient,
@@ -37,7 +38,7 @@ SignInManager<AppUser>  _signinManager,
        
    return   await  CreateUserExternalAsync(user , userInfoResponse.Email , userInfoResponse.Name , info ,accessTokenLifeTime);
       }
-       throw new CustomUnauthorizedException("Invalid external authentication");
+       throw new CustomUnauthorizedException(_languageJsonService.LanguageStrongJson("InvalidExternalAuthentication"));
       }
       public async Task<Token> GoogleLoginAsync(string idToken ,int accessTokenLifeTime)
       {
@@ -53,7 +54,8 @@ SignInManager<AppUser>  _signinManager,
        var info=  new UserLoginInfo("GOOGLE", payload.Subject , "GOOGLE");
 
 
-       AppUser user=  await  _userManager.FindByLoginAsync(info.LoginProvider , info.ProviderKey);
+        AppUser? user = await _userManager.FindByLoginAsync(info.LoginProvider, info.ProviderKey)
+            ?? throw new CustomUnauthorizedException(_languageJsonService.LanguageStrongJson("UserLoginNotFound"));
        await _authHub.Connect();
          return   await  CreateUserExternalAsync(user , payload.Email , payload.Name , info ,accessTokenLifeTime);
       }
@@ -62,7 +64,7 @@ SignInManager<AppUser>  _signinManager,
       {
          AppUser user=  await   _userManager.FindByNameAsync(usernameOrEmail)
           ??   await _userManager.FindByEmailAsync(usernameOrEmail)
-          ??   throw new CustomUnauthorizedException("The user did not verify the account");
+          ??   throw new CustomUnauthorizedException(_languageJsonService.LanguageStrongJson("UserDidNotVerifyAccount"));
 
          var result=   await  _signinManager.CheckPasswordSignInAsync(user , password ,isSave);
        if(result.Succeeded){
@@ -75,7 +77,7 @@ SignInManager<AppUser>  _signinManager,
        
        }
 
-       throw new CustomUnauthorizedException("The user did not verify the account");
+       throw new CustomUnauthorizedException(_languageJsonService.LanguageStrongJson("UserDidNotVerifyAccount"));
       }
 
       public async Task PasswordResetAsync(string email)
@@ -102,7 +104,7 @@ SignInManager<AppUser>  _signinManager,
             return token;
           }
 
-          throw new CustomUnauthorizedException();
+          throw new CustomUnauthorizedException(_languageJsonService.LanguageStrongJson("InvalidOrExpiredRefreshToken"));
       }
 
     public async Task<bool> VerifyResetTokenAsync(string resetToken, string userId)
@@ -152,7 +154,7 @@ SignInManager<AppUser>  _signinManager,
                   return token;
 
              }
-               throw new CustomUnauthorizedException("Invalid external authentication");
+               throw new CustomUnauthorizedException(_languageJsonService.LanguageStrongJson("InvalidExternalAuthentication"));
         } 
 
         

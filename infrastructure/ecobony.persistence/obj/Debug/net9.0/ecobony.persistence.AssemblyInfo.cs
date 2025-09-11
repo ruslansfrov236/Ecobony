@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ecobony.persistence")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e1c4be1909527c4cc46635461ae3f15bd2ac2fee")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1d0d862e80cf46b95e44a239c0ba5dbfb5baaf63")]
 [assembly: System.Reflection.AssemblyProductAttribute("ecobony.persistence")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ecobony.persistence")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

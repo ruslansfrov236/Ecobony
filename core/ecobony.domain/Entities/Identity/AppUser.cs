@@ -39,7 +39,7 @@ namespace ecobony.domain.Entities.Identity
         public List<WasteProcess>? WasteProcesses { get; set; }
 
         public List<UserHistory>? UserHistory { get; set; }
-        public List<UserTracking> UserTrackings { get; set; }   
+        public List<UserTracking>? UserTrackings { get; set; }   
         
         public bool IsCurrentlyOnline()
         {

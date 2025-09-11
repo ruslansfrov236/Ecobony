@@ -1,4 +1,6 @@
 
+using ecobony.application.Feauters.Command.Language;
+
 namespace ecobony.webapi.Areas.Controllers;
 [Area("Admin")]
 [Route("api/[area]/[controller]")]
@@ -22,7 +24,7 @@ public class LanguageController(IMediator _mediator):ControllerBase
     }
 
     [HttpPost]
-    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Admin")]
+    //[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Admin")]
     public async Task<IActionResult> Create([FromForm] CreateLanguageCommandRequest request)
     { 
         CreateLanguageCommandResponse response = await _mediator.Send(request);

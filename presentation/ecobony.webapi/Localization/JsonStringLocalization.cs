@@ -1,20 +1,37 @@
-using System.Text.Json;
+﻿using DocumentFormat.OpenXml.InkML;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Caching.Distributed;
 using Microsoft.Extensions.Localization;
+using System.Text.Json;
 
 namespace ecobony.webapi.Localization;
 
-public class JsonStringLocalization(IDistributedCache cache) : IStringLocalizer
+public class JsonStringLocalization : IStringLocalizer
 {
-    private static string ResourceFilePath => "Resources/i18.json";
-    private static string CurrentCultureName => Thread.CurrentThread.CurrentCulture.Name;
+
+    private readonly IDistributedCache _cache;
+   
+    private const string ResourceFilePath = "Resources/i18.json";
+
+
+    public JsonStringLocalization(IDistributedCache cache   )
+    {
+        _cache = cache;
+       
+    }
+
+    private static string CurrentCultureName => CultureInfo.CurrentCulture.TwoLetterISOLanguageName;
+
+
+
+
 
     public LocalizedString this[string name]
     {
         get
         {
-            string value = GetStringByName(name);
-            return new LocalizedString(name, value, value == null!);
+            string? value = GetStringByName(name);
+            return new LocalizedString(name, value ?? name, value is null);
         }
     }
 
@@ -35,44 +52,78 @@ public class JsonStringLocalization(IDistributedCache cache) : IStringLocalizer
         using StreamReader streamReader = new(fileStream);
         using JsonDocument jsonDocument = JsonDocument.Parse(streamReader.ReadToEnd());
 
-        foreach (JsonProperty property in jsonDocument.RootElement.EnumerateObject())
+        foreach (JsonElement item in jsonDocument.RootElement.EnumerateArray())
         {
-            string key = property.Name;
-            string value = property.Value.GetString()!;
-            yield return new LocalizedString(key, value, false);
+            if (item.TryGetProperty("Key", out JsonElement keyElement) &&
+                item.TryGetProperty("LocalizedValue", out JsonElement localizedValues))
+            {
+                string? value = null;
+
+                if (localizedValues.TryGetProperty(CurrentCultureName, out JsonElement locValue))
+                {
+                    value = locValue.GetString();
+                }
+                else
+                {
+                    var shortCulture = CurrentCultureName.Split('-')[0];
+                    foreach (var prop in localizedValues.EnumerateObject())
+                    {
+                        if (prop.Name.StartsWith(shortCulture, StringComparison.OrdinalIgnoreCase))
+                        {
+                            value = prop.Value.GetString();
+                            break;
+                        }
+                    }
+                }
+
+                yield return new LocalizedString(keyElement.GetString()!, value ?? keyElement.GetString()!, value is null);
+            }
         }
     }
 
-    private string GetStringByName(string name)
+    private string? GetStringByName(string name)
     {
         string cacheKey = GenerateCacheKey(name);
-        string cachedValue = cache.GetString(cacheKey)!;
+        string? cachedValue = _cache.GetString(cacheKey);
 
         if (!string.IsNullOrEmpty(cachedValue)) return cachedValue;
 
-        string resourceValue = GetValueFromResourceFile(name);
+        string? resourceValue = GetValueFromResourceFile(name);
 
-        if (!string.IsNullOrEmpty(resourceValue)) cache.SetString(cacheKey, resourceValue);
+        if (!string.IsNullOrEmpty(resourceValue))
+            _cache.SetString(cacheKey, resourceValue);
 
         return resourceValue;
     }
 
-    private string GetValueFromResourceFile(string key)
+    private string? GetValueFromResourceFile(string key)
     {
         using FileStream fileStream = new(ResourceFilePath, FileMode.Open, FileAccess.Read, FileShare.Read);
         using StreamReader streamReader = new(fileStream);
         using JsonDocument jsonDocument = JsonDocument.Parse(streamReader.ReadToEnd());
 
-        JsonElement.ArrayEnumerator translations = jsonDocument.RootElement.EnumerateArray();
-        foreach (JsonElement item in translations)
+        foreach (JsonElement item in jsonDocument.RootElement.EnumerateArray())
         {
-            if (!item.TryGetProperty("Key", out JsonElement keyElement) || keyElement.GetString() != key) continue;
+            if (!item.TryGetProperty("Key", out JsonElement keyElement) || keyElement.GetString() != key)
+                continue;
 
-            if (item.GetProperty("LocalizedValue").TryGetProperty(CurrentCultureName, out JsonElement localizedValue))
-                return localizedValue.GetString()!;
+            if (item.TryGetProperty("LocalizedValue", out JsonElement localizedValues))
+            {
+                var culture = CurrentCultureName;
+
+                if (localizedValues.TryGetProperty(culture, out JsonElement localizedValue))
+                    return localizedValue.GetString() ?? string.Empty;
+
+                var shortCulture = culture.Split('-')[0];
+                foreach (var prop in localizedValues.EnumerateObject())
+                {
+                    if (prop.Name.StartsWith(shortCulture, StringComparison.OrdinalIgnoreCase))
+                        return prop.Value.GetString() ?? string.Empty;
+                }
+            }
         }
 
-        return default!;
+        return null;
     }
 
     private string GenerateCacheKey(string name)

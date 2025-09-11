@@ -1,38 +1,54 @@
+﻿using Microsoft.Extensions.Localization;
+
+namespace ecobony.application.Validator;
+
 public class CreateLanguageValidator : AbstractValidator<CreateLanguageDto_s>
 {
-    public CreateLanguageValidator()
+    private readonly IStringLocalizer _stringLocalizer;
+
+    private static readonly string[] AllowedExtensions = { ".jpg", ".jpeg", ".png", ".gif" };
+    private static readonly string[] AllCultureNames = CultureInfo.GetCultures(CultureTypes.AllCultures)
+                                                                  .Select(c => c.Name)
+                                                                  .ToArray();
+
+    public CreateLanguageValidator(IStringLocalizer stringLocalizer)
     {
+        _stringLocalizer = stringLocalizer;
+
+        // ISOCode qaydaları
         RuleFor(a => a.IsoCode)
-            .NotNull().WithMessage(ValidationLanguageStore.Get("ISOCodeCannotBeNull"))
-            .NotEmpty().WithMessage(ValidationLanguageStore.Get("ISOCodeCannotBeEmpty"))
-            .Length(5, 7).WithMessage(ValidationLanguageStore.Get("ISOCodeLength"))
-            .Must(BeAValidCulture).WithMessage(ValidationLanguageStore.Get("InvalidISOCode"));
+            .NotNull().WithMessage(_stringLocalizer["ISOCodeCannotBeNull"])
+            .NotEmpty().WithMessage(_stringLocalizer["ISOCodeCannotBeEmpty"])
+            .Length(5, 7).WithMessage(_stringLocalizer["ISOCodeLength"])
+            .Must(BeAValidCulture).WithMessage(_stringLocalizer["InvalidISOCode"]);
 
+        // Name qaydaları
         RuleFor(a => a.Name)
-            .NotNull().WithMessage(ValidationLanguageStore.Get("CultureIsRequired"))
-            .NotEmpty().WithMessage(ValidationLanguageStore.Get("CultureCannotBeEmpty"))
-            .Length(5, 20).WithMessage(ValidationLanguageStore.Get("CultureLength"));
+            .NotNull().WithMessage(_stringLocalizer["RequiredValidator"])
+            .NotEmpty().WithMessage(_stringLocalizer["NotEmptyValidator"])
+            .Length(5, 20).WithMessage(_stringLocalizer["CultureLength"]);
 
+        // Key qaydaları
         RuleFor(a => a.Key)
-            .NotNull().WithMessage(ValidationLanguageStore.Get("KeyCannotBeNull"))
-            .MaximumLength(3).WithMessage(ValidationLanguageStore.Get("KeyMaxLength"));
+            .NotNull().WithMessage(_stringLocalizer["KeyCannotBeNull"])
+            .MaximumLength(3).WithMessage(_stringLocalizer["KeyMaxLength"]);
 
-        var allowedExtensions = new[] { ".jpg", ".jpeg", ".png", ".gif" };
-
+        // Fayl qaydaları
         RuleFor(x => x.FormFile)
-            .NotNull().WithMessage(ValidationLanguageStore.Get("FileIsRequired"))
-            .NotEmpty().WithMessage(ValidationLanguageStore.Get("FileCannotBeEmpty"))
-            .Must(file => file.Length > 0).WithMessage(ValidationLanguageStore.Get("FileCannotBeEmpty"))
-            .Must(file => allowedExtensions.Contains(Path.GetExtension(file.FileName).ToLower()))
-            .WithMessage(ValidationLanguageStore.Get("FileFormatNotAllowed"))
-            .Must(file => file.Length <= 5 * 1024 * 1024)
-            .WithMessage(ValidationLanguageStore.Get("FileSizeExceeded"));
+            .Must(file => file != null)
+            
+                .WithMessage(_stringLocalizer["FileIsRequired"])
+            .Must(file => file != null && file.Length > 0)
+                .WithMessage(_stringLocalizer["FileCannotBeEmpty"])
+            .Must(file => file != null && AllowedExtensions.Contains(Path.GetExtension(file.FileName).ToLower()))
+                .WithMessage(_stringLocalizer["FileFormatNotAllowed"])
+            .Must(file => file != null && file.Length <= 5 * 1024 * 1024)
+                .WithMessage(_stringLocalizer["FileSizeExceeded"]);
     }
 
     private bool BeAValidCulture(string isoCode)
     {
-        return CultureInfo
-            .GetCultures(CultureTypes.AllCultures)
-            .Any(c => c.Name.Equals(isoCode, StringComparison.OrdinalIgnoreCase));
+        return !string.IsNullOrWhiteSpace(isoCode) &&
+               AllCultureNames.Contains(isoCode, StringComparer.OrdinalIgnoreCase);
     }
 }

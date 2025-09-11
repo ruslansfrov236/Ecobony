@@ -1,4 +1,4 @@
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 
 namespace ecobony.application.Validator;
@@ -17,7 +17,7 @@ public class ValidationFilter : IAsyncActionFilter
             context.Result = new BadRequestObjectResult(errors);
             return;
         }
-  
+
         await next();
     }
 }

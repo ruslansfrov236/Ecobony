@@ -664,6 +664,7 @@ namespace ecobony.persistence.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("UserId")
+                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("UserName")
@@ -1135,7 +1136,9 @@ namespace ecobony.persistence.Migrations
                 {
                     b.HasOne("ecobony.domain.Entities.Identity.AppUser", "User")
                         .WithMany("TrashCans")
-                        .HasForeignKey("UserId");
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("User");
                 });

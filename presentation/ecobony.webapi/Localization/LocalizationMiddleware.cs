@@ -1,28 +1,42 @@
+﻿using ecobony.domain.Entities.Identity;
+using Microsoft.AspNetCore.Identity;
 using System.Collections.Concurrent;
 using System.Globalization;
 
 namespace ecobony.webapi.Localization;
 
-public class LocalizationMiddleware(RequestDelegate next)
+public class LocalizationMiddleware
 {
+    private readonly RequestDelegate _next;
     private static readonly HashSet<string> AvailableCultures = GetAllCultureNames();
-    private static readonly ConcurrentDictionary<string, CultureInfo> CultureCache = [];
+    private static readonly ConcurrentDictionary<string, CultureInfo> CultureCache = new();
+
+    public LocalizationMiddleware(RequestDelegate next)
+    {
+        _next = next;
+    }
 
     public async Task InvokeAsync(HttpContext context)
     {
-        string cultureKey = context.Session.GetString("Language") ?? "az-AZ";
+       
+        // 1. Session-dan oxu
+        string? cultureKey = context.Request.Cookies.FirstOrDefault(a=>a.Key== "Language").Value ?? "az-AZ";
+        // 2. Session boşdursa, header-dən oxu
+       
 
-        string? preferredCulture = ParseAcceptLanguageHeader(cultureKey);
+       
 
-        if (!string.IsNullOrWhiteSpace(preferredCulture) && DoesCultureExist(preferredCulture))
-        {
-            CultureInfo culture = CultureCache.GetOrAdd(preferredCulture, _ => new CultureInfo(preferredCulture));
+        var culture = new CultureInfo(cultureKey);
+      
+       
+       ;
+        Thread.CurrentThread.CurrentUICulture = culture;
+        Thread.CurrentThread.CurrentCulture = culture;
 
-            Thread.CurrentThread.CurrentCulture = culture;
-            Thread.CurrentThread.CurrentUICulture = culture;
-        }
 
-        await next(context);
+
+
+        await _next(context);
     }
 
     private static bool DoesCultureExist(string cultureKey)
@@ -33,8 +47,8 @@ public class LocalizationMiddleware(RequestDelegate next)
     private static HashSet<string> GetAllCultureNames()
     {
         return CultureInfo.GetCultures(CultureTypes.AllCultures)
-            .Select(culture => culture.Name.ToLowerInvariant())
-            .ToHashSet();
+            .Select(culture => culture.Name) // Orijinal format saxlanılır
+            .ToHashSet(StringComparer.OrdinalIgnoreCase); // Case-insensitive comparison
     }
 
     private static string? ParseAcceptLanguageHeader(string? headerValue)
@@ -43,6 +57,6 @@ public class LocalizationMiddleware(RequestDelegate next)
             .Split(',', StringSplitOptions.RemoveEmptyEntries)
             .Select(part => part.Split(';').First().Trim());
 
-        return items?.FirstOrDefault()?.ToLowerInvariant();
+        return items?.FirstOrDefault();
     }
 }

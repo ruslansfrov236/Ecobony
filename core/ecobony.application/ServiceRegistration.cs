@@ -13,6 +13,7 @@ public static  class ServiceRegistration
        
         service.AddMediatR(typeof(ServiceRegistration));
         service.AddHttpClient();
+
     }
 
 }

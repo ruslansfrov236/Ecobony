@@ -14,7 +14,7 @@ namespace ecobony.webapi.Filter
                 var userManager = scope.ServiceProvider.GetRequiredService<UserManager<AppUser>>();
                 var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<AppRole>>();
 
-                await DbInitilazer.SeedAsync(userManager, roleManager);
+                await DbInitializer.SeedAsync(userManager, roleManager);
             }
         }
     }
