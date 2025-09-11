@@ -1,8 +1,29 @@
-
+﻿
 namespace ecobony.persistence.Context;
 
-public class AppDbContext(DbContextOptions<AppDbContext> options):IdentityDbContext<AppUser , AppRole, string>(options)
+public class AppDbContext:IdentityDbContext<AppUser , AppRole, string>
 {
+
+    private readonly SoftDeleteInterceptor _softDeleteInterceptor;
+
+
+    public AppDbContext(
+        DbContextOptions<AppDbContext> options,
+        SoftDeleteInterceptor softDeleteInterceptor
+    ) : base(options)
+    {
+        _softDeleteInterceptor = softDeleteInterceptor;
+    }
+
+    public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
+
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    {
+        if (_softDeleteInterceptor != null)
+            optionsBuilder.AddInterceptors(_softDeleteInterceptor);
+
+        base.OnConfiguring(optionsBuilder);
+    }
     public DbSet<WasteSortingMistakeTranslation> WasteSortingMistakesTranslations { get; set; }
     public DbSet<SortingActionTranslation> SortingActionsTranslations { get; set; }
     public DbSet<CategoryTranslation> CategoryTranslations { get; set; }
@@ -12,11 +33,11 @@ public class AppDbContext(DbContextOptions<AppDbContext> options):IdentityDbCont
     public DbSet<SortingAction> SortingActions { get; set; } 
     public DbSet<BonusComunity> BonusComunities { get; set; }
     public DbSet<WasteProcess> WasteProcesses { get; set; }
-
     public DbSet<BalanceTransfer> BalanceTransfers { get; set; }
     public DbSet<Balance> Balances { get; set; }
     public DbSet<Category> Categories { get; set; }
     public DbSet<Location> Locations { get; set; }
+    public DbSet<TrashCan> TrashCans { get; set; }  
     public DbSet<Language> Languages { get; set; }
     public DbSet<Header>  Headers { get; set; }
     public DbSet<Bonus> Bonus { get; set; }
@@ -36,4 +57,6 @@ public class AppDbContext(DbContextOptions<AppDbContext> options):IdentityDbCont
             };
         return await base.SaveChangesAsync(cancellationToken);
     }
+
+   
 }
