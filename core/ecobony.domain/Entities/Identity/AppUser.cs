@@ -10,6 +10,7 @@ namespace ecobony.domain.Entities.Identity
         public DateTime? ExitTime { get; set; }   
         public TimeSpan Duration => ExitTime.HasValue ? ExitTime.Value - EntryTime : TimeSpan.Zero;  
         
+        public List<TrashCan> TrashCans { get; set; }   
        
         public string DurationInReadableFormat 
         {

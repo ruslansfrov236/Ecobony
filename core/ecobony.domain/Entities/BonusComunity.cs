@@ -9,4 +9,6 @@ public class BonusComunity : BaseEntity
     public decimal PricePoint { get; set; }
     public Guid WasteId { get; set; }
     public decimal Score { get; set; }
+    public string? IdempotencyKey { get; set; }
+
 }
