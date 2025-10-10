@@ -14,7 +14,7 @@ namespace ecobony.signair.Hubs
         public async Task UserOnline()
         {
             var userCount = await userManager.Users
-                .Where(a => a.IsOnline)
+                .Where(a => a.IsOnline==true)
                 .CountAsync();
 
             await Clients.All.SendAsync(ReceiveHubName.UserOnlineCount, userCount);

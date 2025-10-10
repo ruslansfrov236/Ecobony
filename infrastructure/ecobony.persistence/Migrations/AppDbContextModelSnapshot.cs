@@ -577,6 +577,49 @@ namespace ecobony.persistence.Migrations
                     b.ToTable("Locations");
                 });
 
+            modelBuilder.Entity("ecobony.domain.Entities.LogOptions", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("CreateAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Exception")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Level")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Message")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("RequestPath")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("TimeStamp")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("UpdateAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("UserName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("isDeleted")
+                        .HasColumnType("bit");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("LogOptions");
+                });
+
             modelBuilder.Entity("ecobony.domain.Entities.SortingAction", b =>
                 {
                     b.Property<Guid>("Id")
@@ -660,15 +703,19 @@ namespace ecobony.persistence.Migrations
                     b.Property<string>("EntityName")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<DateTime>("OperationAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("OperationType")
+                        .HasColumnType("int");
+
                     b.Property<DateTime>("UpdateAt")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("UserId")
-                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("UserName")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("isDeleted")
@@ -1136,9 +1183,7 @@ namespace ecobony.persistence.Migrations
                 {
                     b.HasOne("ecobony.domain.Entities.Identity.AppUser", "User")
                         .WithMany("TrashCans")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("UserId");
 
                     b.Navigation("User");
                 });

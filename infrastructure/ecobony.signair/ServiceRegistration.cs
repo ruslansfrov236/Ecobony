@@ -17,5 +17,8 @@ public static class ServiceRegistration
         collection.AddScoped<UserHistoryHub>();
         collection.AddTransient<IUserTrackingService , UserTrackingService>();  
         collection.AddTransient<UserTrackingHub>();
+        collection.AddTransient<LogOptionsService>();
+        collection.AddTransient<TrashCanHub>();
+        collection.AddTransient<TrashCanSignairService>();
     }
 }

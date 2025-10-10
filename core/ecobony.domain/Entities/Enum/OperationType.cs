@@ -6,11 +6,10 @@ using System.Threading.Tasks;
 
 namespace ecobony.domain.Entities.Enum
 {
-    public enum OperationType
+     public enum  OperationType
     {
-        Create ,
-        Update ,
-        Delete 
-
+        Create,
+        Update,
+        Delete
     }
 }

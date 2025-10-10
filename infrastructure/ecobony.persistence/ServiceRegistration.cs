@@ -6,13 +6,15 @@ public static class ServiceRegistration
 {
     public static void AddPersistenceRegistration(this IServiceCollection service)
     {
-        service.AddScoped<SoftDeleteInterceptor>();
+       
+        service.AddTransient<SoftDeleteInterceptor>();
+     
         service.AddDbContext<AppDbContext>((sp, opt) =>
         {
             var interceptor = sp.GetRequiredService<SoftDeleteInterceptor>();
             opt.UseSqlServer(Configuration.ConnectionString).AddInterceptors(interceptor);
         });
-
+     
         service.AddIdentity<AppUser, AppRole>(options =>
         {
             options.Password.RequiredLength = 5;
@@ -63,6 +65,8 @@ public static class ServiceRegistration
         service.AddScoped<IBalanceTransferWriteRepository, BalanceTransferWriteRepository>();
         service.AddScoped<IUserHistoryReadRepository, UserHistoryReadRepository>();
         service.AddScoped<IUserHistoryWriteRepository, UserHistoryWriteRepository>();
+        service.AddScoped<ILogOptionReadRepository, LogOptionsReadRepository>();
+        service.AddScoped<ILogOptionWriteRepository, LogOptionsWriteRepository>();
         service.AddScoped<IBalanceReadRepository, BalanceReadRepository>();
         service.AddScoped<IBalanceWriteRepository, BalanceWriteRepository>();
 

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ecobony.signair")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1d0d862e80cf46b95e44a239c0ba5dbfb5baaf63")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2aa020fd22956a3e6d915dcdeffff01517ee0f9a")]
 [assembly: System.Reflection.AssemblyProductAttribute("ecobony.signair")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ecobony.signair")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

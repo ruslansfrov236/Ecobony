@@ -10,6 +10,7 @@ public static  class HubRegistration
         webApplication.MapHub<AuthHub>("hub/user-auth");
         webApplication.MapHub<UserTrackingHub>("hub/user-tracking");
         webApplication.MapHub<UserHistoryHub>("hub/user-history");
+        webApplication.MapHub<UserHistoryHub>("hub/log-option");
 
     }
 }

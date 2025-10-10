@@ -7,4 +7,6 @@ public static class ReceiveHubName
     public const string UserTrackingAll = "UserTrackingAll";
     public const string UserHistoryAll = "UserHistoryAll";
     public const string UserOnlineCount = "UserOnlineCount";
+    public const string ReceiveTrashCan = "ReceiveTrashCan";
+    public const string ReceiveLog = "ReceiveLog";
 }

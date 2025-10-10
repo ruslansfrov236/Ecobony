@@ -42,8 +42,8 @@ public class AppDbContext:IdentityDbContext<AppUser , AppRole, string>
     public DbSet<Header>  Headers { get; set; }
     public DbSet<Bonus> Bonus { get; set; }
     public DbSet<Waste> Wastes { get; set; }
+    public DbSet<LogOptions> LogOptions { get; set; }
 
-  
     public async override Task<int> SaveChangesAsync(CancellationToken cancellationToken)
     {
         var datas = ChangeTracker

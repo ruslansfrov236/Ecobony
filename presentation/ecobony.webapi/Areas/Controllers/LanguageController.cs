@@ -40,7 +40,7 @@ public class LanguageController(IMediator _mediator):ControllerBase
     }
 
     [HttpPut("soft-delete/{Id}")]
-    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Admin")]
+    //[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Admin")]
     public async Task<IActionResult> SoftDelete([FromRoute] SoftDeleteCommandRequest request)
     {
         SoftDeleteCommandResponse response = await _mediator.Send(request);

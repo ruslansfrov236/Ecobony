@@ -88,6 +88,7 @@ public class Program
         // Swagger & Response Compression
         builder.Services.AddEndpointsApiExplorer();
         builder.Services.SwaggerAuthorizeToken();
+        builder.SerilogConfigure();
         builder.Services.AddResponseCompression(options =>
         {
             options.EnableForHttps = true;
@@ -134,7 +135,7 @@ public class Program
         app.MapHubs();
 
         // Seed admin user & roles
-        await app.SeedAdminUserAndRolesAsync();
+        //await app.SeedAdminUserAndRolesAsync();
 
         app.Run();
     }

@@ -165,7 +165,7 @@ namespace ecobony.persistence.Service
             .GetFilter(s => s.CreateAt >= startDate.ToLocalTime()
                             && s.CreateAt <= endDate.ToLocalTime()
                             && s.isDeleted == false)
-            .OrderByDescending(s => s.UpdateAt != null ? s.UpdateAt : s.CreateAt)
+            .OrderByDescending(s => s.UpdateAt >DateTime.UtcNow.ToLocalTime() ? s.UpdateAt : s.CreateAt)
     .ToListAsync();
 
             var result = data

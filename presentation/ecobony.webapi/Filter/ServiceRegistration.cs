@@ -1,4 +1,13 @@
-﻿namespace ecobony.webapi.Filter
+﻿
+using Serilog.Sinks.MSSqlServer;
+using System.Collections.ObjectModel;
+using System.Data;
+using ecobony.signair.Services;
+using Serilog;
+using ecobony.domain.Entities;
+
+
+namespace ecobony.webapi.Filter
 {
     public static class ServiceRegistration
     {
@@ -34,5 +43,37 @@
                 });
             });
         }
+
+
+
+        public static void SerilogConfigure(this WebApplicationBuilder builder)
+        {
+           
+            var serviceProvider = builder.Services.BuildServiceProvider();
+            var hubContext = serviceProvider.GetRequiredService<LogOptionsService>();
+
+
+
+     
+   
+            Log.Logger = new LoggerConfiguration()
+                .WriteTo.Console()
+                .WriteTo.File("logs/log.txt", rollingInterval: RollingInterval.Day)
+                .WriteTo.MSSqlServer(
+                    connectionString: Configuration.ConnectionString,
+                    sinkOptions: new MSSqlServerSinkOptions { TableName = "Logs", AutoCreateSqlTable = true },
+                    restrictedToMinimumLevel: Serilog.Events.LogEventLevel.Information
+                
+                )
+                .WriteTo.Sink(new SignalRSink(hubContext))  // 🔴 Burada argument verilir
+                .Enrich.FromLogContext()
+                .Enrich.WithEnvironmentName()
+                .Enrich.WithThreadId()
+                .MinimumLevel.Information()
+                .CreateLogger();
+
+            builder.Host.UseSerilog();
+        }
+
     }
 }
