@@ -3,44 +3,359 @@
   "WorkspaceRootPath": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E1309E25-2670-484B-851B-28DFBD6A1D77}|presentation\\ecobony.webapi\\ecobony.webapi.csproj|c:\\users\\rusla\\documents\\web\\ecobony\\ecobony\\presentation\\ecobony.webapi\\filter\\usertrackingmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E1309E25-2670-484B-851B-28DFBD6A1D77}|presentation\\ecobony.webapi\\ecobony.webapi.csproj|solutionrelative:presentation\\ecobony.webapi\\filter\\usertrackingmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{40EB8AEA-5711-4328-936E-8EB751093AFE}|infrastructure\\ecobony.persistence\\ecobony.persistence.csproj|c:\\users\\rusla\\documents\\web\\ecobony\\ecobony\\infrastructure\\ecobony.persistence\\softdeleteinterceptor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40EB8AEA-5711-4328-936E-8EB751093AFE}|infrastructure\\ecobony.persistence\\ecobony.persistence.csproj|solutionrelative:infrastructure\\ecobony.persistence\\softdeleteinterceptor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E1309E25-2670-484B-851B-28DFBD6A1D77}|presentation\\ecobony.webapi\\ecobony.webapi.csproj|c:\\users\\rusla\\documents\\web\\ecobony\\ecobony\\presentation\\ecobony.webapi\\filter\\userhistorymiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E1309E25-2670-484B-851B-28DFBD6A1D77}|presentation\\ecobony.webapi\\ecobony.webapi.csproj|solutionrelative:presentation\\ecobony.webapi\\filter\\userhistorymiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{031A1FB9-F1A9-4DDD-B59C-E514A346827B}|infrastructure\\ecobony.signair\\ecobony.signair.csproj|c:\\users\\rusla\\documents\\web\\ecobony\\ecobony\\infrastructure\\ecobony.signair\\services\\trashcansignairservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{031A1FB9-F1A9-4DDD-B59C-E514A346827B}|infrastructure\\ecobony.signair\\ecobony.signair.csproj|solutionrelative:infrastructure\\ecobony.signair\\services\\trashcansignairservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E1309E25-2670-484B-851B-28DFBD6A1D77}|presentation\\ecobony.webapi\\ecobony.webapi.csproj|c:\\users\\rusla\\documents\\web\\ecobony\\ecobony\\presentation\\ecobony.webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E1309E25-2670-484B-851B-28DFBD6A1D77}|presentation\\ecobony.webapi\\ecobony.webapi.csproj|solutionrelative:presentation\\ecobony.webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3D8D5A64-4027-4BCC-93EA-169AB03C53D0}|core\\ecobony.domain\\ecobony.domain.csproj|c:\\users\\rusla\\documents\\web\\ecobony\\ecobony\\core\\ecobony.domain\\entities\\enum\\operationtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D8D5A64-4027-4BCC-93EA-169AB03C53D0}|core\\ecobony.domain\\ecobony.domain.csproj|solutionrelative:core\\ecobony.domain\\entities\\enum\\operationtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D8D5A64-4027-4BCC-93EA-169AB03C53D0}|core\\ecobony.domain\\ecobony.domain.csproj|c:\\users\\rusla\\documents\\web\\ecobony\\ecobony\\core\\ecobony.domain\\entities\\enum\\headerrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D8D5A64-4027-4BCC-93EA-169AB03C53D0}|core\\ecobony.domain\\ecobony.domain.csproj|solutionrelative:core\\ecobony.domain\\entities\\enum\\headerrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D8D5A64-4027-4BCC-93EA-169AB03C53D0}|core\\ecobony.domain\\ecobony.domain.csproj|c:\\users\\rusla\\documents\\web\\ecobony\\ecobony\\core\\ecobony.domain\\entities\\enum\\actiontype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D8D5A64-4027-4BCC-93EA-169AB03C53D0}|core\\ecobony.domain\\ecobony.domain.csproj|solutionrelative:core\\ecobony.domain\\entities\\enum\\actiontype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D8D5A64-4027-4BCC-93EA-169AB03C53D0}|core\\ecobony.domain\\ecobony.domain.csproj|c:\\users\\rusla\\documents\\web\\ecobony\\ecobony\\core\\ecobony.domain\\entities\\trashcan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D8D5A64-4027-4BCC-93EA-169AB03C53D0}|core\\ecobony.domain\\ecobony.domain.csproj|solutionrelative:core\\ecobony.domain\\entities\\trashcan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D8D5A64-4027-4BCC-93EA-169AB03C53D0}|core\\ecobony.domain\\ecobony.domain.csproj|c:\\users\\rusla\\documents\\web\\ecobony\\ecobony\\core\\ecobony.domain\\entities\\logoptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D8D5A64-4027-4BCC-93EA-169AB03C53D0}|core\\ecobony.domain\\ecobony.domain.csproj|solutionrelative:core\\ecobony.domain\\entities\\logoptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D8D5A64-4027-4BCC-93EA-169AB03C53D0}|core\\ecobony.domain\\ecobony.domain.csproj|c:\\users\\rusla\\documents\\web\\ecobony\\ecobony\\core\\ecobony.domain\\dto\u0027s\\validationlanguagestore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D8D5A64-4027-4BCC-93EA-169AB03C53D0}|core\\ecobony.domain\\ecobony.domain.csproj|solutionrelative:core\\ecobony.domain\\dto\u0027s\\validationlanguagestore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E1309E25-2670-484B-851B-28DFBD6A1D77}|presentation\\ecobony.webapi\\ecobony.webapi.csproj|c:\\users\\rusla\\documents\\web\\ecobony\\ecobony\\presentation\\ecobony.webapi\\ecobony.webapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{E1309E25-2670-484B-851B-28DFBD6A1D77}|presentation\\ecobony.webapi\\ecobony.webapi.csproj|solutionrelative:presentation\\ecobony.webapi\\ecobony.webapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\infrastructure\\ecobony.persistence\\Migrations\\20250827162704_mg_2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:infrastructure\\ecobony.persistence\\Migrations\\20250827162704_mg_2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{031A1FB9-F1A9-4DDD-B59C-E514A346827B}|infrastructure\\ecobony.signair\\ecobony.signair.csproj|c:\\users\\rusla\\documents\\web\\ecobony\\ecobony\\infrastructure\\ecobony.signair\\serviceregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{031A1FB9-F1A9-4DDD-B59C-E514A346827B}|infrastructure\\ecobony.signair\\ecobony.signair.csproj|solutionrelative:infrastructure\\ecobony.signair\\serviceregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{71438DB4-D731-4A49-A06E-3371D360498E}|core\\ecobony.application\\ecobony.application.csproj|c:\\users\\rusla\\documents\\web\\ecobony\\ecobony\\core\\ecobony.application\\services\\iuserhistoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{71438DB4-D731-4A49-A06E-3371D360498E}|core\\ecobony.application\\ecobony.application.csproj|solutionrelative:core\\ecobony.application\\services\\iuserhistoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E1309E25-2670-484B-851B-28DFBD6A1D77}|presentation\\ecobony.webapi\\ecobony.webapi.csproj|c:\\users\\rusla\\documents\\web\\ecobony\\ecobony\\presentation\\ecobony.webapi\\resources\\i18.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{E1309E25-2670-484B-851B-28DFBD6A1D77}|presentation\\ecobony.webapi\\ecobony.webapi.csproj|solutionrelative:presentation\\ecobony.webapi\\resources\\i18.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{40EB8AEA-5711-4328-936E-8EB751093AFE}|infrastructure\\ecobony.persistence\\ecobony.persistence.csproj|c:\\users\\rusla\\documents\\web\\ecobony\\ecobony\\infrastructure\\ecobony.persistence\\service\\userhistoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{40EB8AEA-5711-4328-936E-8EB751093AFE}|infrastructure\\ecobony.persistence\\ecobony.persistence.csproj|solutionrelative:infrastructure\\ecobony.persistence\\service\\userhistoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E1309E25-2670-484B-851B-28DFBD6A1D77}|presentation\\ecobony.webapi\\ecobony.webapi.csproj|c:\\users\\rusla\\documents\\web\\ecobony\\ecobony\\presentation\\ecobony.webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1309E25-2670-484B-851B-28DFBD6A1D77}|presentation\\ecobony.webapi\\ecobony.webapi.csproj|solutionrelative:presentation\\ecobony.webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1309E25-2670-484B-851B-28DFBD6A1D77}|presentation\\ecobony.webapi\\ecobony.webapi.csproj|c:\\users\\rusla\\documents\\web\\ecobony\\ecobony\\presentation\\ecobony.webapi\\globalusing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1309E25-2670-484B-851B-28DFBD6A1D77}|presentation\\ecobony.webapi\\ecobony.webapi.csproj|solutionrelative:presentation\\ecobony.webapi\\globalusing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\infrastructure\\ecobony.persistence\\Migrations\\20251009183439_mg_10.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:infrastructure\\ecobony.persistence\\Migrations\\20251009183439_mg_10.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40EB8AEA-5711-4328-936E-8EB751093AFE}|infrastructure\\ecobony.persistence\\ecobony.persistence.csproj|c:\\users\\rusla\\documents\\web\\ecobony\\ecobony\\infrastructure\\ecobony.persistence\\context\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40EB8AEA-5711-4328-936E-8EB751093AFE}|infrastructure\\ecobony.persistence\\ecobony.persistence.csproj|solutionrelative:infrastructure\\ecobony.persistence\\context\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1309E25-2670-484B-851B-28DFBD6A1D77}|presentation\\ecobony.webapi\\ecobony.webapi.csproj|c:\\users\\rusla\\documents\\web\\ecobony\\ecobony\\presentation\\ecobony.webapi\\localization\\jsonstringlocalization.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1309E25-2670-484B-851B-28DFBD6A1D77}|presentation\\ecobony.webapi\\ecobony.webapi.csproj|solutionrelative:presentation\\ecobony.webapi\\localization\\jsonstringlocalization.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1309E25-2670-484B-851B-28DFBD6A1D77}|presentation\\ecobony.webapi\\ecobony.webapi.csproj|c:\\users\\rusla\\documents\\web\\ecobony\\ecobony\\presentation\\ecobony.webapi\\filter\\serviceregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1309E25-2670-484B-851B-28DFBD6A1D77}|presentation\\ecobony.webapi\\ecobony.webapi.csproj|solutionrelative:presentation\\ecobony.webapi\\filter\\serviceregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{031A1FB9-F1A9-4DDD-B59C-E514A346827B}|infrastructure\\ecobony.signair\\ecobony.signair.csproj|c:\\users\\rusla\\documents\\web\\ecobony\\ecobony\\infrastructure\\ecobony.signair\\services\\logoptionsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{031A1FB9-F1A9-4DDD-B59C-E514A346827B}|infrastructure\\ecobony.signair\\ecobony.signair.csproj|solutionrelative:infrastructure\\ecobony.signair\\services\\logoptionsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{40EB8AEA-5711-4328-936E-8EB751093AFE}|infrastructure\\ecobony.persistence\\ecobony.persistence.csproj|c:\\users\\rusla\\documents\\web\\ecobony\\ecobony\\infrastructure\\ecobony.persistence\\serviceregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{40EB8AEA-5711-4328-936E-8EB751093AFE}|infrastructure\\ecobony.persistence\\ecobony.persistence.csproj|solutionrelative:infrastructure\\ecobony.persistence\\serviceregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{40EB8AEA-5711-4328-936E-8EB751093AFE}|infrastructure\\ecobony.persistence\\ecobony.persistence.csproj|c:\\users\\rusla\\documents\\web\\ecobony\\ecobony\\infrastructure\\ecobony.persistence\\globalusing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{40EB8AEA-5711-4328-936E-8EB751093AFE}|infrastructure\\ecobony.persistence\\ecobony.persistence.csproj|solutionrelative:infrastructure\\ecobony.persistence\\globalusing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{71438DB4-D731-4A49-A06E-3371D360498E}|core\\ecobony.application\\ecobony.application.csproj|c:\\users\\rusla\\documents\\web\\ecobony\\ecobony\\core\\ecobony.application\\services\\itrashcanservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{71438DB4-D731-4A49-A06E-3371D360498E}|core\\ecobony.application\\ecobony.application.csproj|solutionrelative:core\\ecobony.application\\services\\itrashcanservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{031A1FB9-F1A9-4DDD-B59C-E514A346827B}|infrastructure\\ecobony.signair\\ecobony.signair.csproj|c:\\users\\rusla\\documents\\web\\ecobony\\ecobony\\infrastructure\\ecobony.signair\\serviceregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{031A1FB9-F1A9-4DDD-B59C-E514A346827B}|infrastructure\\ecobony.signair\\ecobony.signair.csproj|solutionrelative:infrastructure\\ecobony.signair\\serviceregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{71438DB4-D731-4A49-A06E-3371D360498E}|core\\ecobony.application\\ecobony.application.csproj|c:\\users\\rusla\\documents\\web\\ecobony\\ecobony\\core\\ecobony.application\\serviceregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{71438DB4-D731-4A49-A06E-3371D360498E}|core\\ecobony.application\\ecobony.application.csproj|solutionrelative:core\\ecobony.application\\serviceregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D8D5A64-4027-4BCC-93EA-169AB03C53D0}|core\\ecobony.domain\\ecobony.domain.csproj|c:\\users\\rusla\\documents\\web\\ecobony\\ecobony\\core\\ecobony.domain\\dto\u0027s\\trashcan\\createtrashcandto\u0027s.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D8D5A64-4027-4BCC-93EA-169AB03C53D0}|core\\ecobony.domain\\ecobony.domain.csproj|solutionrelative:core\\ecobony.domain\\dto\u0027s\\trashcan\\createtrashcandto\u0027s.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{031A1FB9-F1A9-4DDD-B59C-E514A346827B}|infrastructure\\ecobony.signair\\ecobony.signair.csproj|c:\\users\\rusla\\documents\\web\\ecobony\\ecobony\\infrastructure\\ecobony.signair\\receivehubname.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{031A1FB9-F1A9-4DDD-B59C-E514A346827B}|infrastructure\\ecobony.signair\\ecobony.signair.csproj|solutionrelative:infrastructure\\ecobony.signair\\receivehubname.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{031A1FB9-F1A9-4DDD-B59C-E514A346827B}|infrastructure\\ecobony.signair\\ecobony.signair.csproj|c:\\users\\rusla\\documents\\web\\ecobony\\ecobony\\infrastructure\\ecobony.signair\\hubs\\trashcanhub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{031A1FB9-F1A9-4DDD-B59C-E514A346827B}|infrastructure\\ecobony.signair\\ecobony.signair.csproj|solutionrelative:infrastructure\\ecobony.signair\\hubs\\trashcanhub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1309E25-2670-484B-851B-28DFBD6A1D77}|presentation\\ecobony.webapi\\ecobony.webapi.csproj|c:\\users\\rusla\\documents\\web\\ecobony\\ecobony\\presentation\\ecobony.webapi\\filter\\signalrsink.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1309E25-2670-484B-851B-28DFBD6A1D77}|presentation\\ecobony.webapi\\ecobony.webapi.csproj|solutionrelative:presentation\\ecobony.webapi\\filter\\signalrsink.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1309E25-2670-484B-851B-28DFBD6A1D77}|presentation\\ecobony.webapi\\ecobony.webapi.csproj|c:\\users\\rusla\\documents\\web\\ecobony\\ecobony\\presentation\\ecobony.webapi\\areas\\controllers\\languagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1309E25-2670-484B-851B-28DFBD6A1D77}|presentation\\ecobony.webapi\\ecobony.webapi.csproj|solutionrelative:presentation\\ecobony.webapi\\areas\\controllers\\languagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{71438DB4-D731-4A49-A06E-3371D360498E}|core\\ecobony.application\\ecobony.application.csproj|c:\\users\\rusla\\documents\\web\\ecobony\\ecobony\\core\\ecobony.application\\ecobony.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{71438DB4-D731-4A49-A06E-3371D360498E}|core\\ecobony.application\\ecobony.application.csproj|solutionrelative:core\\ecobony.application\\ecobony.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1309E25-2670-484B-851B-28DFBD6A1D77}|presentation\\ecobony.webapi\\ecobony.webapi.csproj|c:\\users\\rusla\\documents\\web\\ecobony\\ecobony\\presentation\\ecobony.webapi\\filter\\idempotencyactionfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1309E25-2670-484B-851B-28DFBD6A1D77}|presentation\\ecobony.webapi\\ecobony.webapi.csproj|solutionrelative:presentation\\ecobony.webapi\\filter\\idempotencyactionfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1309E25-2670-484B-851B-28DFBD6A1D77}|presentation\\ecobony.webapi\\ecobony.webapi.csproj|c:\\users\\rusla\\documents\\web\\ecobony\\ecobony\\presentation\\ecobony.webapi\\filter\\globalexceptionmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1309E25-2670-484B-851B-28DFBD6A1D77}|presentation\\ecobony.webapi\\ecobony.webapi.csproj|solutionrelative:presentation\\ecobony.webapi\\filter\\globalexceptionmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1309E25-2670-484B-851B-28DFBD6A1D77}|presentation\\ecobony.webapi\\ecobony.webapi.csproj|c:\\users\\rusla\\documents\\web\\ecobony\\ecobony\\presentation\\ecobony.webapi\\filter\\culturedatetimeconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1309E25-2670-484B-851B-28DFBD6A1D77}|presentation\\ecobony.webapi\\ecobony.webapi.csproj|solutionrelative:presentation\\ecobony.webapi\\filter\\culturedatetimeconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1309E25-2670-484B-851B-28DFBD6A1D77}|presentation\\ecobony.webapi\\ecobony.webapi.csproj|c:\\users\\rusla\\documents\\web\\ecobony\\ecobony\\presentation\\ecobony.webapi\\filter\\compressresponsemiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1309E25-2670-484B-851B-28DFBD6A1D77}|presentation\\ecobony.webapi\\ecobony.webapi.csproj|solutionrelative:presentation\\ecobony.webapi\\filter\\compressresponsemiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1309E25-2670-484B-851B-28DFBD6A1D77}|presentation\\ecobony.webapi\\ecobony.webapi.csproj|c:\\users\\rusla\\documents\\web\\ecobony\\ecobony\\presentation\\ecobony.webapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{E1309E25-2670-484B-851B-28DFBD6A1D77}|presentation\\ecobony.webapi\\ecobony.webapi.csproj|solutionrelative:presentation\\ecobony.webapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1309E25-2670-484B-851B-28DFBD6A1D77}|presentation\\ecobony.webapi\\ecobony.webapi.csproj|c:\\users\\rusla\\documents\\web\\ecobony\\ecobony\\presentation\\ecobony.webapi\\filter\\dbinitializerextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1309E25-2670-484B-851B-28DFBD6A1D77}|presentation\\ecobony.webapi\\ecobony.webapi.csproj|solutionrelative:presentation\\ecobony.webapi\\filter\\dbinitializerextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{900F3B74-7582-42D6-A712-FD44550CE85C}|infrastructure\\ecobony.infrastructure\\ecobony.infrastructure.csproj|c:\\users\\rusla\\documents\\web\\ecobony\\ecobony\\infrastructure\\ecobony.infrastructure\\ecobony.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{900F3B74-7582-42D6-A712-FD44550CE85C}|infrastructure\\ecobony.infrastructure\\ecobony.infrastructure.csproj|solutionrelative:infrastructure\\ecobony.infrastructure\\ecobony.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\rusla\\AppData\\Local\\Temp\\TFSTemp\\vctmp8628_964534.SoftDeleteInterceptor.2b091906.Result.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1309E25-2670-484B-851B-28DFBD6A1D77}|presentation\\ecobony.webapi\\ecobony.webapi.csproj|c:\\users\\rusla\\documents\\web\\ecobony\\ecobony\\presentation\\ecobony.webapi\\filter\\usertrackingactionfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1309E25-2670-484B-851B-28DFBD6A1D77}|presentation\\ecobony.webapi\\ecobony.webapi.csproj|solutionrelative:presentation\\ecobony.webapi\\filter\\usertrackingactionfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40EB8AEA-5711-4328-936E-8EB751093AFE}|infrastructure\\ecobony.persistence\\ecobony.persistence.csproj|c:\\users\\rusla\\documents\\web\\ecobony\\ecobony\\infrastructure\\ecobony.persistence\\service\\userhistoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40EB8AEA-5711-4328-936E-8EB751093AFE}|infrastructure\\ecobony.persistence\\ecobony.persistence.csproj|solutionrelative:infrastructure\\ecobony.persistence\\service\\userhistoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{031A1FB9-F1A9-4DDD-B59C-E514A346827B}|infrastructure\\ecobony.signair\\ecobony.signair.csproj|c:\\users\\rusla\\documents\\web\\ecobony\\ecobony\\infrastructure\\ecobony.signair\\hubs\\userhistoryhub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{031A1FB9-F1A9-4DDD-B59C-E514A346827B}|infrastructure\\ecobony.signair\\ecobony.signair.csproj|solutionrelative:infrastructure\\ecobony.signair\\hubs\\userhistoryhub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{031A1FB9-F1A9-4DDD-B59C-E514A346827B}|infrastructure\\ecobony.signair\\ecobony.signair.csproj|c:\\users\\rusla\\documents\\web\\ecobony\\ecobony\\infrastructure\\ecobony.signair\\hubs\\loghub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{031A1FB9-F1A9-4DDD-B59C-E514A346827B}|infrastructure\\ecobony.signair\\ecobony.signair.csproj|solutionrelative:infrastructure\\ecobony.signair\\hubs\\loghub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{031A1FB9-F1A9-4DDD-B59C-E514A346827B}|infrastructure\\ecobony.signair\\ecobony.signair.csproj|c:\\users\\rusla\\documents\\web\\ecobony\\ecobony\\infrastructure\\ecobony.signair\\services\\usertrackingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{031A1FB9-F1A9-4DDD-B59C-E514A346827B}|infrastructure\\ecobony.signair\\ecobony.signair.csproj|solutionrelative:infrastructure\\ecobony.signair\\services\\usertrackingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1309E25-2670-484B-851B-28DFBD6A1D77}|presentation\\ecobony.webapi\\ecobony.webapi.csproj|c:\\users\\rusla\\documents\\web\\ecobony\\ecobony\\presentation\\ecobony.webapi\\filter\\ratelimitingmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1309E25-2670-484B-851B-28DFBD6A1D77}|presentation\\ecobony.webapi\\ecobony.webapi.csproj|solutionrelative:presentation\\ecobony.webapi\\filter\\ratelimitingmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{031A1FB9-F1A9-4DDD-B59C-E514A346827B}|infrastructure\\ecobony.signair\\ecobony.signair.csproj|c:\\users\\rusla\\documents\\web\\ecobony\\ecobony\\infrastructure\\ecobony.signair\\hubs\\usertrackinghub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{031A1FB9-F1A9-4DDD-B59C-E514A346827B}|infrastructure\\ecobony.signair\\ecobony.signair.csproj|solutionrelative:infrastructure\\ecobony.signair\\hubs\\usertrackinghub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40EB8AEA-5711-4328-936E-8EB751093AFE}|infrastructure\\ecobony.persistence\\ecobony.persistence.csproj|c:\\users\\rusla\\documents\\web\\ecobony\\ecobony\\infrastructure\\ecobony.persistence\\repository\\logoptions\\logoptionswriterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40EB8AEA-5711-4328-936E-8EB751093AFE}|infrastructure\\ecobony.persistence\\ecobony.persistence.csproj|solutionrelative:infrastructure\\ecobony.persistence\\repository\\logoptions\\logoptionswriterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40EB8AEA-5711-4328-936E-8EB751093AFE}|infrastructure\\ecobony.persistence\\ecobony.persistence.csproj|c:\\users\\rusla\\documents\\web\\ecobony\\ecobony\\infrastructure\\ecobony.persistence\\repository\\logoptions\\logoptionsreadrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40EB8AEA-5711-4328-936E-8EB751093AFE}|infrastructure\\ecobony.persistence\\ecobony.persistence.csproj|solutionrelative:infrastructure\\ecobony.persistence\\repository\\logoptions\\logoptionsreadrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{71438DB4-D731-4A49-A06E-3371D360498E}|core\\ecobony.application\\ecobony.application.csproj|c:\\users\\rusla\\documents\\web\\ecobony\\ecobony\\core\\ecobony.application\\repository\\logoptions\\ilogoptionwriterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{71438DB4-D731-4A49-A06E-3371D360498E}|core\\ecobony.application\\ecobony.application.csproj|solutionrelative:core\\ecobony.application\\repository\\logoptions\\ilogoptionwriterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{71438DB4-D731-4A49-A06E-3371D360498E}|core\\ecobony.application\\ecobony.application.csproj|c:\\users\\rusla\\documents\\web\\ecobony\\ecobony\\core\\ecobony.application\\repository\\logoptions\\ilogoptionreadrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{71438DB4-D731-4A49-A06E-3371D360498E}|core\\ecobony.application\\ecobony.application.csproj|solutionrelative:core\\ecobony.application\\repository\\logoptions\\ilogoptionreadrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{71438DB4-D731-4A49-A06E-3371D360498E}|core\\ecobony.application\\ecobony.application.csproj|c:\\users\\rusla\\documents\\web\\ecobony\\ecobony\\core\\ecobony.application\\globalusing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{71438DB4-D731-4A49-A06E-3371D360498E}|core\\ecobony.application\\ecobony.application.csproj|solutionrelative:core\\ecobony.application\\globalusing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D8D5A64-4027-4BCC-93EA-169AB03C53D0}|core\\ecobony.domain\\ecobony.domain.csproj|c:\\users\\rusla\\documents\\web\\ecobony\\ecobony\\core\\ecobony.domain\\entities\\location.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D8D5A64-4027-4BCC-93EA-169AB03C53D0}|core\\ecobony.domain\\ecobony.domain.csproj|solutionrelative:core\\ecobony.domain\\entities\\location.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{031A1FB9-F1A9-4DDD-B59C-E514A346827B}|infrastructure\\ecobony.signair\\ecobony.signair.csproj|c:\\users\\rusla\\documents\\web\\ecobony\\ecobony\\infrastructure\\ecobony.signair\\hubregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{031A1FB9-F1A9-4DDD-B59C-E514A346827B}|infrastructure\\ecobony.signair\\ecobony.signair.csproj|solutionrelative:infrastructure\\ecobony.signair\\hubregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40EB8AEA-5711-4328-936E-8EB751093AFE}|infrastructure\\ecobony.persistence\\ecobony.persistence.csproj|c:\\users\\rusla\\documents\\web\\ecobony\\ecobony\\infrastructure\\ecobony.persistence\\dbinitilazer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40EB8AEA-5711-4328-936E-8EB751093AFE}|infrastructure\\ecobony.persistence\\ecobony.persistence.csproj|solutionrelative:infrastructure\\ecobony.persistence\\dbinitilazer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40EB8AEA-5711-4328-936E-8EB751093AFE}|infrastructure\\ecobony.persistence\\ecobony.persistence.csproj|c:\\users\\rusla\\documents\\web\\ecobony\\ecobony\\infrastructure\\ecobony.persistence\\service\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40EB8AEA-5711-4328-936E-8EB751093AFE}|infrastructure\\ecobony.persistence\\ecobony.persistence.csproj|solutionrelative:infrastructure\\ecobony.persistence\\service\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40EB8AEA-5711-4328-936E-8EB751093AFE}|infrastructure\\ecobony.persistence\\ecobony.persistence.csproj|c:\\users\\rusla\\documents\\web\\ecobony\\ecobony\\infrastructure\\ecobony.persistence\\service\\roleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40EB8AEA-5711-4328-936E-8EB751093AFE}|infrastructure\\ecobony.persistence\\ecobony.persistence.csproj|solutionrelative:infrastructure\\ecobony.persistence\\service\\roleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40EB8AEA-5711-4328-936E-8EB751093AFE}|infrastructure\\ecobony.persistence\\ecobony.persistence.csproj|c:\\users\\rusla\\documents\\web\\ecobony\\ecobony\\infrastructure\\ecobony.persistence\\service\\locationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40EB8AEA-5711-4328-936E-8EB751093AFE}|infrastructure\\ecobony.persistence\\ecobony.persistence.csproj|solutionrelative:infrastructure\\ecobony.persistence\\service\\locationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40EB8AEA-5711-4328-936E-8EB751093AFE}|infrastructure\\ecobony.persistence\\ecobony.persistence.csproj|c:\\users\\rusla\\documents\\web\\ecobony\\ecobony\\infrastructure\\ecobony.persistence\\service\\languageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40EB8AEA-5711-4328-936E-8EB751093AFE}|infrastructure\\ecobony.persistence\\ecobony.persistence.csproj|solutionrelative:infrastructure\\ecobony.persistence\\service\\languageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40EB8AEA-5711-4328-936E-8EB751093AFE}|infrastructure\\ecobony.persistence\\ecobony.persistence.csproj|c:\\users\\rusla\\documents\\web\\ecobony\\ecobony\\infrastructure\\ecobony.persistence\\service\\languagejsonservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40EB8AEA-5711-4328-936E-8EB751093AFE}|infrastructure\\ecobony.persistence\\ecobony.persistence.csproj|solutionrelative:infrastructure\\ecobony.persistence\\service\\languagejsonservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40EB8AEA-5711-4328-936E-8EB751093AFE}|infrastructure\\ecobony.persistence\\ecobony.persistence.csproj|c:\\users\\rusla\\documents\\web\\ecobony\\ecobony\\infrastructure\\ecobony.persistence\\service\\headerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40EB8AEA-5711-4328-936E-8EB751093AFE}|infrastructure\\ecobony.persistence\\ecobony.persistence.csproj|solutionrelative:infrastructure\\ecobony.persistence\\service\\headerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40EB8AEA-5711-4328-936E-8EB751093AFE}|infrastructure\\ecobony.persistence\\ecobony.persistence.csproj|c:\\users\\rusla\\documents\\web\\ecobony\\ecobony\\infrastructure\\ecobony.persistence\\service\\balanceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40EB8AEA-5711-4328-936E-8EB751093AFE}|infrastructure\\ecobony.persistence\\ecobony.persistence.csproj|solutionrelative:infrastructure\\ecobony.persistence\\service\\balanceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40EB8AEA-5711-4328-936E-8EB751093AFE}|infrastructure\\ecobony.persistence\\ecobony.persistence.csproj|c:\\users\\rusla\\documents\\web\\ecobony\\ecobony\\infrastructure\\ecobony.persistence\\service\\bonusservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40EB8AEA-5711-4328-936E-8EB751093AFE}|infrastructure\\ecobony.persistence\\ecobony.persistence.csproj|solutionrelative:infrastructure\\ecobony.persistence\\service\\bonusservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40EB8AEA-5711-4328-936E-8EB751093AFE}|infrastructure\\ecobony.persistence\\ecobony.persistence.csproj|c:\\users\\rusla\\documents\\web\\ecobony\\ecobony\\infrastructure\\ecobony.persistence\\service\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40EB8AEA-5711-4328-936E-8EB751093AFE}|infrastructure\\ecobony.persistence\\ecobony.persistence.csproj|solutionrelative:infrastructure\\ecobony.persistence\\service\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1309E25-2670-484B-851B-28DFBD6A1D77}|presentation\\ecobony.webapi\\ecobony.webapi.csproj|c:\\users\\rusla\\documents\\web\\ecobony\\ecobony\\presentation\\ecobony.webapi\\localization\\localizationmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1309E25-2670-484B-851B-28DFBD6A1D77}|presentation\\ecobony.webapi\\ecobony.webapi.csproj|solutionrelative:presentation\\ecobony.webapi\\localization\\localizationmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{71438DB4-D731-4A49-A06E-3371D360498E}|core\\ecobony.application\\ecobony.application.csproj|c:\\users\\rusla\\documents\\web\\ecobony\\ecobony\\core\\ecobony.application\\services\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{71438DB4-D731-4A49-A06E-3371D360498E}|core\\ecobony.application\\ecobony.application.csproj|solutionrelative:core\\ecobony.application\\services\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1309E25-2670-484B-851B-28DFBD6A1D77}|presentation\\ecobony.webapi\\ecobony.webapi.csproj|c:\\users\\rusla\\documents\\web\\ecobony\\ecobony\\presentation\\ecobony.webapi\\controllers\\balancecontroller.cs||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{E1309E25-2670-484B-851B-28DFBD6A1D77}|presentation\\ecobony.webapi\\ecobony.webapi.csproj|solutionrelative:presentation\\ecobony.webapi\\controllers\\balancecontroller.cs||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1309E25-2670-484B-851B-28DFBD6A1D77}|presentation\\ecobony.webapi\\ecobony.webapi.csproj|c:\\users\\rusla\\documents\\web\\ecobony\\ecobony\\presentation\\ecobony.webapi\\controllers\\bonuscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1309E25-2670-484B-851B-28DFBD6A1D77}|presentation\\ecobony.webapi\\ecobony.webapi.csproj|solutionrelative:presentation\\ecobony.webapi\\controllers\\bonuscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1309E25-2670-484B-851B-28DFBD6A1D77}|presentation\\ecobony.webapi\\ecobony.webapi.csproj|c:\\users\\rusla\\documents\\web\\ecobony\\ecobony\\presentation\\ecobony.webapi\\areas\\controllers\\balancecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1309E25-2670-484B-851B-28DFBD6A1D77}|presentation\\ecobony.webapi\\ecobony.webapi.csproj|solutionrelative:presentation\\ecobony.webapi\\areas\\controllers\\balancecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40EB8AEA-5711-4328-936E-8EB751093AFE}|infrastructure\\ecobony.persistence\\ecobony.persistence.csproj|c:\\users\\rusla\\documents\\web\\ecobony\\ecobony\\infrastructure\\ecobony.persistence\\service\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40EB8AEA-5711-4328-936E-8EB751093AFE}|infrastructure\\ecobony.persistence\\ecobony.persistence.csproj|solutionrelative:infrastructure\\ecobony.persistence\\service\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{71438DB4-D731-4A49-A06E-3371D360498E}|core\\ecobony.application\\ecobony.application.csproj|c:\\users\\rusla\\documents\\web\\ecobony\\ecobony\\core\\ecobony.application\\feauters\\command\\language\\createlanguage\\createlanguagecommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{71438DB4-D731-4A49-A06E-3371D360498E}|core\\ecobony.application\\ecobony.application.csproj|solutionrelative:core\\ecobony.application\\feauters\\command\\language\\createlanguage\\createlanguagecommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{71438DB4-D731-4A49-A06E-3371D360498E}|core\\ecobony.application\\ecobony.application.csproj|c:\\users\\rusla\\documents\\web\\ecobony\\ecobony\\core\\ecobony.application\\feauters\\query\\language\\getbyisocodeasync\\getbyisocodecommandresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{71438DB4-D731-4A49-A06E-3371D360498E}|core\\ecobony.application\\ecobony.application.csproj|solutionrelative:core\\ecobony.application\\feauters\\query\\language\\getbyisocodeasync\\getbyisocodecommandresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{71438DB4-D731-4A49-A06E-3371D360498E}|core\\ecobony.application\\ecobony.application.csproj|c:\\users\\rusla\\documents\\web\\ecobony\\ecobony\\core\\ecobony.application\\validator\\abstractvalidator\\language\\createlanguagevalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{71438DB4-D731-4A49-A06E-3371D360498E}|core\\ecobony.application\\ecobony.application.csproj|solutionrelative:core\\ecobony.application\\validator\\abstractvalidator\\language\\createlanguagevalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{71438DB4-D731-4A49-A06E-3371D360498E}|core\\ecobony.application\\ecobony.application.csproj|c:\\users\\rusla\\documents\\web\\ecobony\\ecobony\\core\\ecobony.application\\feauters\\query\\language\\getclientall\\getclientallcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{71438DB4-D731-4A49-A06E-3371D360498E}|core\\ecobony.application\\ecobony.application.csproj|solutionrelative:core\\ecobony.application\\feauters\\query\\language\\getclientall\\getclientallcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{71438DB4-D731-4A49-A06E-3371D360498E}|core\\ecobony.application\\ecobony.application.csproj|c:\\users\\rusla\\documents\\web\\ecobony\\ecobony\\core\\ecobony.application\\feauters\\query\\language\\getbyisocodeasync\\getbyisocodecommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{71438DB4-D731-4A49-A06E-3371D360498E}|core\\ecobony.application\\ecobony.application.csproj|solutionrelative:core\\ecobony.application\\feauters\\query\\language\\getbyisocodeasync\\getbyisocodecommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1309E25-2670-484B-851B-28DFBD6A1D77}|presentation\\ecobony.webapi\\ecobony.webapi.csproj|c:\\users\\rusla\\documents\\web\\ecobony\\ecobony\\presentation\\ecobony.webapi\\localization\\jsonstringlocalizationfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1309E25-2670-484B-851B-28DFBD6A1D77}|presentation\\ecobony.webapi\\ecobony.webapi.csproj|solutionrelative:presentation\\ecobony.webapi\\localization\\jsonstringlocalizationfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D8D5A64-4027-4BCC-93EA-169AB03C53D0}|core\\ecobony.domain\\ecobony.domain.csproj|c:\\users\\rusla\\documents\\web\\ecobony\\ecobony\\core\\ecobony.domain\\dto\u0027s\\category\\createcategorytranslationdto\u0027s.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D8D5A64-4027-4BCC-93EA-169AB03C53D0}|core\\ecobony.domain\\ecobony.domain.csproj|solutionrelative:core\\ecobony.domain\\dto\u0027s\\category\\createcategorytranslationdto\u0027s.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D8D5A64-4027-4BCC-93EA-169AB03C53D0}|core\\ecobony.domain\\ecobony.domain.csproj|c:\\users\\rusla\\documents\\web\\ecobony\\ecobony\\core\\ecobony.domain\\dto\u0027s\\wastesortingmistake\\updatewastesortingmistaketranslationdto\u0027s.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D8D5A64-4027-4BCC-93EA-169AB03C53D0}|core\\ecobony.domain\\ecobony.domain.csproj|solutionrelative:core\\ecobony.domain\\dto\u0027s\\wastesortingmistake\\updatewastesortingmistaketranslationdto\u0027s.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1309E25-2670-484B-851B-28DFBD6A1D77}|presentation\\ecobony.webapi\\ecobony.webapi.csproj|c:\\users\\rusla\\documents\\web\\ecobony\\ecobony\\presentation\\ecobony.webapi\\controllers\\languagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1309E25-2670-484B-851B-28DFBD6A1D77}|presentation\\ecobony.webapi\\ecobony.webapi.csproj|solutionrelative:presentation\\ecobony.webapi\\controllers\\languagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{71438DB4-D731-4A49-A06E-3371D360498E}|core\\ecobony.application\\ecobony.application.csproj|c:\\users\\rusla\\documents\\web\\ecobony\\ecobony\\core\\ecobony.application\\feauters\\query\\language\\getclientall\\getclientallcommandresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{71438DB4-D731-4A49-A06E-3371D360498E}|core\\ecobony.application\\ecobony.application.csproj|solutionrelative:core\\ecobony.application\\feauters\\query\\language\\getclientall\\getclientallcommandresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{71438DB4-D731-4A49-A06E-3371D360498E}|core\\ecobony.application\\ecobony.application.csproj|c:\\users\\rusla\\documents\\web\\ecobony\\ecobony\\core\\ecobony.application\\feauters\\query\\language\\getclientall\\getclientallcommandrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{71438DB4-D731-4A49-A06E-3371D360498E}|core\\ecobony.application\\ecobony.application.csproj|solutionrelative:core\\ecobony.application\\feauters\\query\\language\\getclientall\\getclientallcommandrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{71438DB4-D731-4A49-A06E-3371D360498E}|core\\ecobony.application\\ecobony.application.csproj|c:\\users\\rusla\\documents\\web\\ecobony\\ecobony\\core\\ecobony.application\\validator\\validationfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{71438DB4-D731-4A49-A06E-3371D360498E}|core\\ecobony.application\\ecobony.application.csproj|solutionrelative:core\\ecobony.application\\validator\\validationfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{900F3B74-7582-42D6-A712-FD44550CE85C}|infrastructure\\ecobony.infrastructure\\ecobony.infrastructure.csproj|c:\\users\\rusla\\documents\\web\\ecobony\\ecobony\\infrastructure\\ecobony.infrastructure\\serviceregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{900F3B74-7582-42D6-A712-FD44550CE85C}|infrastructure\\ecobony.infrastructure\\ecobony.infrastructure.csproj|solutionrelative:infrastructure\\ecobony.infrastructure\\serviceregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{71438DB4-D731-4A49-A06E-3371D360498E}|core\\ecobony.application\\ecobony.application.csproj|c:\\users\\rusla\\documents\\web\\ecobony\\ecobony\\core\\ecobony.application\\validator\\abstractvalidator\\header\\createheadervalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{71438DB4-D731-4A49-A06E-3371D360498E}|core\\ecobony.application\\ecobony.application.csproj|solutionrelative:core\\ecobony.application\\validator\\abstractvalidator\\header\\createheadervalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{71438DB4-D731-4A49-A06E-3371D360498E}|core\\ecobony.application\\ecobony.application.csproj|c:\\users\\rusla\\documents\\web\\ecobony\\ecobony\\core\\ecobony.application\\feauters\\query\\language\\getbyisocodeasync\\getbyisocodecommandrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{71438DB4-D731-4A49-A06E-3371D360498E}|core\\ecobony.application\\ecobony.application.csproj|solutionrelative:core\\ecobony.application\\feauters\\query\\language\\getbyisocodeasync\\getbyisocodecommandrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D8D5A64-4027-4BCC-93EA-169AB03C53D0}|core\\ecobony.domain\\ecobony.domain.csproj|c:\\users\\rusla\\documents\\web\\ecobony\\ecobony\\core\\ecobony.domain\\entities\\enum\\validationmessagekey.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D8D5A64-4027-4BCC-93EA-169AB03C53D0}|core\\ecobony.domain\\ecobony.domain.csproj|solutionrelative:core\\ecobony.domain\\entities\\enum\\validationmessagekey.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{71438DB4-D731-4A49-A06E-3371D360498E}|core\\ecobony.application\\ecobony.application.csproj|c:\\users\\rusla\\documents\\web\\ecobony\\ecobony\\core\\ecobony.application\\validator\\abstractvalidator\\header\\updateheadertranslationvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{71438DB4-D731-4A49-A06E-3371D360498E}|core\\ecobony.application\\ecobony.application.csproj|solutionrelative:core\\ecobony.application\\validator\\abstractvalidator\\header\\updateheadertranslationvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{71438DB4-D731-4A49-A06E-3371D360498E}|core\\ecobony.application\\ecobony.application.csproj|c:\\users\\rusla\\documents\\web\\ecobony\\ecobony\\core\\ecobony.application\\validator\\abstractvalidator\\header\\updateheadervalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{71438DB4-D731-4A49-A06E-3371D360498E}|core\\ecobony.application\\ecobony.application.csproj|solutionrelative:core\\ecobony.application\\validator\\abstractvalidator\\header\\updateheadervalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{71438DB4-D731-4A49-A06E-3371D360498E}|core\\ecobony.application\\ecobony.application.csproj|c:\\users\\rusla\\documents\\web\\ecobony\\ecobony\\core\\ecobony.application\\validator\\abstractvalidator\\header\\createheadertranslationvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{71438DB4-D731-4A49-A06E-3371D360498E}|core\\ecobony.application\\ecobony.application.csproj|solutionrelative:core\\ecobony.application\\validator\\abstractvalidator\\header\\createheadertranslationvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{71438DB4-D731-4A49-A06E-3371D360498E}|core\\ecobony.application\\ecobony.application.csproj|c:\\users\\rusla\\documents\\web\\ecobony\\ecobony\\core\\ecobony.application\\validator\\abstractvalidator\\bonus\\createbonusvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{71438DB4-D731-4A49-A06E-3371D360498E}|core\\ecobony.application\\ecobony.application.csproj|solutionrelative:core\\ecobony.application\\validator\\abstractvalidator\\bonus\\createbonusvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{71438DB4-D731-4A49-A06E-3371D360498E}|core\\ecobony.application\\ecobony.application.csproj|c:\\users\\rusla\\documents\\web\\ecobony\\ecobony\\core\\ecobony.application\\validator\\abstractvalidator\\bonus\\updatebonusvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{71438DB4-D731-4A49-A06E-3371D360498E}|core\\ecobony.application\\ecobony.application.csproj|solutionrelative:core\\ecobony.application\\validator\\abstractvalidator\\bonus\\updatebonusvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1309E25-2670-484B-851B-28DFBD6A1D77}|presentation\\ecobony.webapi\\ecobony.webapi.csproj|c:\\users\\rusla\\documents\\web\\ecobony\\ecobony\\presentation\\ecobony.webapi\\areas\\controllers\\rolecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1309E25-2670-484B-851B-28DFBD6A1D77}|presentation\\ecobony.webapi\\ecobony.webapi.csproj|solutionrelative:presentation\\ecobony.webapi\\areas\\controllers\\rolecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\presentation\\ecobony.webapi\\Resources\\Error.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:presentation\\ecobony.webapi\\Resources\\Error.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40EB8AEA-5711-4328-936E-8EB751093AFE}|infrastructure\\ecobony.persistence\\ecobony.persistence.csproj|c:\\users\\rusla\\documents\\web\\ecobony\\ecobony\\infrastructure\\ecobony.persistence\\migrations\\20251009183547_mg_1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40EB8AEA-5711-4328-936E-8EB751093AFE}|infrastructure\\ecobony.persistence\\ecobony.persistence.csproj|solutionrelative:infrastructure\\ecobony.persistence\\migrations\\20251009183547_mg_1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,11 +365,73 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 2,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+              "$type": "Document",
+              "DocumentIndex": 66,
+              "Title": "GetByIsoCodeCommandResponse.cs",
+              "DocumentMoniker": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\core\\ecobony.application\\Feauters\\Query\\Language\\GetByIsoCodeAsync\\GetByIsoCodeCommandResponse.cs",
+              "RelativeDocumentMoniker": "core\\ecobony.application\\Feauters\\Query\\Language\\GetByIsoCodeAsync\\GetByIsoCodeCommandResponse.cs",
+              "ToolTip": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\core\\ecobony.application\\Feauters\\Query\\Language\\GetByIsoCodeAsync\\GetByIsoCodeCommandResponse.cs",
+              "RelativeToolTip": "core\\ecobony.application\\Feauters\\Query\\Language\\GetByIsoCodeAsync\\GetByIsoCodeCommandResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-24T18:00:02.271Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "JsonStringLocalization.cs",
+              "DocumentMoniker": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\presentation\\ecobony.webapi\\Localization\\JsonStringLocalization.cs",
+              "RelativeDocumentMoniker": "presentation\\ecobony.webapi\\Localization\\JsonStringLocalization.cs",
+              "ToolTip": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\presentation\\ecobony.webapi\\Localization\\JsonStringLocalization.cs",
+              "RelativeToolTip": "presentation\\ecobony.webapi\\Localization\\JsonStringLocalization.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAASwB8AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-28T16:26:17.548Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SoftDeleteInterceptor.cs",
+              "DocumentMoniker": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\infrastructure\\ecobony.persistence\\SoftDeleteInterceptor.cs",
+              "RelativeDocumentMoniker": "infrastructure\\ecobony.persistence\\SoftDeleteInterceptor.cs",
+              "ToolTip": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\infrastructure\\ecobony.persistence\\SoftDeleteInterceptor.cs",
+              "RelativeToolTip": "infrastructure\\ecobony.persistence\\SoftDeleteInterceptor.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAAUwE4AAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-21T09:05:45.195Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "HeaderRole.cs",
+              "DocumentMoniker": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\core\\ecobony.domain\\Entities\\Enum\\HeaderRole.cs",
+              "RelativeDocumentMoniker": "core\\ecobony.domain\\Entities\\Enum\\HeaderRole.cs",
+              "ToolTip": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\core\\ecobony.domain\\Entities\\Enum\\HeaderRole.cs",
+              "RelativeToolTip": "core\\ecobony.domain\\Entities\\Enum\\HeaderRole.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-10T17:19:07.761Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "OperationType.cs",
+              "DocumentMoniker": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\core\\ecobony.domain\\Entities\\Enum\\OperationType.cs",
+              "RelativeDocumentMoniker": "core\\ecobony.domain\\Entities\\Enum\\OperationType.cs",
+              "ToolTip": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\core\\ecobony.domain\\Entities\\Enum\\OperationType.cs",
+              "RelativeToolTip": "core\\ecobony.domain\\Entities\\Enum\\OperationType.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-10T17:18:29.117Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Bookmark",
@@ -81,120 +458,85 @@
               "Name": "ST:0:0:{57d563b6-44a5-47df-85be-f4199ad6b651}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ecobony.webapi",
-              "DocumentMoniker": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\presentation\\ecobony.webapi\\ecobony.webapi.csproj",
-              "RelativeDocumentMoniker": "presentation\\ecobony.webapi\\ecobony.webapi.csproj",
-              "ToolTip": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\presentation\\ecobony.webapi\\ecobony.webapi.csproj",
-              "RelativeToolTip": "presentation\\ecobony.webapi\\ecobony.webapi.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-08-27T16:10:32.695Z",
+              "DocumentIndex": 1,
+              "Title": "TrashCanSignairService.cs",
+              "DocumentMoniker": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\infrastructure\\ecobony.signair\\Services\\TrashCanSignairService.cs",
+              "RelativeDocumentMoniker": "infrastructure\\ecobony.signair\\Services\\TrashCanSignairService.cs",
+              "ToolTip": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\infrastructure\\ecobony.signair\\Services\\TrashCanSignairService.cs",
+              "RelativeToolTip": "infrastructure\\ecobony.signair\\Services\\TrashCanSignairService.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAADQAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-09T17:52:08.088Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "20250827162704_mg_2.cs",
-              "DocumentMoniker": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\infrastructure\\ecobony.persistence\\Migrations\\20250827162704_mg_2.cs",
-              "RelativeDocumentMoniker": "infrastructure\\ecobony.persistence\\Migrations\\20250827162704_mg_2.cs",
-              "ToolTip": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\infrastructure\\ecobony.persistence\\Migrations\\20250827162704_mg_2.cs",
-              "RelativeToolTip": "infrastructure\\ecobony.persistence\\Migrations\\20250827162704_mg_2.cs",
-              "ViewState": "AgIAACMAAAAAAAAAAAAAADwAAABbAAAAAAAAAA==",
+              "Title": "ActionType.cs",
+              "DocumentMoniker": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\core\\ecobony.domain\\Entities\\Enum\\ActionType.cs",
+              "RelativeDocumentMoniker": "core\\ecobony.domain\\Entities\\Enum\\ActionType.cs",
+              "ToolTip": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\core\\ecobony.domain\\Entities\\Enum\\ActionType.cs",
+              "RelativeToolTip": "core\\ecobony.domain\\Entities\\Enum\\ActionType.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-27T16:27:05.806Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\presentation\\ecobony.webapi\\Program.cs",
-              "RelativeDocumentMoniker": "presentation\\ecobony.webapi\\Program.cs",
-              "ToolTip": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\presentation\\ecobony.webapi\\Program.cs",
-              "RelativeToolTip": "presentation\\ecobony.webapi\\Program.cs",
-              "ViewState": "AgIAADUAAAAAAAAAAAAAAE0AAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-27T16:04:17.405Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UserTrackingMiddleware.cs",
-              "DocumentMoniker": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\presentation\\ecobony.webapi\\Filter\\UserTrackingMiddleware.cs",
-              "RelativeDocumentMoniker": "presentation\\ecobony.webapi\\Filter\\UserTrackingMiddleware.cs",
-              "ToolTip": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\presentation\\ecobony.webapi\\Filter\\UserTrackingMiddleware.cs",
-              "RelativeToolTip": "presentation\\ecobony.webapi\\Filter\\UserTrackingMiddleware.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-27T16:03:01.732Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "UserHistoryMiddleware.cs",
-              "DocumentMoniker": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\presentation\\ecobony.webapi\\Filter\\UserHistoryMiddleware.cs",
-              "RelativeDocumentMoniker": "presentation\\ecobony.webapi\\Filter\\UserHistoryMiddleware.cs",
-              "ToolTip": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\presentation\\ecobony.webapi\\Filter\\UserHistoryMiddleware.cs",
-              "RelativeToolTip": "presentation\\ecobony.webapi\\Filter\\UserHistoryMiddleware.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-27T16:02:52.945Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ServiceRegistration.cs",
-              "DocumentMoniker": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\infrastructure\\ecobony.persistence\\ServiceRegistration.cs",
-              "RelativeDocumentMoniker": "infrastructure\\ecobony.persistence\\ServiceRegistration.cs",
-              "ToolTip": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\infrastructure\\ecobony.persistence\\ServiceRegistration.cs",
-              "RelativeToolTip": "infrastructure\\ecobony.persistence\\ServiceRegistration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-27T15:59:14.758Z",
+              "WhenOpened": "2025-10-10T17:19:06.31Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "UserHistoryService.cs",
-              "DocumentMoniker": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\infrastructure\\ecobony.persistence\\Service\\UserHistoryService.cs",
-              "RelativeDocumentMoniker": "infrastructure\\ecobony.persistence\\Service\\UserHistoryService.cs",
-              "ToolTip": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\infrastructure\\ecobony.persistence\\Service\\UserHistoryService.cs",
-              "RelativeToolTip": "infrastructure\\ecobony.persistence\\Service\\UserHistoryService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAnAAAAAAAAAA==",
+              "Title": "LogOptions.cs",
+              "DocumentMoniker": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\core\\ecobony.domain\\Entities\\LogOptions.cs",
+              "RelativeDocumentMoniker": "core\\ecobony.domain\\Entities\\LogOptions.cs",
+              "ToolTip": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\core\\ecobony.domain\\Entities\\LogOptions.cs",
+              "RelativeToolTip": "core\\ecobony.domain\\Entities\\LogOptions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-27T15:49:53.23Z",
+              "WhenOpened": "2025-10-06T16:38:29.721Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "IUserHistoryService.cs",
-              "DocumentMoniker": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\core\\ecobony.application\\Services\\IUserHistoryService.cs",
-              "RelativeDocumentMoniker": "core\\ecobony.application\\Services\\IUserHistoryService.cs",
-              "ToolTip": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\core\\ecobony.application\\Services\\IUserHistoryService.cs",
-              "RelativeToolTip": "core\\ecobony.application\\Services\\IUserHistoryService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAaAAAAAAAAAA==",
+              "Title": "TrashCan.cs",
+              "DocumentMoniker": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\core\\ecobony.domain\\Entities\\TrashCan.cs",
+              "RelativeDocumentMoniker": "core\\ecobony.domain\\Entities\\TrashCan.cs",
+              "ToolTip": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\core\\ecobony.domain\\Entities\\TrashCan.cs",
+              "RelativeToolTip": "core\\ecobony.domain\\Entities\\TrashCan.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA4AAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-27T15:53:40.461Z",
+              "WhenOpened": "2025-10-06T15:35:37.8Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ValidationLanguageStore.cs",
+              "DocumentMoniker": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\core\\ecobony.domain\\Dto\u0027s\\ValidationLanguageStore.cs",
+              "RelativeDocumentMoniker": "core\\ecobony.domain\\Dto\u0027s\\ValidationLanguageStore.cs",
+              "ToolTip": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\core\\ecobony.domain\\Dto\u0027s\\ValidationLanguageStore.cs",
+              "RelativeToolTip": "core\\ecobony.domain\\Dto\u0027s\\ValidationLanguageStore.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-09T17:58:56.932Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "GlobalUsing.cs",
-              "DocumentMoniker": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\infrastructure\\ecobony.persistence\\GlobalUsing.cs",
-              "RelativeDocumentMoniker": "infrastructure\\ecobony.persistence\\GlobalUsing.cs",
-              "ToolTip": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\infrastructure\\ecobony.persistence\\GlobalUsing.cs",
-              "RelativeToolTip": "infrastructure\\ecobony.persistence\\GlobalUsing.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-27T16:13:23.812Z",
+              "Title": "ecobony.webapi.csproj",
+              "DocumentMoniker": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\presentation\\ecobony.webapi\\ecobony.webapi.csproj",
+              "RelativeDocumentMoniker": "presentation\\ecobony.webapi\\ecobony.webapi.csproj",
+              "ToolTip": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\presentation\\ecobony.webapi\\ecobony.webapi.csproj",
+              "RelativeToolTip": "presentation\\ecobony.webapi\\ecobony.webapi.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAABpAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-09-28T16:17:02.224Z",
               "EditorCaption": ""
             },
             {
@@ -205,10 +547,933 @@
               "RelativeDocumentMoniker": "infrastructure\\ecobony.signair\\ServiceRegistration.cs",
               "ToolTip": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\infrastructure\\ecobony.signair\\ServiceRegistration.cs",
               "RelativeToolTip": "infrastructure\\ecobony.signair\\ServiceRegistration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABQAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAABQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-27T16:03:12.909Z",
+              "WhenOpened": "2025-10-06T18:28:14.339Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "GlobalUsing.cs",
+              "DocumentMoniker": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\presentation\\ecobony.webapi\\GlobalUsing.cs",
+              "RelativeDocumentMoniker": "presentation\\ecobony.webapi\\GlobalUsing.cs",
+              "ToolTip": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\presentation\\ecobony.webapi\\GlobalUsing.cs",
+              "RelativeToolTip": "presentation\\ecobony.webapi\\GlobalUsing.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAUwCQAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-18T20:47:29.589Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "i18.json",
+              "DocumentMoniker": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\presentation\\ecobony.webapi\\Resources\\i18.json",
+              "RelativeDocumentMoniker": "presentation\\ecobony.webapi\\Resources\\i18.json",
+              "ToolTip": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\presentation\\ecobony.webapi\\Resources\\i18.json",
+              "RelativeToolTip": "presentation\\ecobony.webapi\\Resources\\i18.json",
+              "ViewState": "AgIAAJkAAAAAAAAAAAAAAKQAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-09-20T18:05:56.867Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\presentation\\ecobony.webapi\\Program.cs",
+              "RelativeDocumentMoniker": "presentation\\ecobony.webapi\\Program.cs",
+              "ToolTip": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\presentation\\ecobony.webapi\\Program.cs",
+              "RelativeToolTip": "presentation\\ecobony.webapi\\Program.cs",
+              "ViewState": "AgIAAG8AAAAAAAAAAAAUwHwAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-18T20:42:10.028Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 88,
+              "Title": "20251009183547_mg_1.cs",
+              "DocumentMoniker": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\infrastructure\\ecobony.persistence\\Migrations\\20251009183547_mg_1.cs",
+              "RelativeDocumentMoniker": "infrastructure\\ecobony.persistence\\Migrations\\20251009183547_mg_1.cs",
+              "ToolTip": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\infrastructure\\ecobony.persistence\\Migrations\\20251009183547_mg_1.cs",
+              "RelativeToolTip": "infrastructure\\ecobony.persistence\\Migrations\\20251009183547_mg_1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-09T18:35:47.884Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "20251009183439_mg_10.cs",
+              "DocumentMoniker": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\infrastructure\\ecobony.persistence\\Migrations\\20251009183439_mg_10.cs",
+              "RelativeDocumentMoniker": "infrastructure\\ecobony.persistence\\Migrations\\20251009183439_mg_10.cs",
+              "ToolTip": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\infrastructure\\ecobony.persistence\\Migrations\\20251009183439_mg_10.cs",
+              "RelativeToolTip": "infrastructure\\ecobony.persistence\\Migrations\\20251009183439_mg_10.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-09T18:34:39.82Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\infrastructure\\ecobony.persistence\\Context\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "infrastructure\\ecobony.persistence\\Context\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\infrastructure\\ecobony.persistence\\Context\\AppDbContext.cs",
+              "RelativeToolTip": "infrastructure\\ecobony.persistence\\Context\\AppDbContext.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAAA9wDEAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T16:41:13.243Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ServiceRegistration.cs",
+              "DocumentMoniker": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\presentation\\ecobony.webapi\\Filter\\ServiceRegistration.cs",
+              "RelativeDocumentMoniker": "presentation\\ecobony.webapi\\Filter\\ServiceRegistration.cs",
+              "ToolTip": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\presentation\\ecobony.webapi\\Filter\\ServiceRegistration.cs",
+              "RelativeToolTip": "presentation\\ecobony.webapi\\Filter\\ServiceRegistration.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAAcwDQAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T15:57:50.846Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "ServiceRegistration.cs",
+              "DocumentMoniker": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\infrastructure\\ecobony.persistence\\ServiceRegistration.cs",
+              "RelativeDocumentMoniker": "infrastructure\\ecobony.persistence\\ServiceRegistration.cs",
+              "ToolTip": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\infrastructure\\ecobony.persistence\\ServiceRegistration.cs",
+              "RelativeToolTip": "infrastructure\\ecobony.persistence\\ServiceRegistration.cs",
+              "ViewState": "AgIAADIAAAAAAAAAAAAswEsAAABPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-21T09:39:45.507Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "LogOptionsService.cs",
+              "DocumentMoniker": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\infrastructure\\ecobony.signair\\Services\\LogOptionsService.cs",
+              "RelativeDocumentMoniker": "infrastructure\\ecobony.signair\\Services\\LogOptionsService.cs",
+              "ToolTip": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\infrastructure\\ecobony.signair\\Services\\LogOptionsService.cs",
+              "RelativeToolTip": "infrastructure\\ecobony.signair\\Services\\LogOptionsService.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAYwCcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T18:08:49.163Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "ITrashCanService.cs",
+              "DocumentMoniker": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\core\\ecobony.application\\Services\\ITrashCanService.cs",
+              "RelativeDocumentMoniker": "core\\ecobony.application\\Services\\ITrashCanService.cs",
+              "ToolTip": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\core\\ecobony.application\\Services\\ITrashCanService.cs",
+              "RelativeToolTip": "core\\ecobony.application\\Services\\ITrashCanService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-09T18:03:17.957Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "ServiceRegistration.cs",
+              "DocumentMoniker": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\core\\ecobony.application\\ServiceRegistration.cs",
+              "RelativeDocumentMoniker": "core\\ecobony.application\\ServiceRegistration.cs",
+              "ToolTip": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\core\\ecobony.application\\ServiceRegistration.cs",
+              "RelativeToolTip": "core\\ecobony.application\\ServiceRegistration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-21T09:39:33.457Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "CreateTrashCanDto\u0027s.cs",
+              "DocumentMoniker": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\core\\ecobony.domain\\Dto\u0027s\\TrashCan\\CreateTrashCanDto\u0027s.cs",
+              "RelativeDocumentMoniker": "core\\ecobony.domain\\Dto\u0027s\\TrashCan\\CreateTrashCanDto\u0027s.cs",
+              "ToolTip": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\core\\ecobony.domain\\Dto\u0027s\\TrashCan\\CreateTrashCanDto\u0027s.cs",
+              "RelativeToolTip": "core\\ecobony.domain\\Dto\u0027s\\TrashCan\\CreateTrashCanDto\u0027s.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-09T17:57:47.464Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "ReceiveHubName.cs",
+              "DocumentMoniker": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\infrastructure\\ecobony.signair\\ReceiveHubName.cs",
+              "RelativeDocumentMoniker": "infrastructure\\ecobony.signair\\ReceiveHubName.cs",
+              "ToolTip": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\infrastructure\\ecobony.signair\\ReceiveHubName.cs",
+              "RelativeToolTip": "infrastructure\\ecobony.signair\\ReceiveHubName.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T16:42:17.288Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "TrashCanHub.cs",
+              "DocumentMoniker": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\infrastructure\\ecobony.signair\\Hubs\\TrashCanHub.cs",
+              "RelativeDocumentMoniker": "infrastructure\\ecobony.signair\\Hubs\\TrashCanHub.cs",
+              "ToolTip": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\infrastructure\\ecobony.signair\\Hubs\\TrashCanHub.cs",
+              "RelativeToolTip": "infrastructure\\ecobony.signair\\Hubs\\TrashCanHub.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-09T17:51:32.462Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "SignalRSink.cs",
+              "DocumentMoniker": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\presentation\\ecobony.webapi\\Filter\\SignalRSink.cs",
+              "RelativeDocumentMoniker": "presentation\\ecobony.webapi\\Filter\\SignalRSink.cs",
+              "ToolTip": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\presentation\\ecobony.webapi\\Filter\\SignalRSink.cs",
+              "RelativeToolTip": "presentation\\ecobony.webapi\\Filter\\SignalRSink.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAArwBcAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T18:03:39.718Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "LanguageController.cs",
+              "DocumentMoniker": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\presentation\\ecobony.webapi\\Areas\\Controllers\\LanguageController.cs",
+              "RelativeDocumentMoniker": "presentation\\ecobony.webapi\\Areas\\Controllers\\LanguageController.cs",
+              "ToolTip": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\presentation\\ecobony.webapi\\Areas\\Controllers\\LanguageController.cs",
+              "RelativeToolTip": "presentation\\ecobony.webapi\\Areas\\Controllers\\LanguageController.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAUwCoAAABiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-22T17:34:03.595Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "ecobony.application.csproj",
+              "DocumentMoniker": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\core\\ecobony.application\\ecobony.application.csproj",
+              "RelativeDocumentMoniker": "core\\ecobony.application\\ecobony.application.csproj",
+              "ToolTip": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\core\\ecobony.application\\ecobony.application.csproj",
+              "RelativeToolTip": "core\\ecobony.application\\ecobony.application.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-09-23T16:11:14.247Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "IdempotencyActionFilter.cs",
+              "DocumentMoniker": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\presentation\\ecobony.webapi\\Filter\\IdempotencyActionFilter.cs",
+              "RelativeDocumentMoniker": "presentation\\ecobony.webapi\\Filter\\IdempotencyActionFilter.cs",
+              "ToolTip": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\presentation\\ecobony.webapi\\Filter\\IdempotencyActionFilter.cs",
+              "RelativeToolTip": "presentation\\ecobony.webapi\\Filter\\IdempotencyActionFilter.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAAABAAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T15:03:24.429Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "GlobalExceptionMiddleware.cs",
+              "DocumentMoniker": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\presentation\\ecobony.webapi\\Filter\\GlobalExceptionMiddleware.cs",
+              "RelativeDocumentMoniker": "presentation\\ecobony.webapi\\Filter\\GlobalExceptionMiddleware.cs",
+              "ToolTip": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\presentation\\ecobony.webapi\\Filter\\GlobalExceptionMiddleware.cs",
+              "RelativeToolTip": "presentation\\ecobony.webapi\\Filter\\GlobalExceptionMiddleware.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-30T17:38:23.699Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "CultureDateTimeConverter.cs",
+              "DocumentMoniker": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\presentation\\ecobony.webapi\\Filter\\CultureDateTimeConverter.cs",
+              "RelativeDocumentMoniker": "presentation\\ecobony.webapi\\Filter\\CultureDateTimeConverter.cs",
+              "ToolTip": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\presentation\\ecobony.webapi\\Filter\\CultureDateTimeConverter.cs",
+              "RelativeToolTip": "presentation\\ecobony.webapi\\Filter\\CultureDateTimeConverter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T15:03:18.835Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "CompressResponseMiddleware.cs",
+              "DocumentMoniker": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\presentation\\ecobony.webapi\\Filter\\CompressResponseMiddleware.cs",
+              "RelativeDocumentMoniker": "presentation\\ecobony.webapi\\Filter\\CompressResponseMiddleware.cs",
+              "ToolTip": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\presentation\\ecobony.webapi\\Filter\\CompressResponseMiddleware.cs",
+              "RelativeToolTip": "presentation\\ecobony.webapi\\Filter\\CompressResponseMiddleware.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAAAAIAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T09:28:42.18Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\presentation\\ecobony.webapi\\appsettings.json",
+              "RelativeDocumentMoniker": "presentation\\ecobony.webapi\\appsettings.json",
+              "ToolTip": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\presentation\\ecobony.webapi\\appsettings.json",
+              "RelativeToolTip": "presentation\\ecobony.webapi\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-09-21T09:19:38.307Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "DbInitializerExtensions.cs",
+              "DocumentMoniker": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\presentation\\ecobony.webapi\\Filter\\DbInitializerExtensions.cs",
+              "RelativeDocumentMoniker": "presentation\\ecobony.webapi\\Filter\\DbInitializerExtensions.cs",
+              "ToolTip": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\presentation\\ecobony.webapi\\Filter\\DbInitializerExtensions.cs",
+              "RelativeToolTip": "presentation\\ecobony.webapi\\Filter\\DbInitializerExtensions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-22T16:51:24.511Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "ecobony.infrastructure.csproj",
+              "DocumentMoniker": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\infrastructure\\ecobony.infrastructure\\ecobony.infrastructure.csproj",
+              "RelativeDocumentMoniker": "infrastructure\\ecobony.infrastructure\\ecobony.infrastructure.csproj",
+              "ToolTip": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\infrastructure\\ecobony.infrastructure\\ecobony.infrastructure.csproj",
+              "RelativeToolTip": "infrastructure\\ecobony.infrastructure\\ecobony.infrastructure.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-09-24T18:36:29.249Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "vctmp8628_964534.SoftDeleteInterceptor.2b091906.Result.cs",
+              "DocumentMoniker": "C:\\Users\\rusla\\AppData\\Local\\Temp\\TFSTemp\\vctmp8628_964534.SoftDeleteInterceptor.2b091906.Result.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\AppData\\Local\\Temp\\TFSTemp\\vctmp8628_964534.SoftDeleteInterceptor.2b091906.Result.cs",
+              "ToolTip": "C:\\Users\\rusla\\AppData\\Local\\Temp\\TFSTemp\\vctmp8628_964534.SoftDeleteInterceptor.2b091906.Result.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\AppData\\Local\\Temp\\TFSTemp\\vctmp8628_964534.SoftDeleteInterceptor.2b091906.Result.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-08T15:35:38.31Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "UserTrackingActionFilter.cs",
+              "DocumentMoniker": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\presentation\\ecobony.webapi\\Filter\\UserTrackingActionFilter.cs",
+              "RelativeDocumentMoniker": "presentation\\ecobony.webapi\\Filter\\UserTrackingActionFilter.cs",
+              "ToolTip": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\presentation\\ecobony.webapi\\Filter\\UserTrackingActionFilter.cs",
+              "RelativeToolTip": "presentation\\ecobony.webapi\\Filter\\UserTrackingActionFilter.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAswCAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T15:02:37.21Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "UserHistoryService.cs",
+              "DocumentMoniker": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\infrastructure\\ecobony.persistence\\Service\\UserHistoryService.cs",
+              "RelativeDocumentMoniker": "infrastructure\\ecobony.persistence\\Service\\UserHistoryService.cs",
+              "ToolTip": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\infrastructure\\ecobony.persistence\\Service\\UserHistoryService.cs",
+              "RelativeToolTip": "infrastructure\\ecobony.persistence\\Service\\UserHistoryService.cs",
+              "ViewState": "AgIAAJcAAAAAAAAAAAAEwKcAAABNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T18:17:22.228Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "UserHistoryHub.cs",
+              "DocumentMoniker": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\infrastructure\\ecobony.signair\\Hubs\\UserHistoryHub.cs",
+              "RelativeDocumentMoniker": "infrastructure\\ecobony.signair\\Hubs\\UserHistoryHub.cs",
+              "ToolTip": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\infrastructure\\ecobony.signair\\Hubs\\UserHistoryHub.cs",
+              "RelativeToolTip": "infrastructure\\ecobony.signair\\Hubs\\UserHistoryHub.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T17:50:08.322Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "LogHub.cs",
+              "DocumentMoniker": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\infrastructure\\ecobony.signair\\Hubs\\LogHub.cs",
+              "RelativeDocumentMoniker": "infrastructure\\ecobony.signair\\Hubs\\LogHub.cs",
+              "ToolTip": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\infrastructure\\ecobony.signair\\Hubs\\LogHub.cs",
+              "RelativeToolTip": "infrastructure\\ecobony.signair\\Hubs\\LogHub.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAAAwAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T16:42:32.065Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "UserTrackingService.cs",
+              "DocumentMoniker": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\infrastructure\\ecobony.signair\\Services\\UserTrackingService.cs",
+              "RelativeDocumentMoniker": "infrastructure\\ecobony.signair\\Services\\UserTrackingService.cs",
+              "ToolTip": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\infrastructure\\ecobony.signair\\Services\\UserTrackingService.cs",
+              "RelativeToolTip": "infrastructure\\ecobony.signair\\Services\\UserTrackingService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T18:09:20.721Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "RateLimitingMiddleware.cs",
+              "DocumentMoniker": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\presentation\\ecobony.webapi\\Filter\\RateLimitingMiddleware.cs",
+              "RelativeDocumentMoniker": "presentation\\ecobony.webapi\\Filter\\RateLimitingMiddleware.cs",
+              "ToolTip": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\presentation\\ecobony.webapi\\Filter\\RateLimitingMiddleware.cs",
+              "RelativeToolTip": "presentation\\ecobony.webapi\\Filter\\RateLimitingMiddleware.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAADwvzEAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T15:02:35.749Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "UserTrackingHub.cs",
+              "DocumentMoniker": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\infrastructure\\ecobony.signair\\Hubs\\UserTrackingHub.cs",
+              "RelativeDocumentMoniker": "infrastructure\\ecobony.signair\\Hubs\\UserTrackingHub.cs",
+              "ToolTip": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\infrastructure\\ecobony.signair\\Hubs\\UserTrackingHub.cs",
+              "RelativeToolTip": "infrastructure\\ecobony.signair\\Hubs\\UserTrackingHub.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T17:50:07.405Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "LogOptionsWriteRepository.cs",
+              "DocumentMoniker": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\infrastructure\\ecobony.persistence\\Repository\\LogOptions\\LogOptionsWriteRepository.cs",
+              "RelativeDocumentMoniker": "infrastructure\\ecobony.persistence\\Repository\\LogOptions\\LogOptionsWriteRepository.cs",
+              "ToolTip": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\infrastructure\\ecobony.persistence\\Repository\\LogOptions\\LogOptionsWriteRepository.cs",
+              "RelativeToolTip": "infrastructure\\ecobony.persistence\\Repository\\LogOptions\\LogOptionsWriteRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T17:03:30.383Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "LogOptionsReadRepository.cs",
+              "DocumentMoniker": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\infrastructure\\ecobony.persistence\\Repository\\LogOptions\\LogOptionsReadRepository.cs",
+              "RelativeDocumentMoniker": "infrastructure\\ecobony.persistence\\Repository\\LogOptions\\LogOptionsReadRepository.cs",
+              "ToolTip": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\infrastructure\\ecobony.persistence\\Repository\\LogOptions\\LogOptionsReadRepository.cs",
+              "RelativeToolTip": "infrastructure\\ecobony.persistence\\Repository\\LogOptions\\LogOptionsReadRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T16:52:08.746Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "ILogOptionWriteRepository.cs",
+              "DocumentMoniker": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\core\\ecobony.application\\Repository\\LogOptions\\ILogOptionWriteRepository.cs",
+              "RelativeDocumentMoniker": "core\\ecobony.application\\Repository\\LogOptions\\ILogOptionWriteRepository.cs",
+              "ToolTip": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\core\\ecobony.application\\Repository\\LogOptions\\ILogOptionWriteRepository.cs",
+              "RelativeToolTip": "core\\ecobony.application\\Repository\\LogOptions\\ILogOptionWriteRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T16:47:15.952Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "ILogOptionReadRepository.cs",
+              "DocumentMoniker": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\core\\ecobony.application\\Repository\\LogOptions\\ILogOptionReadRepository.cs",
+              "RelativeDocumentMoniker": "core\\ecobony.application\\Repository\\LogOptions\\ILogOptionReadRepository.cs",
+              "ToolTip": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\core\\ecobony.application\\Repository\\LogOptions\\ILogOptionReadRepository.cs",
+              "RelativeToolTip": "core\\ecobony.application\\Repository\\LogOptions\\ILogOptionReadRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T16:46:20.185Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "GlobalUsing.cs",
+              "DocumentMoniker": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\core\\ecobony.application\\GlobalUsing.cs",
+              "RelativeDocumentMoniker": "core\\ecobony.application\\GlobalUsing.cs",
+              "ToolTip": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\core\\ecobony.application\\GlobalUsing.cs",
+              "RelativeToolTip": "core\\ecobony.application\\GlobalUsing.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-24T17:53:57.365Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "Location.cs",
+              "DocumentMoniker": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\core\\ecobony.domain\\Entities\\Location.cs",
+              "RelativeDocumentMoniker": "core\\ecobony.domain\\Entities\\Location.cs",
+              "ToolTip": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\core\\ecobony.domain\\Entities\\Location.cs",
+              "RelativeToolTip": "core\\ecobony.domain\\Entities\\Location.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T17:13:20.467Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "HubRegistration.cs",
+              "DocumentMoniker": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\infrastructure\\ecobony.signair\\HubRegistration.cs",
+              "RelativeDocumentMoniker": "infrastructure\\ecobony.signair\\HubRegistration.cs",
+              "ToolTip": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\infrastructure\\ecobony.signair\\HubRegistration.cs",
+              "RelativeToolTip": "infrastructure\\ecobony.signair\\HubRegistration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T16:41:58.655Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "DbInitilazer.cs",
+              "DocumentMoniker": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\infrastructure\\ecobony.persistence\\DbInitilazer.cs",
+              "RelativeDocumentMoniker": "infrastructure\\ecobony.persistence\\DbInitilazer.cs",
+              "ToolTip": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\infrastructure\\ecobony.persistence\\DbInitilazer.cs",
+              "RelativeToolTip": "infrastructure\\ecobony.persistence\\DbInitilazer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAA6wAQAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-21T10:20:41.588Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "RoleService.cs",
+              "DocumentMoniker": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\infrastructure\\ecobony.persistence\\Service\\RoleService.cs",
+              "RelativeDocumentMoniker": "infrastructure\\ecobony.persistence\\Service\\RoleService.cs",
+              "ToolTip": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\infrastructure\\ecobony.persistence\\Service\\RoleService.cs",
+              "RelativeToolTip": "infrastructure\\ecobony.persistence\\Service\\RoleService.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAD4vxYAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-21T10:10:03.115Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "LanguageJsonService.cs",
+              "DocumentMoniker": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\infrastructure\\ecobony.persistence\\Service\\LanguageJsonService.cs",
+              "RelativeDocumentMoniker": "infrastructure\\ecobony.persistence\\Service\\LanguageJsonService.cs",
+              "ToolTip": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\infrastructure\\ecobony.persistence\\Service\\LanguageJsonService.cs",
+              "RelativeToolTip": "infrastructure\\ecobony.persistence\\Service\\LanguageJsonService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T10:40:00.982Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 55,
+              "Title": "HeaderService.cs",
+              "DocumentMoniker": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\infrastructure\\ecobony.persistence\\Service\\HeaderService.cs",
+              "RelativeDocumentMoniker": "infrastructure\\ecobony.persistence\\Service\\HeaderService.cs",
+              "ToolTip": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\infrastructure\\ecobony.persistence\\Service\\HeaderService.cs",
+              "RelativeToolTip": "infrastructure\\ecobony.persistence\\Service\\HeaderService.cs",
+              "ViewState": "AgIAABcBAAAAAAAAAAAqwDABAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T05:43:29.663Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\infrastructure\\ecobony.persistence\\Service\\AuthService.cs",
+              "RelativeDocumentMoniker": "infrastructure\\ecobony.persistence\\Service\\AuthService.cs",
+              "ToolTip": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\infrastructure\\ecobony.persistence\\Service\\AuthService.cs",
+              "RelativeToolTip": "infrastructure\\ecobony.persistence\\Service\\AuthService.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAABsAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T09:46:55.344Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "LanguageService.cs",
+              "DocumentMoniker": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\infrastructure\\ecobony.persistence\\Service\\LanguageService.cs",
+              "RelativeDocumentMoniker": "infrastructure\\ecobony.persistence\\Service\\LanguageService.cs",
+              "ToolTip": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\infrastructure\\ecobony.persistence\\Service\\LanguageService.cs",
+              "RelativeToolTip": "infrastructure\\ecobony.persistence\\Service\\LanguageService.cs",
+              "ViewState": "AgIAAKwAAAAAAAAAAAAiwL8AAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-22T16:42:39.016Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "LocationService.cs",
+              "DocumentMoniker": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\infrastructure\\ecobony.persistence\\Service\\LocationService.cs",
+              "RelativeDocumentMoniker": "infrastructure\\ecobony.persistence\\Service\\LocationService.cs",
+              "ToolTip": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\infrastructure\\ecobony.persistence\\Service\\LocationService.cs",
+              "RelativeToolTip": "infrastructure\\ecobony.persistence\\Service\\LocationService.cs",
+              "ViewState": "AgIAAHgAAAAAAAAAAIBJwHsAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T10:50:35.675Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 56,
+              "Title": "BalanceService.cs",
+              "DocumentMoniker": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\infrastructure\\ecobony.persistence\\Service\\BalanceService.cs",
+              "RelativeDocumentMoniker": "infrastructure\\ecobony.persistence\\Service\\BalanceService.cs",
+              "ToolTip": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\infrastructure\\ecobony.persistence\\Service\\BalanceService.cs",
+              "RelativeToolTip": "infrastructure\\ecobony.persistence\\Service\\BalanceService.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAIBJwAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-30T17:07:26.262Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 57,
+              "Title": "BonusService.cs",
+              "DocumentMoniker": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\infrastructure\\ecobony.persistence\\Service\\BonusService.cs",
+              "RelativeDocumentMoniker": "infrastructure\\ecobony.persistence\\Service\\BonusService.cs",
+              "ToolTip": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\infrastructure\\ecobony.persistence\\Service\\BonusService.cs",
+              "RelativeToolTip": "infrastructure\\ecobony.persistence\\Service\\BonusService.cs",
+              "ViewState": "AgIAAHYAAAAAAAAAAIBJwJIAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-03T10:02:43.844Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 58,
+              "Title": "CategoryService.cs",
+              "DocumentMoniker": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\infrastructure\\ecobony.persistence\\Service\\CategoryService.cs",
+              "RelativeDocumentMoniker": "infrastructure\\ecobony.persistence\\Service\\CategoryService.cs",
+              "ToolTip": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\infrastructure\\ecobony.persistence\\Service\\CategoryService.cs",
+              "RelativeToolTip": "infrastructure\\ecobony.persistence\\Service\\CategoryService.cs",
+              "ViewState": "AgIAADYBAAAAAAAAAAAqwE8BAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-03T10:03:02.499Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 59,
+              "Title": "LocalizationMiddleware.cs",
+              "DocumentMoniker": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\presentation\\ecobony.webapi\\Localization\\LocalizationMiddleware.cs",
+              "RelativeDocumentMoniker": "presentation\\ecobony.webapi\\Localization\\LocalizationMiddleware.cs",
+              "ToolTip": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\presentation\\ecobony.webapi\\Localization\\LocalizationMiddleware.cs",
+              "RelativeToolTip": "presentation\\ecobony.webapi\\Localization\\LocalizationMiddleware.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAiwCEAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-28T16:27:18.333Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 60,
+              "Title": "IAuthService.cs",
+              "DocumentMoniker": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\core\\ecobony.application\\Services\\IAuthService.cs",
+              "RelativeDocumentMoniker": "core\\ecobony.application\\Services\\IAuthService.cs",
+              "ToolTip": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\core\\ecobony.application\\Services\\IAuthService.cs",
+              "RelativeToolTip": "core\\ecobony.application\\Services\\IAuthService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T09:46:44.37Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 61,
+              "Title": "BalanceController.cs",
+              "DocumentMoniker": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\presentation\\ecobony.webapi\\Controllers\\BalanceController.cs",
+              "RelativeDocumentMoniker": "presentation\\ecobony.webapi\\Controllers\\BalanceController.cs",
+              "ToolTip": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\presentation\\ecobony.webapi\\Controllers\\BalanceController.cs",
+              "RelativeToolTip": "presentation\\ecobony.webapi\\Controllers\\BalanceController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T09:32:34.67Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 62,
+              "Title": "BonusController.cs",
+              "DocumentMoniker": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\presentation\\ecobony.webapi\\Controllers\\BonusController.cs",
+              "RelativeDocumentMoniker": "presentation\\ecobony.webapi\\Controllers\\BonusController.cs",
+              "ToolTip": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\presentation\\ecobony.webapi\\Controllers\\BonusController.cs",
+              "RelativeToolTip": "presentation\\ecobony.webapi\\Controllers\\BonusController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T09:32:54.143Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 63,
+              "Title": "BalanceController.cs",
+              "DocumentMoniker": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\presentation\\ecobony.webapi\\Areas\\Controllers\\BalanceController.cs",
+              "RelativeDocumentMoniker": "presentation\\ecobony.webapi\\Areas\\Controllers\\BalanceController.cs",
+              "ToolTip": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\presentation\\ecobony.webapi\\Areas\\Controllers\\BalanceController.cs",
+              "RelativeToolTip": "presentation\\ecobony.webapi\\Areas\\Controllers\\BalanceController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-30T17:44:09.657Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 64,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\infrastructure\\ecobony.persistence\\Service\\UserService.cs",
+              "RelativeDocumentMoniker": "infrastructure\\ecobony.persistence\\Service\\UserService.cs",
+              "ToolTip": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\infrastructure\\ecobony.persistence\\Service\\UserService.cs",
+              "RelativeToolTip": "infrastructure\\ecobony.persistence\\Service\\UserService.cs",
+              "ViewState": "AgIAAFcAAAAAAAAAAAAswGUAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T06:01:46.832Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 65,
+              "Title": "CreateLanguageCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\core\\ecobony.application\\Feauters\\Command\\Language\\CreateLanguage\\CreateLanguageCommandHandler.cs",
+              "RelativeDocumentMoniker": "core\\ecobony.application\\Feauters\\Command\\Language\\CreateLanguage\\CreateLanguageCommandHandler.cs",
+              "ToolTip": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\core\\ecobony.application\\Feauters\\Command\\Language\\CreateLanguage\\CreateLanguageCommandHandler.cs",
+              "RelativeToolTip": "core\\ecobony.application\\Feauters\\Command\\Language\\CreateLanguage\\CreateLanguageCommandHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-22T17:34:22.444Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 67,
+              "Title": "CreateLanguageValidator.cs",
+              "DocumentMoniker": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\core\\ecobony.application\\Validator\\AbstractValidator\\Language\\CreateLanguageValidator.cs",
+              "RelativeDocumentMoniker": "core\\ecobony.application\\Validator\\AbstractValidator\\Language\\CreateLanguageValidator.cs",
+              "ToolTip": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\core\\ecobony.application\\Validator\\AbstractValidator\\Language\\CreateLanguageValidator.cs",
+              "RelativeToolTip": "core\\ecobony.application\\Validator\\AbstractValidator\\Language\\CreateLanguageValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-18T20:54:47.283Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 68,
+              "Title": "GetClientAllCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\core\\ecobony.application\\Feauters\\Query\\Language\\GetClientAll\\GetClientAllCommandHandler.cs",
+              "RelativeDocumentMoniker": "core\\ecobony.application\\Feauters\\Query\\Language\\GetClientAll\\GetClientAllCommandHandler.cs",
+              "ToolTip": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\core\\ecobony.application\\Feauters\\Query\\Language\\GetClientAll\\GetClientAllCommandHandler.cs",
+              "RelativeToolTip": "core\\ecobony.application\\Feauters\\Query\\Language\\GetClientAll\\GetClientAllCommandHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAABtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-28T16:56:03.098Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 69,
+              "Title": "GetByIsoCodeCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\core\\ecobony.application\\Feauters\\Query\\Language\\GetByIsoCodeAsync\\GetByIsoCodeCommandHandler.cs",
+              "RelativeDocumentMoniker": "core\\ecobony.application\\Feauters\\Query\\Language\\GetByIsoCodeAsync\\GetByIsoCodeCommandHandler.cs",
+              "ToolTip": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\core\\ecobony.application\\Feauters\\Query\\Language\\GetByIsoCodeAsync\\GetByIsoCodeCommandHandler.cs",
+              "RelativeToolTip": "core\\ecobony.application\\Feauters\\Query\\Language\\GetByIsoCodeAsync\\GetByIsoCodeCommandHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-24T17:59:59.946Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 70,
+              "Title": "JsonStringLocalizationFactory.cs",
+              "DocumentMoniker": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\presentation\\ecobony.webapi\\Localization\\JsonStringLocalizationFactory.cs",
+              "RelativeDocumentMoniker": "presentation\\ecobony.webapi\\Localization\\JsonStringLocalizationFactory.cs",
+              "ToolTip": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\presentation\\ecobony.webapi\\Localization\\JsonStringLocalizationFactory.cs",
+              "RelativeToolTip": "presentation\\ecobony.webapi\\Localization\\JsonStringLocalizationFactory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-28T16:36:57.65Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 71,
+              "Title": "CreateCategoryTranslationDto\u0027s.cs",
+              "DocumentMoniker": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\core\\ecobony.domain\\Dto\u0027s\\Category\\CreateCategoryTranslationDto\u0027s.cs",
+              "RelativeDocumentMoniker": "core\\ecobony.domain\\Dto\u0027s\\Category\\CreateCategoryTranslationDto\u0027s.cs",
+              "ToolTip": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\core\\ecobony.domain\\Dto\u0027s\\Category\\CreateCategoryTranslationDto\u0027s.cs",
+              "RelativeToolTip": "core\\ecobony.domain\\Dto\u0027s\\Category\\CreateCategoryTranslationDto\u0027s.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-28T19:25:04.833Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 72,
+              "Title": "UpdateWasteSortingMistakeTranslationDto\u0027s.cs",
+              "DocumentMoniker": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\core\\ecobony.domain\\Dto\u0027s\\WasteSortingMistake\\UpdateWasteSortingMistakeTranslationDto\u0027s.cs",
+              "RelativeDocumentMoniker": "core\\ecobony.domain\\Dto\u0027s\\WasteSortingMistake\\UpdateWasteSortingMistakeTranslationDto\u0027s.cs",
+              "ToolTip": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\core\\ecobony.domain\\Dto\u0027s\\WasteSortingMistake\\UpdateWasteSortingMistakeTranslationDto\u0027s.cs",
+              "RelativeToolTip": "core\\ecobony.domain\\Dto\u0027s\\WasteSortingMistake\\UpdateWasteSortingMistakeTranslationDto\u0027s.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-28T19:24:04.006Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 73,
+              "Title": "LanguageController.cs",
+              "DocumentMoniker": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\presentation\\ecobony.webapi\\Controllers\\LanguageController.cs",
+              "RelativeDocumentMoniker": "presentation\\ecobony.webapi\\Controllers\\LanguageController.cs",
+              "ToolTip": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\presentation\\ecobony.webapi\\Controllers\\LanguageController.cs",
+              "RelativeToolTip": "presentation\\ecobony.webapi\\Controllers\\LanguageController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-24T17:59:36.047Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 75,
+              "Title": "GetClientAllCommandRequest.cs",
+              "DocumentMoniker": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\core\\ecobony.application\\Feauters\\Query\\Language\\GetClientAll\\GetClientAllCommandRequest.cs",
+              "RelativeDocumentMoniker": "core\\ecobony.application\\Feauters\\Query\\Language\\GetClientAll\\GetClientAllCommandRequest.cs",
+              "ToolTip": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\core\\ecobony.application\\Feauters\\Query\\Language\\GetClientAll\\GetClientAllCommandRequest.cs",
+              "RelativeToolTip": "core\\ecobony.application\\Feauters\\Query\\Language\\GetClientAll\\GetClientAllCommandRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-28T16:56:07.93Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 74,
+              "Title": "GetClientAllCommandResponse.cs",
+              "DocumentMoniker": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\core\\ecobony.application\\Feauters\\Query\\Language\\GetClientAll\\GetClientAllCommandResponse.cs",
+              "RelativeDocumentMoniker": "core\\ecobony.application\\Feauters\\Query\\Language\\GetClientAll\\GetClientAllCommandResponse.cs",
+              "ToolTip": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\core\\ecobony.application\\Feauters\\Query\\Language\\GetClientAll\\GetClientAllCommandResponse.cs",
+              "RelativeToolTip": "core\\ecobony.application\\Feauters\\Query\\Language\\GetClientAll\\GetClientAllCommandResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-28T16:56:11.305Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 76,
+              "Title": "ValidationFilter.cs",
+              "DocumentMoniker": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\core\\ecobony.application\\Validator\\ValidationFilter.cs",
+              "RelativeDocumentMoniker": "core\\ecobony.application\\Validator\\ValidationFilter.cs",
+              "ToolTip": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\core\\ecobony.application\\Validator\\ValidationFilter.cs",
+              "RelativeToolTip": "core\\ecobony.application\\Validator\\ValidationFilter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-21T09:26:32.095Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 77,
+              "Title": "ServiceRegistration.cs",
+              "DocumentMoniker": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\infrastructure\\ecobony.infrastructure\\ServiceRegistration.cs",
+              "RelativeDocumentMoniker": "infrastructure\\ecobony.infrastructure\\ServiceRegistration.cs",
+              "ToolTip": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\infrastructure\\ecobony.infrastructure\\ServiceRegistration.cs",
+              "RelativeToolTip": "infrastructure\\ecobony.infrastructure\\ServiceRegistration.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAUwDgAAABMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-22T17:10:23.797Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 78,
+              "Title": "CreateHeaderValidator.cs",
+              "DocumentMoniker": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\core\\ecobony.application\\Validator\\AbstractValidator\\Header\\CreateHeaderValidator.cs",
+              "RelativeDocumentMoniker": "core\\ecobony.application\\Validator\\AbstractValidator\\Header\\CreateHeaderValidator.cs",
+              "ToolTip": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\core\\ecobony.application\\Validator\\AbstractValidator\\Header\\CreateHeaderValidator.cs",
+              "RelativeToolTip": "core\\ecobony.application\\Validator\\AbstractValidator\\Header\\CreateHeaderValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-22T17:27:17.842Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 79,
+              "Title": "GetByIsoCodeCommandRequest.cs",
+              "DocumentMoniker": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\core\\ecobony.application\\Feauters\\Query\\Language\\GetByIsoCodeAsync\\GetByIsoCodeCommandRequest.cs",
+              "RelativeDocumentMoniker": "core\\ecobony.application\\Feauters\\Query\\Language\\GetByIsoCodeAsync\\GetByIsoCodeCommandRequest.cs",
+              "ToolTip": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\core\\ecobony.application\\Feauters\\Query\\Language\\GetByIsoCodeAsync\\GetByIsoCodeCommandRequest.cs",
+              "RelativeToolTip": "core\\ecobony.application\\Feauters\\Query\\Language\\GetByIsoCodeAsync\\GetByIsoCodeCommandRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-24T17:59:57.955Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 80,
+              "Title": "ValidationMessageKey.cs",
+              "DocumentMoniker": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\core\\ecobony.domain\\Entities\\Enum\\ValidationMessageKey.cs",
+              "RelativeDocumentMoniker": "core\\ecobony.domain\\Entities\\Enum\\ValidationMessageKey.cs",
+              "ToolTip": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\core\\ecobony.domain\\Entities\\Enum\\ValidationMessageKey.cs",
+              "RelativeToolTip": "core\\ecobony.domain\\Entities\\Enum\\ValidationMessageKey.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAuwB0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-23T16:55:58.051Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 81,
+              "Title": "UpdateHeaderTranslationValidator.cs",
+              "DocumentMoniker": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\core\\ecobony.application\\Validator\\AbstractValidator\\Header\\UpdateHeaderTranslationValidator.cs",
+              "RelativeDocumentMoniker": "core\\ecobony.application\\Validator\\AbstractValidator\\Header\\UpdateHeaderTranslationValidator.cs",
+              "ToolTip": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\core\\ecobony.application\\Validator\\AbstractValidator\\Header\\UpdateHeaderTranslationValidator.cs",
+              "RelativeToolTip": "core\\ecobony.application\\Validator\\AbstractValidator\\Header\\UpdateHeaderTranslationValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-22T17:27:22.255Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 82,
+              "Title": "UpdateHeaderValidator.cs",
+              "DocumentMoniker": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\core\\ecobony.application\\Validator\\AbstractValidator\\Header\\UpdateHeaderValidator.cs",
+              "RelativeDocumentMoniker": "core\\ecobony.application\\Validator\\AbstractValidator\\Header\\UpdateHeaderValidator.cs",
+              "ToolTip": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\core\\ecobony.application\\Validator\\AbstractValidator\\Header\\UpdateHeaderValidator.cs",
+              "RelativeToolTip": "core\\ecobony.application\\Validator\\AbstractValidator\\Header\\UpdateHeaderValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-22T17:27:27.148Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 83,
+              "Title": "CreateHeaderTranslationValidator.cs",
+              "DocumentMoniker": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\core\\ecobony.application\\Validator\\AbstractValidator\\Header\\CreateHeaderTranslationValidator.cs",
+              "RelativeDocumentMoniker": "core\\ecobony.application\\Validator\\AbstractValidator\\Header\\CreateHeaderTranslationValidator.cs",
+              "ToolTip": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\core\\ecobony.application\\Validator\\AbstractValidator\\Header\\CreateHeaderTranslationValidator.cs",
+              "RelativeToolTip": "core\\ecobony.application\\Validator\\AbstractValidator\\Header\\CreateHeaderTranslationValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-22T17:27:15.591Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 84,
+              "Title": "CreateBonusValidator.cs",
+              "DocumentMoniker": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\core\\ecobony.application\\Validator\\AbstractValidator\\Bonus\\CreateBonusValidator.cs",
+              "RelativeDocumentMoniker": "core\\ecobony.application\\Validator\\AbstractValidator\\Bonus\\CreateBonusValidator.cs",
+              "ToolTip": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\core\\ecobony.application\\Validator\\AbstractValidator\\Bonus\\CreateBonusValidator.cs",
+              "RelativeToolTip": "core\\ecobony.application\\Validator\\AbstractValidator\\Bonus\\CreateBonusValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-22T17:27:12.378Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 85,
+              "Title": "UpdateBonusValidator.cs",
+              "DocumentMoniker": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\core\\ecobony.application\\Validator\\AbstractValidator\\Bonus\\UpdateBonusValidator.cs",
+              "RelativeDocumentMoniker": "core\\ecobony.application\\Validator\\AbstractValidator\\Bonus\\UpdateBonusValidator.cs",
+              "ToolTip": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\core\\ecobony.application\\Validator\\AbstractValidator\\Bonus\\UpdateBonusValidator.cs",
+              "RelativeToolTip": "core\\ecobony.application\\Validator\\AbstractValidator\\Bonus\\UpdateBonusValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-22T17:27:08.872Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 86,
+              "Title": "RoleController.cs",
+              "DocumentMoniker": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\presentation\\ecobony.webapi\\Areas\\Controllers\\RoleController.cs",
+              "RelativeDocumentMoniker": "presentation\\ecobony.webapi\\Areas\\Controllers\\RoleController.cs",
+              "ToolTip": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\presentation\\ecobony.webapi\\Areas\\Controllers\\RoleController.cs",
+              "RelativeToolTip": "presentation\\ecobony.webapi\\Areas\\Controllers\\RoleController.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAIBZwBoAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-21T10:06:57.985Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 87,
+              "Title": "Error.resx",
+              "DocumentMoniker": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\presentation\\ecobony.webapi\\Resources\\Error.resx",
+              "RelativeDocumentMoniker": "presentation\\ecobony.webapi\\Resources\\Error.resx",
+              "ToolTip": "C:\\Users\\rusla\\Documents\\Web\\ecobony\\ecobony\\presentation\\ecobony.webapi\\Resources\\Error.resx",
+              "RelativeToolTip": "presentation\\ecobony.webapi\\Resources\\Error.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2025-09-20T18:05:26.918Z"
             }
           ]
         }
